@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'lolcano';
+$dbpass = 'lolcanoll';
 $dbname = 'ediary';
 
 ?>
