@@ -1,0 +1,130 @@
+CREATE TABLE student(
+	id int NOT NULL, 
+	first char(20) NOT NULL, 
+	last char(20) NOT NULL, 
+	password varchar(20) NOT NULL, 
+	last_login date, 
+	active bool NOT NULL, 
+	age int, 
+	gender enum('M','F'), 
+	height double, 
+	mass double,
+	athletic bool, 
+	sport char(20),
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE admin(
+	id int NOT NULL,
+	first char(20) NOT NULL,
+	last char(20) NOT NULL,
+	password varchar(20) NOT NULL,
+	last_login date,
+	is_super boolean,
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE class(
+	name char(30) NOT NULL, 
+	admin_id int NOT NULL, 
+	start date, 
+	finish date, 
+	window int, 
+	PRIMARY KEY (name,admin_id)
+);
+
+
+CREATE TABLE classmap(
+	student_id int NOT NULL,
+	class_name char(30), 
+	PRIMARY KEY (student_id,class_name) 
+);
+
+
+CREATE TABLE compcodes(
+	compcode varchar(5) NOT NULL,
+	mets double NOT NULL,
+	type varchar(30) NOT NULL, 
+	cardio boolean, 
+	muscle boolean, 
+	flex boolean, 
+	body boolean, 
+	heading varchar(100) NOT NULL, 
+	description text NOT NULL, 
+	intensity text NOT NULL, 
+	PRIMARY KEY (compcode)
+);
+
+
+CREATE TABLE training_records1( 
+	daydate date not null, 
+	compcode varchar(5) not null, 
+	duration mediumint unsigned not null,
+	start varchar(10) not null,
+	end varchar(10) not null, 
+	student_id int not null, class char(30) not null, 
+	time_of_day ENUM('Early Morning','Morning','Mid Morning','Midday','Early Afternoon','Late Afternoon','Evening','Night') not null, 
+	primary key(daydate, student_id, class, compcode, time_of_day) 
+);
+
+
+CREATE TABLE training_records2(
+	daydate date not null,
+	student_id int not null,
+	class char(30) not null,
+	heart_rate mediumint unsigned,
+	sleep mediumint unsigned,
+	health ENUM('1','2','3','4','5'),
+	ratings text not null,
+	primary key(daydate, student_id, class)
+);
+
+
+CREATE TABLE exception(
+	group_id varchar(30) NOT NULL,
+	subject_id int NOT NULL,
+	daydate date NOT NULL,
+	PRIMARY KEY(group_id,subject_id,daydate)
+);
+
+
+CREATE TABLE fitness_test(
+	subject_id INT NOT NULL, 
+	group_id varchar(30) NOT NULL,
+	daydate DATE NOT NULL, 
+	test_num INT NOT NULL, 
+	pushup INT, 
+	situp INT, 
+	chinup INT, 
+	hang DOUBLE, 
+	sitreach1 DOUBLE, 
+	sitreach2 DOUBLE, 
+	height DOUBLE, 
+	mass DOUBLE, 
+	bmi DOUBLE,
+	bmi_rating varchar(30),
+	waist DOUBLE,
+	hip DOUBLE,
+	ratio DOUBLE, 
+	wh_rating varchar(30), 
+	PRIMARY KEY(subject_id,group_id,test_num)
+);
+
+
+CREATE TABLE rating_item(
+	id INT AUTO_INCREMENT NOT NULL,
+	description varchar(30) NOT NULL,
+	summary text,
+	primary key(id)
+);
+
+
+CREATE TABLE rating_item_map(
+	groupname varchar(30) NOT NULL,
+	id int NOT NULL,
+	primary key(groupname,id)
+);
+
+
