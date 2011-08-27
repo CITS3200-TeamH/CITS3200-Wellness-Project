@@ -1,6 +1,6 @@
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'your_mysql_password_here';
+$dbpass = 'lolcano';
 $dbname = 'ediary';
 ?>
