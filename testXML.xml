@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>LOL</key>
+			<string>Wellness Data</string>
+			<key>completedLOL</key>
+			<false/>
+			<key>dataLOL</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Resting HR</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Sleep hours</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Health</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>titleLOL</key>
+			<string>Exercise Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Sleep quality</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Energy level</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Confidence/Esteem</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Rating Items</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Activity</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<string>Date 1</string>
+	</array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Wellness Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Resting HR</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Sleep hours</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Health</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Exercise Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Sleep quality</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Energy level</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Confidence/Esteem</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Rating Items</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Activity</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<string>Date 2</string>
+	</array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Wellness Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Resting HR</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Sleep hours</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Health</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Exercise Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Sleep quality</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Energy level</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Confidence/Esteem</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Rating Items</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Activity</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<string>Date 3</string>
+	</array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Wellness Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Resting HR</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Sleep hours</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Health</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Exercise Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Sleep quality</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Energy level</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Confidence/Esteem</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Rating Items</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Activity</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<string>Date 4</string>
+	</array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Wellness Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Resting HR</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Sleep hours</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<true/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Health</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Exercise Data</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Sleep quality</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Energy level</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>Confidence/Esteem</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Rating Items</string>
+			<key>completed</key>
+			<false/>
+			<key>data</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>Activity</string>
+					<key>rating</key>
+					<string>Enter Data</string>
+					<key>picker</key>
+					<false/>
+					<key>edited</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<string>Date 5</string>
+	</array>
+</array>
+</plist>
