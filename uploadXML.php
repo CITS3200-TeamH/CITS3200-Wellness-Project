@@ -13,7 +13,7 @@
 			foreach ($topLevel->array as $day) {
 				$date = $day->string;
 				echo "<strong> " . $date . "</strong> <br />\n";
-				$healthItemCount = 0;									//1 is Wellness, 2 is rating items and 3 is Activities.
+				$healthItemCount = 0; //1 is Wellness, 2 is rating items and 3 is Activities.
 				foreach ($day->dict as $healthItem) {
 					$healthItemCount++;
 					echo "<span style='font-style:italic;'> " . $healthItemCount . " " . $healthItem->string . "</span>";
@@ -21,14 +21,22 @@
 					foreach ($healthItem->array as $dataOptions) {
 						foreach ($dataOptions->dict as $data) {
 							$counter = 0;
+							$data;
 							foreach ($data->string as $display) {
 								$counter++;
 								if ($counter == 1) {
 									echo $display . " --> ";
 								} else if ($counter % 2 == 0) {
+									$data = $display; //gets Heart rate, sleep hours and health.
 									echo $display;
 								}
 							}
+							if ($healthItemCounter == 0) {
+								//insert wellness data
+							} else if ($healthItemCounter == 1) {
+								//insert rating data
+							} else {
+								//insert fitness data
 							echo "<br />\n";
 						}
 						echo "<br />\n";
