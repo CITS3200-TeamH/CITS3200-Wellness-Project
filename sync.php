@@ -62,7 +62,10 @@ function sync($username, $password) {
 			$sql = "SELECT rating_item.description FROM rating_item, rating_item_map, classmap WHERE classmap.student_id=\"$username\" AND rating_item_map.groupname=classmap.class_name AND rating_item.id=rating_item_map.id";
 			$availableRatings = mysql_query($sql); //use this to get the names of the ratings
 
-			if ($ratingData) { //we have an entry for this day
+			$sql = "SELECT compcodes.description, training_records1.duration FROM training_records1, compcodes WHERE training_records1.id=\"$username\" AND AND daydate=$nextDate AND compcode.compcode=training_records1.compcode";
+			$activityData = mysql_query($sql); //get the activity data for this day
+
+			if (mysql_row_count($ratingData) != 0) { //we have an entry for this day
 				$temp = mysql_fetch_array($ratingData);
 
 				if ($temp["heart_rate"] != "NULL") { //if no data then all 3 fields will be null
@@ -82,9 +85,9 @@ function sync($username, $password) {
 			echo "<key>completed</key>\n";
 		
 			if ($hr != "Enter Data") {
-				echo "<true/>\n";
+				echo "<string>YES</string>\n";
 			} else {
-				echo "<false/>\n";
+				echo "<string>NO</string>\n";
 			}
 
 			echo "<key>data</key>\n";
@@ -96,7 +99,8 @@ function sync($username, $password) {
 			echo "<string>$hr</string>\n";
 			echo "<key>picker</key>\n";
 			echo "<true/>\n";
-			echo "<string>No</string>\n";
+			echo "<key> edited </key>\n";
+			echo "<string>NO</string>\n";
 			echo "</dict>\n";
 			echo "<dict>\n";
 			echo "<key>name</key>\n";
@@ -105,7 +109,8 @@ function sync($username, $password) {
 			echo "<string>$sleep</string>\n";
 			echo "<key>picker</key>\n";
 			echo "<true/>\n";
-			echo "<string>No</string>\n";
+			echo "<key> edited </key>\n";
+			echo "<string>NO</string>\n";
 			echo "</dict>\n";
 			echo "<dict>\n";
 			echo "<key>name</key>\n";
@@ -114,7 +119,8 @@ function sync($username, $password) {
 			echo "<string>$health</string>\n";
 			echo "<key>picker</key>\n";
 			echo "<false/>\n";
-			echo "<string>No</string>\n";
+			echo "<key> edited </key>\n";
+			echo "<string>NO</string>\n";
 			echo "</dict>\n";
 			echo "</array>\n";
 			echo "</dict>\n";
@@ -125,47 +131,93 @@ function sync($username, $password) {
 			echo "<key>completed</key>\n";
 
 			if (isset($ratings)) {
-				echo "<true/>\n";
+				echo "<string>YES</string>\n";
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 
 				$count = 0;
-				foreach ($availableRatings as $r) {
+				while (($r = mysql_fetch_array($availableRatings) != null) {
 					echo "<dict>\n";
 					echo "<key>name</key>\n";
-					echo "<string>$r</string>\n";
+					echo "<string>" . $r[0] . "</string>\n";
 					echo "<key>rating</key>\n";
-					echo "<string>$ratings[$count]</string>\n";
+					echo "<string>" . $ratings[$count] . "</string>\n";
 					echo "<key>picker</key>\n";
 					echo "<false/>\n";
-					echo "<string>No</string>\n";
+					echo "<key> edited </key>\n";
+					echo "<string>NO</string>\n";
 					echo "</dict>\n";
 
 					$count++;	
 				}					
 			} else {
-				echo "<false/>\n";
+				echo "<string>NO</string>\n";
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 
-				foreach ($availableRatings as $r) {
+			while (($r = mysql_fetch_array($availableRatings) != null) {
 					echo "<dict>\n";
 					echo "<key>name</key>\n";
-					echo "<string>$r</string>\n";
+					echo "<string>" . $r[0] . "</string>\n";
 					echo "<key>rating</key>\n";
 					echo "<string>Enter Data</string>\n";
 					echo "<key>picker</key>\n";
 					echo "<false/>\n";
-					echo "<string>No</string>\n";
+					echo "<key> edited </key>\n";
+					echo "<string>NO</string>\n";
 					echo "</dict>\n";
-				}	
+				}					
 			}
 
 			echo "</array>\n";
 			echo "</dict>\n";
 
-			//next is fitness data			
-		}		
+			echo "<dict>\n";
+					
+			echo "<key>title</key>\n";
+			echo "<string>Rating Items</string>\n";
+			echo "<key>completed</key>\n";
+
+			if (mysql_row_count($activityData) != 0) {
+				echo "<string>YES</string>\n";
+				echo "<key>data</key>\n";
+				echo "<array>\n";
+				
+				while (($activities = mysql_fetch_array($activityData) != null) {
+					echo "<dict>\n";
+					echo "<key>name</key>\n";
+					echo "<string>" . $activities[0] . "</string>\n"; //activity name
+					echo "<key>rating</key>\n";
+					echo "<string>" . $activities[1] . "</string>\n"; //activity duration
+					echo "<key>picker</key>\n";
+					echo "<false/>\n";
+					echo "<key>edited</key>\n";
+					echo "<string>NO</string>\n";
+					echo "</dict>\n";
+				}	
+			} else {
+				echo "<string>NO</string>\n";
+				echo "<key>data</key>\n";
+				echo "<array>\n";
+				echo "<dict>\n";
+				echo "<key>name</key>\n";
+				echo "<string>Activity</string>\n";
+				echo "<key>rating</key>\n";
+				echo "<string>Enter Data</string>\n";
+				echo "<key>picker</key>\n";
+				echo "<false/>\n";
+				echo "<key>edited</key>\n";
+				echo "<string>NO</string>\n";
+				echo "</dict>\n";
+			}
+
+			echo "</array>\n";
+			echo "</dict>\n";
+			echo "<string>$nextDate</string>\n";
+			echo "</array>\n";		
+		}
+		echo "</array>\n";
+		echo "</plist>\n";	
 	} else {
 		echo "outside of window";
 	}
