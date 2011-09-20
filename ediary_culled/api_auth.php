@@ -46,7 +46,7 @@
         $rootNode = $domDoc->appendChild($rootElt);
         $textNode = $domDoc->createTextNode('Wow, it works!');
         $rootNode->appendChild($textNode);
-        Header('Content-type: text/xml');
+        //Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
 
     }
