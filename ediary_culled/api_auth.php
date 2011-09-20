@@ -15,7 +15,7 @@
         echo "vars set";
         
 		if (is_int_val($username)) {
-			$sql="SELECT * FROM" . (string) $tbl_name . " Where id=" . (string) $username;
+			$sql="SELECT * FROM" . (string) $tbl_name;
 			$result = mysql_query($sql);
                 echo "query executed";
         
