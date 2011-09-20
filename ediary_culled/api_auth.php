@@ -15,7 +15,7 @@
         echo "vars set";
         
 		if (is_int_val($username)) {
-			$sql="SELECT * FROM $tbl_name Where id=".$username." AND password=".$password;
+			$sql="SELECT * FROM" . $tbl_name . " Where id=" . $username;
 			$result = mysql_query($sql);
                 echo "query executed";
         
