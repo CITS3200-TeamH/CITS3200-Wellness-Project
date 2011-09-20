@@ -44,17 +44,9 @@
         $domDoc = new DOMDocument;
         $rootElt = $domDoc->createElement('root');
         $rootNode = $domDoc->appendChild($rootElt);
-        /*
-        $subElt = $domDoc->createElement('foo');
-        $attr = $domDoc->createAttribute('ah');
-        $attrVal = $domDoc->createTextNode('OK');
-        $attr->appendChild($attrVal);
-        $subElt->appendChild($attr);
-        $subNode = $rootNode->appendChild($subElt);
-        */
         $textNode = $domDoc->createTextNode('Wow, it works!');
         $rootNode->appendChild($textNode);
-        
+        Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
 
     }
