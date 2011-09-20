@@ -6,10 +6,14 @@
     include "layout.php";
 	include "connect.php";
     
+    echo "hello";
+    
 	if (isset($_POST["username"], $_POST["password"])) {
 		$username = escape_data($_POST["username"]);
 		$password = escape_data($_POST["password"]);
 		
+        echo "vars set";
+        
 		if (is_int_val($username)) {
 			$sql="SELECT * FROM $tbl_name, classmap WHERE student.id='$username' AND student.password='$password' AND classmap.id=student_id";
 			$result = mysql_query($sql);
