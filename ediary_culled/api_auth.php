@@ -15,7 +15,7 @@
         echo "vars set";
         
 		if (is_int_val($username)) {
-			$sql="SELECT * FROM $tbl_name WHERE binary(id)=$username";
+			$sql="SELECT * FROM $tbl_name WHERE binary(id)='$username' AND binary(password)='$password' AND id=student_id";
 			$result = mysql_query($sql);
                 echo "query executed";
         
