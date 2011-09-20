@@ -9,13 +9,13 @@
     echo "hello";
     
 	if (isset($_GET["username"], $_GET["password"])) {
-	//	$username = escape_data($_GET["username"]);
-	//	$password = escape_data($_GET["password"]);
+		$username = escape_data($_GET["username"]);
+		$password = escape_data($_GET["password"]);
 		
         echo "vars set";
         
-	//	if (is_int_val($username)) {
-			$sql="SELECT * FROM $tbl_name";
+		if (is_int_val($username)) {
+			$sql="SELECT * FROM $tbl_name Where id=".$username." AND password=".$password;
 			$result = mysql_query($sql);
                 echo "query executed";
         
@@ -29,9 +29,9 @@
 			} else {
 				echo "Invalid username and/or password";
 			}
-	//	} else {
-	//		echo "Username is not an integer value";
-	//	}
+		} else {
+			echo "Username is not an integer value";
+		}
 	} 
 
     
