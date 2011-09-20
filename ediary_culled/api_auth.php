@@ -2,9 +2,9 @@
     
     $tbl_name = "student";
 	
-    include "ediary/config.php";
-    include "ediary/layout.php";
-	include "ediary/connect.php";
+    include "config.php";
+    include "layout.php";
+	include "connect.php";
     
     echo "hello";
     
