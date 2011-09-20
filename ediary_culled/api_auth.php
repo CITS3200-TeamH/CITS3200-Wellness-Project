@@ -32,13 +32,31 @@
     
     // I think we're going to have to make an assumption about the length of the users id, I think if they use UWA's id's 8 should be fine.
     function generateToken($id) {          
-        $token = (string) idate("U");
+       /* $token = (string) idate("U");
         $token = $token . "+" . (string) $id;
         $encoded = convert_uuencode($token);
         $reply = new SimpleXMLElement("<reply></reply>");
         $reply->addAttribute('token', $encoded);
         Header('Content-type: text/xml');
         echo $reply->asXML();
+        */
+        
+        $domDoc = new DOMDocument;
+        $rootElt = $domDoc->createElement('root');
+        $rootNode = $domDoc->appendChild($rootElt);
+        
+        $subElt = $domDoc->createElement('foo');
+        $attr = $domDoc->createAttribute('ah');
+        $attrVal = $domDoc->createTextNode('OK');
+        $attr->appendChild($attrVal);
+        $subElt->appendChild($attr);
+        $subNode = $rootNode->appendChild($subElt);
+        
+        $textNode = $domDoc->createTextNode('Wow, it works!');
+        $subNode->appendChild($textNode);
+        
+        echo htmlentities($domDoc->saveXML());
+
     }
 
     function validateToken($token) {
