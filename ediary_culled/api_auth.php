@@ -6,18 +6,13 @@
     include "layout.php";
 	include "connect.php";
     
-    echo "hello";
-    
 	if (isset($_GET["username"], $_GET["password"])) {
 		$username = escape_data($_GET["username"]);
 		$password = escape_data($_GET["password"]);
-		
-        echo "vars set";
         
 		if (is_int_val($username)) {
 			$sql="SELECT * FROM $tbl_name WHERE binary(id)='$username' AND binary(password)='$password'";
 			$result = mysql_query($sql);
-                echo "query executed";
         
 			if (mysql_num_rows($result) != 0) {
 				//generate token
@@ -37,13 +32,9 @@
     
     // I think we're going to have to make an assumption about the length of the users id, I think if they use UWA's id's 8 should be fine.
     function generateToken($id) {          
-              $token = (string) idate("U");
-              $token = $token . "+" . (string) $id;
-            // should encrypt the string here.  Possibly use convert_uuencode($token);
-              
+        $token = (string) idate("U");
+        $token = $token . "+" . (string) $id;
         $encoded = convert_uuencode($token);
-        echo "<br> token=" . $token;
-        
         $reply = new SimpleXMLElement("<reply></reply>");
         $reply->addAttribute('token', $encoded);
         Header('Content-type: text/xml');
