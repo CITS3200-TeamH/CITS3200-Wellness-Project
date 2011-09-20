@@ -41,8 +41,8 @@
               $token = $token . "+" . (string) $id;
             // should encrypt the string here.  Possibly use convert_uuencode($token);
               
-       // $encoded = convert_uuencode($token);
-        $encoded = $token;
+        $encoded = convert_uuencode($token);
+        echo "<br> token=" . $token;
         
         $reply = new SimpleXMLElement("<reply></reply>");
         $reply->addAttribute('token', $encoded);
