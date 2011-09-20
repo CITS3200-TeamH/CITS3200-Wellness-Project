@@ -8,9 +8,9 @@
     
     echo "hello";
     
-	if (isset($_POST["username"], $_POST["password"])) {
-		$username = escape_data($_POST["username"]);
-		$password = escape_data($_POST["password"]);
+	if (isset($_GET["username"], $_GET["password"])) {
+		$username = escape_data($_GET["username"]);
+		$password = escape_data($_GET["password"]);
 		
         echo "vars set";
         
