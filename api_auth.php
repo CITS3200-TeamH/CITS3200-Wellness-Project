@@ -17,23 +17,17 @@
 			if (mysql_num_rows($result) != 0) {
 				//generate token
                 $row=mysql_fetch_array($result);
-                $token = generateToken($row['id']); // Should really check if student is active (student.active bool in db)
+                generateToken($row['id']); // Should really check if student is active (student.active bool in db)
                 
                 
                 
 			} else {
-				echo "NO";
+				echo "Invalid username and/or password";
 			}
 		} else {
-			echo "NO";
+			echo "Username is not an integer value";
 		}
 	} 
-    
-    //elseif (isset($_POST["token"]) {
-    //    $token = escape_data($_POST["token"]);
-    //    validateToken($token);   
-    //         
-    //}
 
     
     // I think we're going to have to make an assumption about the length of the users id, I think if they use UWA's id's 8 should be fine.
@@ -41,7 +35,13 @@
               $token = (string) idate("U");
               $token = $token . "+" . (string) $id;
             // should encrypt the string here.  Possibly use convert_uuencode($token);
-              return $token;
+              
+        $encoded = convert_uuencode($token);
+        
+        $reply = new SimpleXMLElement("<reply></reply>");
+        $reply->addAttribute('token', $encoded);
+        Header('Content-type: text/xml');
+        echo $reply->asXML();
     }
 
     function validateToken($token) {
@@ -49,7 +49,14 @@
         $time = (int) substr($token,0,strpos($token,"+"));
         
         if((idate("U")-$time)<86400) {
-        $id = (int) substr($token,strpos($token,"+"));
+            $id = (int) substr($token,strpos($token,"+"));
+        }
+        
+        if(isset($id)){
+            return $id;
+        }else{
+            return null;
+        }
         
         
     }
