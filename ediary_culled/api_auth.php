@@ -56,11 +56,16 @@
         echo $token;
         echo "<br>";
         echo convert_uudecode($encoded);
+        echo "<br>";
+        echo validateToken($encoded);
         
     }
 
     function validateToken($token) {
         // should decrypt the string here. Possibly use convert_uudecode($token);
+        
+        $token = convert_uudecode($token);
+        
         $time = (int) substr($token,0,strpos($token,"+"));
         
         if((idate("U")-$time)<86400) {
@@ -70,7 +75,7 @@
         if(isset($id)){
             return $id;
         }else{
-            return null;
+            return "invalid";
         }
         
         
