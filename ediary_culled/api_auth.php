@@ -30,17 +30,8 @@
 	} 
 
     
-    // I think we're going to have to make an assumption about the length of the users id, I think if they use UWA's id's 8 should be fine.
+
     function generateToken($id) {          
-       /* $token = (string) idate("U");
-        $token = $token . "+" . (string) $id;
-        $encoded = convert_uuencode($token);
-        $reply = new SimpleXMLElement("<reply></reply>");
-        $reply->addAttribute('token', $encoded);
-        Header('Content-type: text/xml');
-        echo $reply->asXML();
-        */
-        
         $token = (string) idate("U");
         $token = $token . "+" . (string) $id;
         $encoded = convert_uuencode($token);
@@ -52,17 +43,19 @@
         $rootNode->appendChild($textNode);
         //Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
+        
+        /*
         echo "<br>";
         echo $token;
         echo "<br>";
         echo convert_uudecode($encoded);
         echo "<br>";
         echo validateToken($encoded);
+         */
         
     }
 
     function validateToken($token) {
-        // should decrypt the string here. Possibly use convert_uudecode($token);
         
         $token = convert_uudecode($token);
         
