@@ -52,7 +52,11 @@
         $rootNode->appendChild($textNode);
         //Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
-
+        echo "<br>";
+        echo $token;
+        echo "<br>";
+        echo convert_uudecode($encoded);
+        
     }
 
     function validateToken($token) {
