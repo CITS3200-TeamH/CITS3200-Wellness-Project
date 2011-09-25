@@ -41,10 +41,14 @@
         echo $reply->asXML();
         */
         
+        $token = (string) idate("U");
+        $token = $token . "+" . (string) $id;
+        $encoded = convert_uuencode($token);
+        
         $domDoc = new DOMDocument;
-        $rootElt = $domDoc->createElement('root');
+        $rootElt = $domDoc->createElement('token');
         $rootNode = $domDoc->appendChild($rootElt);
-        $textNode = $domDoc->createTextNode('Wow, it works!');
+        $textNode = $domDoc->createTextNode($encoded);
         $rootNode->appendChild($textNode);
         //Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
