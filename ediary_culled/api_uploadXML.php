@@ -1,9 +1,24 @@
 <?php
-	include "config.php";
-	include "layout.php";
-	include "connect.php";
+include "config.php";
+include "layout.php";
+include "api_auth.php";
 
-	if ($_FILES["file"]["error"] <= 0 && $_FILES["file"]["type"] == "text/xml") {
+$username;
+
+if (isset($_POST["token"]) || isset($_GET["token"])) { //XML POST error here also) {
+	$id = validateToken($_POST["token"]);
+		
+	if ($id != null) {
+		uploadXML($id);
+	} else {
+		echo "Invalid_Token";
+	}
+} else {
+	echo "Submission_Error";
+}
+
+function uploadXML($username) {
+	if ($_FILES["file"]["error"] <= 0 && $_FILES["file"]["type"] == "text/xml") { //in the mean time use this for submission
 		echo "<p>\n";
 
 		$xml = simplexml_load_file($_FILES["file"]["tmp_name"]);
@@ -71,7 +86,6 @@
 							}
 							//$sql = "UPDATE training_records2 SET ";
 						}						
-						//update here?
 						echo "<br />\n";
 					}
 				}

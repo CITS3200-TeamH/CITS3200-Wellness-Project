@@ -2,32 +2,23 @@
 
 include "config.php";
 include "layout.php";
-include "connect.php";
+include "api_auth.php";
 
-$tbl_name = "student";
 
-if (isset($_GET["username"]) && isset($_GET["password"])) {
-	$username = escape_data($_GET['username']);
-	$password = escape_data($_GET['password']);
-
-	if (is_int_val($username)) {
-		$sql="SELECT * FROM student, classmap WHERE binary(id)='$username' AND binary(password)='$password' AND id=student_id";
-		$result = mysql_query($sql);
-
-		if (mysql_num_rows($result) != 0) {
-			sync($username, $password);
-		} else {
-			echo "NO";
-		}
+if (isset($_POST["token"]) || isset($_GET["token"])) {
+	$id = validateToken($_POST["token"]);
+		
+	if ($id != null) {
+		sync($id);
 	} else {
-		echo "NO";
+		echo "Invalid_Token";
 	}
 } else {
-	echo "NO";
+	echo "Submission_Error";
 }
 
-function sync($username, $password) {
-	$sql="SELECT * FROM student, classmap, class WHERE binary(id)='$username' AND binary(password)='$password' AND id=student_id AND name=class_name";
+function sync($username) {
+	$sql="SELECT * FROM student, classmap, class WHERE binary(id)='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
 	$lower = strtotime($result["start"]);
 	$upper = strtotime($result["finish"]);
