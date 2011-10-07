@@ -5,7 +5,7 @@ include "api_auth.php";
 
 $username;
 
-if (isset($_POST["token"]) || isset($_GET["token"])) { //XML POST error here also) {
+if (isset($_POST["token"]) || isset($_GET["token"])){ //XML POST error here also) {
 	$id = validateToken($_POST["token"]);
 		
 	if ($id != null) {
@@ -18,10 +18,26 @@ if (isset($_POST["token"]) || isset($_GET["token"])) { //XML POST error here als
 }
 
 function uploadXML($username) {
-	if ($_FILES["file"]["error"] <= 0 && $_FILES["file"]["type"] == "text/xml") { //in the mean time use this for submission
+	$inp = fopen("php://input");
+	$filename = "../uploads" . $username . date("Y/m/d-H:i:s") . ".xml"
+	$outp = fopen($filename, "w");
+
+	if ($inp && $outp) {
+		while (!feof($inp)) {
+			$buffer = fread($inp, 8192);
+			fwrite($outp, $buffer);
+		}
+
+		fclose($inp);
+		fclose($outp);
 		echo "<p>\n";
 
-		$xml = simplexml_load_file($_FILES["file"]["tmp_name"]);
+		$xml = simplexml_load_file($filename);
+		
+		if (!$xml) {
+			echo "File Read Failed";
+			return;
+		}
 
 		foreach ($xml->array as $topLevel) {
 			foreach ($topLevel->array as $day) {
