@@ -22,7 +22,7 @@ function uploadXML($username) {
 	$filename = "../uploads" . $username . date("Y/m/d-H:i:s") . ".xml"
 	$outp = fopen($filename, "w");
 
-	if ($inp && $outp) {
+	if ($inp && $outp) {			
 		while (!feof($inp)) {
 			$buffer = fread($inp, 8192);
 			fwrite($outp, $buffer);
@@ -42,12 +42,9 @@ function uploadXML($username) {
 		foreach ($xml->array as $topLevel) {
 			foreach ($topLevel->array as $day) {
 				$date = $day->string;
-				echo "<strong> " . $date . "</strong> <br />\n";
 				$healthItemCount = 0; //1 is Wellness, 2 is rating items and 3 is Activities.
 				foreach ($day->dict as $healthItem) {
 					$healthItemCount++;
-					//echo "<span style='font-style:italic;'> " . $healthItemCount . " " . $healthItem->string . "</span>";
-					//echo "<br />\n";
 					foreach ($healthItem->array as $dataOptions) {
 						$healthData = null;
 						foreach ($dataOptions->dict as $data) {
@@ -67,18 +64,29 @@ function uploadXML($username) {
 						}
 						
 						if ($healthItemCount == 1) { //general wellness data
-							echo "<strong> Wellness Data </strong>\n";
-							echo "<br />";
+							//echo "<strong> Wellness Data </strong>\n";
+							//echo "<br />";
 							
-							foreach ($healthData as $key => $value) {
-								echo "$key ---> $value";
-								echo "<br />";
-							}
-							//$sql = "UPDATE training_records1 SET heart_rate=" . $healthData[0] . " AND sleep=" . $healthData[1] . " AND health=" . $healthData[2] . " WHERE ..."
+							//foreach ($healthData as $key => $value) {
+								//echo "$key ---> $value";
+								//echo "<br />";
+							//}
+							$sql = "SELECT * FROM training_records1 WHERE student_id='$username' && daydate='$date'";
+							$rows = mysql_query($sql);
 							
+							if (mysql_num_rows($rows) != 0) {
+								$sql = "UPDATE training_records1 SET heart_rate=" . $healthData[0] . " AND sleep=" . $healthData[1] . " AND health=" . $healthData[2] . " WHERE student_id='$username' && datedate='$date'";
+							} else {
+								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'"";
+								$rows = mysql_query($sql);
+								$values = mysql_fetch_array($rows);
+								$class = $values["class_name"];
+								$sql = "INSERT INTO training_records1 VALUES ('$date', '$username', '$class', " . $healthData[0] . ", " . $healthData[1] . ", " . $healthData[2] . ",,)";
+								mysql_query($sql);
+							}						
 						} else if ($healthItemCount == 2){ //rating data
-							echo "<strong> Rating Data </strong>";
-							echo "<br />";
+							//echo "<strong> Rating Data </strong>";
+							//echo "<br />";
 							$data;
 							$i = 0;
 							
@@ -90,8 +98,22 @@ function uploadXML($username) {
 								}
 								$i++;
 							}
-							echo "$data";
-							echo "<br/>";
+							//echo "$data";
+							//echo "<br/>";
+							
+							$sql = "SELECT * FROM training_records1 WHERE student_id='$username' && daydate='$date'";
+							$rows = mysql_query($sql);
+							
+							if (mysql_num_rows($rows) != 0) {
+								$sql = "UPDATE training_records1 SET ratings='$data' WHERE student_id='$username' && datedate='$date'";
+							} else {
+								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'"";
+								$rows = mysql_query($sql);
+								$values = mysql_fetch_array($rows);
+								$class = $values["class_name"];
+								$sql = "INSERT INTO training_records1 VALUES ('$date', '$username', '$class',,,,'$data')";
+								mysql_query($sql);
+							}
 						} else { //activity data
 							echo "<strong> Activity Data </strong>\n";
 							echo "<br/>";
