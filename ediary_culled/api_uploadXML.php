@@ -77,7 +77,7 @@ function uploadXML($username) {
 							if (mysql_num_rows($rows) != 0) {
 								$sql = "UPDATE training_records1 SET heart_rate=" . $healthData[0] . " AND sleep=" . $healthData[1] . " AND health=" . $healthData[2] . " WHERE student_id='$username' && datedate='$date'";
 							} else {
-								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'"";
+								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
 								$rows = mysql_query($sql);
 								$values = mysql_fetch_array($rows);
 								$class = $values["class_name"];
@@ -107,7 +107,7 @@ function uploadXML($username) {
 							if (mysql_num_rows($rows) != 0) {
 								$sql = "UPDATE training_records1 SET ratings='$data' WHERE student_id='$username' && datedate='$date'";
 							} else {
-								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'"";
+								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
 								$rows = mysql_query($sql);
 								$values = mysql_fetch_array($rows);
 								$class = $values["class_name"];
