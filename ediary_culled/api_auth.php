@@ -52,7 +52,9 @@
 		} else {
 			echo "Username is not an integer value";
 		}
-	} 
+    } else {
+        echo "didn't get any data";
+        }
 
     
 
