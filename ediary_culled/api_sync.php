@@ -1,17 +1,18 @@
 <?php
-
-include "config.php";
-include "layout.php";
-include "api_auth.php";
-
+include "api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])) {
-	$id = validateToken($_POST["token"]);
+	$id;
+	if (isset($_POST["token"])) {
+		$id = validateToken($_POST["token"]);
+	} else if (isset($_GET["token"])) {
+		$id = validateToken($_GET["token"]);
+	}
 		
-	if ($id != null) {
+	if ($id != "invalid") {
 		sync($id);
 	} else {
-		echo "Invalid_Token";
+		echo "error-2";
 	}
 } else {
 	echo "Submission_Error";
@@ -211,7 +212,7 @@ function sync($username) {
 		echo "</array>\n";
 		echo "</plist>\n";	
 	} else {
-		echo "NO";
+		echo "error-3";
 	}
 }
 ?>

@@ -14,16 +14,11 @@
      *
      *
      **/
-    
+    include "api_authFunctions.php";
     // --- Modifiable Variables --- //
-    $validPeriod = 86400;
     $tbl_name = "student";
     // --- End Of Modifiable Variables --- //
-    
-    include "config.php";
-    include "layout.php";
-	include "connect.php";
-    
+        
 	//if (isset($_POST["username"], $_POST["password"])) {
     if (isset($_POST["username"]) || isset($_GET["username"])) {
         if(isset($_POST["username"])) { 
@@ -42,10 +37,7 @@
 			if (mysql_num_rows($result) != 0) {
 				//generate token
                 $row=mysql_fetch_array($result);
-                generateToken($row['id']); // Should really check if student is active (student.active bool in db)
-                
-                
-                
+                generateToken($row['id']); // Should really check if student is active (student.active bool in db)               
 			} else {
 				echo "Invalid username and/or password";
 			}
@@ -54,39 +46,4 @@
 		}
     } else {
         echo "didn't get any data";
-        }
-
-    
-
-    function generateToken($id) {          
-        $token = (string) idate("U");
-        $token = $token . "+" . (string) $id;
-        //$encoded = convert_uuencode($token);
-        
-        $domDoc = new DOMDocument;
-        $rootElt = $domDoc->createElement('token');
-        $rootNode = $domDoc->appendChild($rootElt);
-        $textNode = $domDoc->createTextNode($token);
-        $rootNode->appendChild($textNode);
-        //Header('Content-type: text/xml');
-        echo htmlentities($domDoc->saveXML());
-    }
-
-    function validateToken($token) {
-        
-        $token = convert_uudecode($token);
-        
-        $time = (int) substr($token,0,strpos($token,"+"));
-        
-        if((idate("U")-$time)<$validPeriod) {
-            $id = (int) substr($token,strpos($token,"+"));
-        }
-        
-        if(isset($id)){
-            return $id;
-        }else{
-            return "invalid";
-        }
-        
-        
     }
