@@ -25,7 +25,7 @@
 	include "connect.php";
     
 	//if (isset($_POST["username"], $_POST["password"])) {
-    if (isset($_POST["username"]) || isset($_GET["username"]) {
+    if (isset($_POST["username"]) || isset($_GET["username"])) {
         if(isset($_POST["username"])) { 
             $username = escape_data($_POST["username"]);
             $password = escape_data($_POST["password"]);
