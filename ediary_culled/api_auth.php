@@ -1,7 +1,25 @@
 <?php
     
+    /**
+     * @author Ruvan Muthu-Krishna 20507884
+     * @unit CITS3200
+     * @group H
+     * @client Nat Benjanuvatra <nat.benjanuvatra@uwa.edu.au>
+     * @date 12/10/2011
+     *
+     * This page has two main functions:
+     * 1) To accept a given username/password combination and if correct to generate a token (which is returned to the client) with a predetermined expiry time/date.
+     * 2) To validate a token and return the userid if it is valid, this is a function which is designed to be called from another page by using the include function to make this function available.
+     *
+     *
+     *
+     **/
+    
+    // --- Modifiable Variables --- //
+    $validPeriod = 86400;
     $tbl_name = "student";
-	
+    // --- End Of Modifiable Variables --- //
+    
     include "config.php";
     include "layout.php";
 	include "connect.php";
@@ -34,25 +52,15 @@
     function generateToken($id) {          
         $token = (string) idate("U");
         $token = $token . "+" . (string) $id;
-        $encoded = convert_uuencode($token);
+        //$encoded = convert_uuencode($token);
         
         $domDoc = new DOMDocument;
         $rootElt = $domDoc->createElement('token');
         $rootNode = $domDoc->appendChild($rootElt);
-        $textNode = $domDoc->createTextNode($encoded);
+        $textNode = $domDoc->createTextNode($token);
         $rootNode->appendChild($textNode);
         //Header('Content-type: text/xml');
         echo htmlentities($domDoc->saveXML());
-        
-        /*
-        echo "<br>";
-        echo $token;
-        echo "<br>";
-        echo convert_uudecode($encoded);
-        echo "<br>";
-        echo validateToken($encoded);
-         */
-        
     }
 
     function validateToken($token) {
@@ -61,7 +69,7 @@
         
         $time = (int) substr($token,0,strpos($token,"+"));
         
-        if((idate("U")-$time)<86400) {
+        if((idate("U")-$time)<$validPeriod) {
             $id = (int) substr($token,strpos($token,"+"));
         }
         

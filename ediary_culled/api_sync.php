@@ -18,7 +18,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])) {
 }
 
 function sync($username) {
-	$sql="SELECT * FROM student, classmap, class WHERE binary(id)='$username' AND id=student_id AND name=class_name";
+	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
 	$lower = strtotime($result["start"]);
 	$upper = strtotime($result["finish"]);
@@ -45,16 +45,16 @@ function sync($username) {
 
 			$nextDate = date("Y-m-d", mktime(0, 0, 0, $month, ($date-$i), $year));
 
-			$sql = "SELECT * FROM training_records1 WHERE binary(id)='$username' AND daydate='$nextDate'";
+			$sql = "SELECT * FROM training_records1 WHERE id='$username' AND daydate='$nextDate'";
 			$fitnessData = mysql_query($sql); //has fitness data
 
-			$sql = "SELECT * FROM training_records2 WHERE binary(student_id)='$username' AND dayDate='$nextDate'";
+			$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND dayDate='$nextDate'";
 			$ratingData = mysql_query($sql); //has heart rate, sleep hours, health and ratings. Ratings are in form 2,4,5,3,1 etc... where 2 corresponds to the value for the first rating for this group etc...
 
-			$sql = "SELECT rating_item.description FROM rating_item, rating_item_map, classmap WHERE binary(classmap.student_id)=\"$username\" AND rating_item_map.groupname=classmap.class_name AND rating_item.id=rating_item_map.id";
+			$sql = "SELECT rating_item.description FROM rating_item, rating_item_map, classmap WHERE classmap.student_id=\"$username\" AND rating_item_map.groupname=classmap.class_name AND rating_item.id=rating_item_map.id";
 			$availableRatings = mysql_query($sql); //use this to get the names of the ratings
 
-			$sql = "SELECT compcodes.heading, training_records1.duration FROM training_records1, compcodes WHERE binary(training_records1.student_id)=\"$username\" AND daydate='$nextDate' AND compcodes.compcode=training_records1.compcode";
+			$sql = "SELECT compcodes.heading, training_records1.duration FROM training_records1, compcodes WHERE training_records1.student_id=\"$username\" AND daydate='$nextDate' AND compcodes.compcode=training_records1.compcode";
 			$activityData = mysql_query($sql);//get the activity data for this day
 
 			if (mysql_num_rows($ratingData) != 0) { //we have an entry for this day
