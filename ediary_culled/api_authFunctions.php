@@ -6,7 +6,7 @@ include "connect.php";
    
    function generateToken($id) {          
         $token = (string) idate("U");
-        $token = $token . "+" . (string) $id;
+        $token = $token . " " . (string) $id;
         
         $domDoc = new DOMDocument;
         $rootElt = $domDoc->createElement('token');

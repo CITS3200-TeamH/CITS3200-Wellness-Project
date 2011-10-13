@@ -1,10 +1,10 @@
 <?php
 include "api_authFunctions.php";
 
-if (isset($_POST["token"]) || isset($_GET["token"])) {
+if (isset($_POST["token"]) || isset($_GET["token"])) { //check to see that we have recieved a token
 	$id;
 	if (isset($_POST["token"])) {
-		$id = validateToken($_POST["token"]);
+		$id = validateToken($_POST["token"]); //validate the token
 	} else if (isset($_GET["token"])) {
 		$id = validateToken($_GET["token"]);
 	}
@@ -26,7 +26,7 @@ function sync($username) {
 	$today = strtotime(date("Y-m-d"));
 	$window = $result["window"];
 
-	if ($today <= $upper && $today >= $lower) {
+	if ($today <= $upper && $today >= $lower) { //check that we are still within the window data entry
 		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		echo "<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n";
 		echo "<plist version=\"1.0\">\n";
@@ -36,7 +36,7 @@ function sync($username) {
 		$date= date("d");
 		$year= date("Y");
 
-		for ($i = 0; $i < $window; $i++) { //day 1 will be today, 2 will be yesterday etc...
+		for ($i = 0; $i < $window; $i++) { //day 1 will be today, 2 will be yesterday etc... till we reach the today - window day
 			$hr = "Enter Data";
 			$sleepHours = "Enter Data";
 			$health = "Enter Data";
@@ -61,7 +61,7 @@ function sync($username) {
 			if (mysql_num_rows($ratingData) != 0) { //we have an entry for this day
 				$temp = mysql_fetch_array($ratingData);
 
-				if ($temp["heart_rate"] != "NULL") { //if no data then all 3 fields will be null
+				if ($temp["heart_rate"] != "NULL") { //The way data is entered will mean that if one is null the others will be as well
 					$hr = $temp["heart_rate"];
 					$sleep = $temp["sleep"];
 					$health = $temp["health"];
