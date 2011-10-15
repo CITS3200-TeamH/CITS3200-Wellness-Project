@@ -18,7 +18,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	if ($id != "invalid") {
 		uploadXML($id);
 	} else {
-		echo "error-2";
+		echo "error-2"; //an invalid token should produce an error
 	}
 } else {
 	echo "didn't recieve any data";
@@ -32,18 +32,18 @@ function uploadXML($username) {
 	$today = strtotime(date("Y-m-d"));
 	$window = $result["window"];
 
-	if ($today <= $upper && $today >= $lower) { //check to make sure the user should be uploading just in case the active field in the student table is not updated regularly
-		$xml = simplexml_load_string($_POST["xml"]);
-
-		foreach ($xml->array as $day) { //loops for each day
+	if ($today <= $upper && $today >= $lower) { //check to make sure the user should be uploading (i.e. still within the start/end times)
+		$xml = simplexml_load_string($_POST["xml"]); //load the XML string
+		//From here to the end of the page will need to be changed to reflect the new database schema
+		foreach ($xml->array as $day) { //get each day. It is best to see the XML schema to understand what each loop is doing.
 			$date = $day->string;
 			$dateValue = strtotime($date);
 			
-			if ($dateValue <= $today && $dateValue >= ($today - 86400)) {
+			if ($dateValue <= $today && $dateValue >= ($today - 86400)) { //check to make sure that we are within the data entry window
 				$healthItemCount = 0;
 				foreach ($day->dict as $healthItem) { //loops for each data entry options i.e. Rating Items, Health Items and Activities
 					$healthItemCount++;
-					foreach ($healthItem->array as $dataOptions) { //it is best to look at the xml to see what is happening here
+					foreach ($healthItem->array as $dataOptions) {
 						$healthData = null;
 						$edited = null;
 						$ratingChange = false;
@@ -54,9 +54,9 @@ function uploadXML($username) {
 							foreach ($data->string as $display) {
 								$counter++;
 								
-								if ($counter == 1) {
+								if ($counter == 1) { //Record the name of the data we are capturing (e.g. Heart Rate etc...)
 									$name = (string) $display;									
-								} else if ($counter % 2 == 0) { //store the data
+								} else if ($counter % 2 == 0) { //Store the data
 									if ($healthItemCount == 1) {
 										$healthData[$index] = $display;
 									} else {
@@ -85,10 +85,10 @@ function uploadXML($username) {
 							$heart = false;
 							$sleep = false;
 							
-							if (mysql_num_rows($rows) != 0) { //if wellness data already exists we update it
+							if (mysql_num_rows($rows) != 0) { //If wellness data already exists we update it
 								$sql = "UPDATE training_records2 SET ";
 								
-								//only update what has been edited
+								//Only update what has been edited
 								if ($edited[0] == "YES") {
 									$heart = true;
 									$sql .= ("heart_rate=" . $healthData[0]);
@@ -97,7 +97,7 @@ function uploadXML($username) {
 								if ($edited[1] == "YES") {
 									$sleep = true;
 									
-									if ($heart) { //need to check this to ensure if we need to add a comma. Previous data in may not have been updated and hence would not be included
+									if ($heart) { //Need to check this to ensure if we need to add a comma. Previous data may not have been updated and hence would not be included -> no comma needed
 										$sql .= (", sleep=" . $healthData[1]);
 									} else {
 										$sql .= ("sleep=" . $healthData[1]);
@@ -113,7 +113,7 @@ function uploadXML($username) {
 								}
 								$sql .= " WHERE student_id='$username' AND daydate='$date'";
 								mysql_query($sql) or die (mysql_error());
-							} else { //no wellness data already exists
+							} else { //No wellness data already exists
 								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
 								$rows = mysql_query($sql) or die (mysql_error());
 								$values = mysql_fetch_array($rows);
@@ -124,7 +124,7 @@ function uploadXML($username) {
 								if ($edited[0] == "YES") {
 									$sql .= $healthData[0];
 								} else if ($edited[0] == "NO") {
-									$sql .= "0";
+									$sql .= "0"; //Don't need to worry about commas here as all possible fields must have a value.
 								}
 								
 								if ($edited[1] == "YES") {
@@ -142,19 +142,19 @@ function uploadXML($username) {
 								$sql .= ", \"\")";
 								mysql_query($sql) or die (mysql_error());
 							}						
-						} else if ($healthItemCount == 2 && $ratingChange){ //we know that at least one rating item has changed and hence must update. 
+						} else if ($healthItemCount == 2 && $ratingChange){ //We know that at least one rating item has changed and hence must update. 
 							$data;
 							$i = 0;
 							//Unfortunately it is not possible to update only one piece of rating data, we must update all of it (even if only one value changed)
 							foreach ($healthData as $value) {
-								if ($edited[$i] == "YES" || $value != "Enter Data") { //if the rating data is edited or is not edited but is non default value we include it in the update
+								if ($edited[$i] == "YES" || $value != "Enter Data") { //If the rating data is edited or is not edited but is non default value we include it in the update
 									$data .= $value;
 								} else {
-									$data .= "5"; 
+									$data .= "5";  //Otherwise use the default value
 								}
 								
 								if ($i != (count($healthData) - 1)) {
-									$data .= ","; //must add commas after each entry (except for the last)
+									$data .= ","; //Must add commas after each entry (except for the last)
 								}
 								$i++;
 							}
