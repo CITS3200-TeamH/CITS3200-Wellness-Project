@@ -953,7 +953,6 @@ function insertRatingItem(ratingitem){
 	});	
 }
 
-
 function insertRatingItemMap(ratingitemmap){
 	if(dataBase==null){
 		openDB();
@@ -972,6 +971,8 @@ function insertedData(){
 	}
 }
 
+var uploadDump;
+
 function uploadData(){
 if(dataBase==null){
 		openDB();
@@ -986,6 +987,7 @@ if(dataBase==null){
 					if(r.rows.length==1){
 						var classname = r.rows.item(0)['name'];
 						var JSON;
+						uploadDump = 1;
 						tx.executeSql('Select * From training_records2 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
@@ -998,6 +1000,7 @@ if(dataBase==null){
 								insert["health"] = rr["health"];
 								insert["ratings"] = rr["ratings"];
 							}
+							extractedData(JSON);
 						},function (t, error) {alert('Obtaining Wellness Data Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
 						alert("You are currently enrolled in multiple classes or no classes. Sorry this application cannot handle this event.");
@@ -1008,6 +1011,16 @@ if(dataBase==null){
 			}
 		},function (t, error) {alert('Obtaining Student Error: '+error.message+' (Code '+error.code+')');;});
 	});
+}
+
+function extractedData(JSON){
+	uploadDump--;
+	document.getElementById("content").innerHTML += insertDump+"<br>";
+	document.getElementById("content").innerHTMl += JSON+"<br>";
+	if(insertDump==0){
+		alert("done");
+		//document.location = "Home.html";
+	}
 }
 
 //##############################################################
