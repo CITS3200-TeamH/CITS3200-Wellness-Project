@@ -741,6 +741,7 @@ function attemptLogon(){
 		xmlHttp.open("POST",url,false);
 		xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 		xmlHttp.send("username="+username+"&password="+password);
+		alert(xmlHttp.responseText);
 		//convert xmlHttp.responseText so so I can get the data I need
 		var token = xmlHttp.responseText;
 		if(token.indexOf("<token>")!=-1){
