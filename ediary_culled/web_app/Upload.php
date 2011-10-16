@@ -29,7 +29,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$today = strtotime(date("Y-m-d"));
 		$window = $result["window"];
 		
-		var $arr = json_decode($_POST["data"]);
+		$arr = json_decode($_POST["data"]);
 		
 		echo json_encode($arr);
 		
