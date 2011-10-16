@@ -19,7 +19,7 @@
     $tbl_name = "student";
     // --- End Of Modifiable Variables --- //
         
-	//if (isset($_POST["username"], $_POST["password"])) {
+	// This allows the username and password to be submitted via POST or GET
     if (isset($_POST["username"]) || isset($_GET["username"])) {
         if(isset($_POST["username"])) { 
             $username = escape_data($_POST["username"]);
@@ -35,9 +35,12 @@
 			$result = mysql_query($sql);
         
 			if (mysql_num_rows($result) != 0) {
-				//generate token
+				// Generate token
                 $row=mysql_fetch_array($result);
-                generateToken($row['id']); // Should really check if student is active (student.active bool in db)               
+                // Check if student is active
+                if($row['active']=1) {
+                    generateToken($row['id']); 
+                }
 			} else {
 				echo "Invalid username and/or password";
 			}
@@ -47,3 +50,5 @@
     } else {
         echo "didn't get any data";
     }
+
+?>
