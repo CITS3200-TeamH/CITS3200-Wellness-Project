@@ -983,16 +983,28 @@ function insertRatingItemMap(ratingitemmap){
 	});	
 }
 
+var locationAfterDownload;
+
 function insertedData(){
 	insertDump--;
 	//document.getElementById("content").innerHTML += insertDump+"<br>";
 	if(insertDump==0){
 		//alert("done");
-		document.location = "Home.html";
+		document.location = locationAfterDownload;
 	}
 }
 
 var uploadDump;
+
+function uploadPage(){
+	var locationstring = document.location.toString();
+	if(locationstring.indexOf("nextpage")!=-1){
+		locationAfterDownload = locationstring.substring(locationstring.indexOf("nextpage")+8)+".html";
+	} else {
+		locationAfterDownload = "Home.html";
+	}
+	uploadData();
+}
 
 function uploadData(){
 if(dataBase==null){
