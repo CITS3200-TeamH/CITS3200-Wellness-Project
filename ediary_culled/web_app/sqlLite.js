@@ -401,7 +401,7 @@ function saveWellnessData(){
 	}
 	var dateValue = document.location.toString();
 	dateValue = dateValue.substring(dateValue.indexOf("date=")+5);
-	var d = new Date();
+	var d = new Date();  
 	d.setTime(dateValue);
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
