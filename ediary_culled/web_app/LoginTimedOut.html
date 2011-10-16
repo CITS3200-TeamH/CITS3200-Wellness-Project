@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html manifest="example.appcache">
+	<head>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="javascript/functions.js" type="text/javascript"></script>
+		<link rel="apple-touch-icon" href="homescreen.png"/>
+		<link href="startup.png" rel="apple-touch-startup-image" />	
+		<title>Excercise eDiary</title>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="title">Session Timed Out</div>
+			<div id="leftnav"><a href="Logon.html"/><img src="images/home.png"/></a></div>
+		</div>
+		<span class="graytitle">
+			You have left your session for more than 15 minutes. Please log back in to continue using the eDiary
+		</span>
+		<ul class="pageitem">				
+			<li class="button">
+				<input name="Login" type="button" value="Login" onClick="document.location='Logon.html'"/>
+			</li>
+		</ul>
+	</body>
+</html>

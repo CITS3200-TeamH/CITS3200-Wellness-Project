@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html manifest="example.appcache">
+	<head>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="javascript/functions.js" type="text/javascript"></script>
+		<link rel="apple-touch-icon" href="homescreen.png"/>
+		<link href="startup.png" rel="apple-touch-startup-image" />	
+		<script type="text/javascript" src="sqlLite.js"></script>
+		<title>Excercise eDiary</title>
+	</head>
+	<body onload="loadEditProfile()">
+		<div id="topbar">
+			<div id="title">Personal Profile</div>
+			<div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a></div>
+		</div>
+				<span class="graytitle">Age</span>
+				<ul class="pageitem">
+				<li class='bigfield'><input id='age' type='text'/></li>
+				</ul>
+				<span class="graytitle">Gender</span>
+				<ul class="pageitem">
+					<li class="radiobutton">
+						<span class="name">Male</span>
+						<input name="gender" id="genderM" type="radio" value="M" />
+					</li>
+					<li class="radiobutton">
+						<span class="name">Female</span>
+						<input name="gender" id="genderF" type="radio" value="F" />
+					</li>
+				</ul>
+				<span class="graytitle">Are you an athlete?</span>
+				<ul class="pageitem">
+					<li class="radiobutton">
+						<span class="name">Yes</span>
+						<input name="athlete" id="athleteT" type="radio" value="Y" />
+					</li>
+					<li class="radiobutton">
+						<span class="name">No</span>
+						<input name="athlete" id="athleteF" type="radio" value="N" />
+					</li>
+				</ul>
+				<span class="graytitle">If so, in what sport/activity?</span>
+				<ul class="pageitem">
+				<li class='bigfield'><input id='sport' type='text'/></li>
+				</ul>
+				<span class="graytitle">At what level (competitive,social,etc.)</span>
+				<ul class="pageitem">
+					<li class="select">
+						<select id="level">
+							<option value="" default>--</option>
+						<option value="Social" >Social</option> 
+						<option value="State Competitions" >State Competitions</option> 
+						<option value="State Representatives/ National Competitions" >State Representatives/ National Competitions</option> 
+						<option value="International Competitions" >International Competitions</option> 
+						<option value="World Championships/ Olympic Games" >World Championships/ Olympic Games</option>						
+						</select>
+					</li>
+				</ul>
+				<ul class="pageitem">				
+							<li class="button">
+			<input name="Update Info" type="button" value="Submit" onClick="saveProfile()"/>
+			</li>
+			</ul>
+	</body>
+</html>

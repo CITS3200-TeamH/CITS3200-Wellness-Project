@@ -1,0 +1,72 @@
+<html manifest="example.appcache">
+	<head>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script src="javascript/functions.js" type="text/javascript"></script>
+		<link rel="apple-touch-icon" href="homescreen.png"/>
+		<link href="startup.png" rel="apple-touch-startup-image" />	
+		<script type="text/javascript" src="sqlLite.js"></script>
+		<title>Excercise eDiary</title>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="title">New Test</div>
+			<div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a></div>
+		</div>
+		<span class="graytitle">Test Date (required)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input placeholder="dd\mm\yyyy" id="daydate" type="text" />
+			<script type="text/javascript">
+				var currentTime = new Date();
+				document.getElementById("daydate").value=currentTime.getDate()+"/"+(currentTime.getMonth()+1)+"/"+currentTime.getFullYear();
+			</script></li>
+		</ul> 
+		<span class="graytitle">Push up's in 30 seconds</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="pushup" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Sit Up Cadence Test</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="situp" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Number of Chin Up's</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="chinup" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Hang Duration (sec)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="hang" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Set & Reach Trial 1 (cm)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="sitreach1" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Sit & Reach Trial 2 (cm)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="sitreach2" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Height (cm)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="height" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Mass (kg)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="mass" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Waist Measurement (cm)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="waist" type="text" /></li>
+		</ul> 
+		<span class="graytitle">Hip Measurement (cm)</span> 
+		<ul class="pageitem"> 
+			<li class="bigfield"><input id="hip" type="text" /></li>
+		</ul> 
+		<ul class="pageitem">				
+			<li class="button">
+				<input name="Submit" type="button" value="Submit" onClick="createNewFitnessTest()"/>
+			</li>
+		</ul>
+	</body>
+</head>

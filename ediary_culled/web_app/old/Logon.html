@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+		<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		
+		<link rel="apple-touch-icon" href="homescreen.png"/>
+		<link href="startup.png" rel="apple-touch-startup-image" />
+		<script type="text/javascript" src="sqlLite.js"></script>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="title">Exercise eDiary Logon</div>
+		</div>
+		<form id='form' method="get">
+			<div id="content">
+				<span class="graytitle"></span>
+				<ul class="pageitem">
+					<li class="bigfield">
+						<input placeholder="UWA Student ID" id="username" name="username" type="text" />
+					</li>
+					<li class="bigfield">
+						<input placeholder="Password" id="password" name="password" type="password" />
+					</li>
+				</ul>
+				<ul class="pageitem">				
+					<li class="button">
+						<input name="Submit" type="button" value="Submit" onClick="attemptLogon()"/>
+					</li>
+				</ul>
+				<span class="graytitle">Please log in to the system with your currnt user ID and password</span>
+			</div>
+		</form>
+	</body>
+</html>
