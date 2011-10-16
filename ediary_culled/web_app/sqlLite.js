@@ -506,7 +506,7 @@ function createNewFitnessTest(){
 function attemptLogon(){
 	if(navigator.onLine){
 		var form = document.getElementById('form');
-		alert();
+		alert('some alert.. to be removed.');
 		//form.action = "http://www.foota.org/CITS3200-Wellness-Project/ediary_culled/api_auth.php";
 		//form.submit();
 		//service.useService(http://www.foota.org/CITS3200-Wellness-Project/ediary_culled/api_auth.php,
