@@ -1016,8 +1016,8 @@ if(dataBase==null){
 function extractedData(JSON){
 	uploadDump--;
 	document.getElementById("content").innerHTML += uploadDump+"<br>";
-	document.getElementById("content").innerHTML += JSON+"<br>";
-	if(insertDump==0){
+	document.getElementById("content").innerHTML += JSON["training_records2"][0]["daydate"]+"<br>";
+	if(uploadDump==0){
 		alert("done");
 		//document.location = "Home.html";
 	}
