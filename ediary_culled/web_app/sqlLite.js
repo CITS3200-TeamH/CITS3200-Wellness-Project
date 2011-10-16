@@ -706,13 +706,14 @@ function createNewFitnessTest(){
 							function (t, r) {
 								document.location = "Fitness.html";
 							},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-					} else {
-						document.location = "LoginTimedOut.html";
-					}
+
 					} else {
 						alert("You are currently enrolled in multiple classes or no classes. Sorry this application cannot handle this event.");
 					}
 				},function (t, error) {alert('Obtaining Class Error: '+error.message+' (Code '+error.code+')');;});
+					} else {
+						document.location = "LoginTimedOut.html";
+					}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 		});
 	}
