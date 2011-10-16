@@ -4,10 +4,15 @@ include "..\api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
+	echo "1";
 	if (isset($_POST["token"]) && isset($_POST["data"])) { //now we check so see if we have both the token AND the xml data
+		echo "2";
 		$id = validateToken($_POST["token"]); //validate the token
+		echo "3";
 	} else if (isset($_GET["token"]) && isset($_GET["data"])) {
+		echo "4";
 		$id = validateToken($_GET["token"]);
+		echo "5";
 	} else {
 		echo "error-3";
 	}
