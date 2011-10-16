@@ -12,7 +12,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	} else if (isset($_GET["token"]) && isset($_GET["xml"])) {
 		$id = validateToken($_GET["token"]);
 	} else {
-		echo "didn't recieve any xml data";
+		echo "error-3";
 	}
 		
 	if ($id != "invalid") {
@@ -21,7 +21,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		echo "error-2"; //an invalid token should produce an error
 	}
 } else {
-	echo "didn't recieve any data";
+	echo "error-1";
 }
 
 function uploadXML($username) {
@@ -80,7 +80,12 @@ function uploadXML($username) {
 						
 						if ($healthItemCount == 1 && ($edited[0] == "YES" || $edited[1] == "YES" || $edited[2] == "YES")) { //update the Wellness Data if any of its fields heart rate, sleep hours or health has changed
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' && daydate='$date'";
-							$rows = mysql_query($sql) or die (mysql_error());
+							$rows = mysql_query($sql);
+							
+							if (!$rows) {
+								echo "error-5";
+								exit();
+							}
 							
 							$heart = false;
 							$sleep = false;
@@ -112,10 +117,22 @@ function uploadXML($username) {
 									}
 								}
 								$sql .= " WHERE student_id='$username' AND daydate='$date'";
-								mysql_query($sql) or die (mysql_error());
+								
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
 							} else { //No wellness data already exists
 								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
-								$rows = mysql_query($sql) or die (mysql_error());
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
+								
 								$values = mysql_fetch_array($rows);
 								$class = $values["class_name"];
 								
@@ -140,7 +157,12 @@ function uploadXML($username) {
 								}
 								
 								$sql .= ", \"\")";
-								mysql_query($sql) or die (mysql_error());
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
 							}						
 						} else if ($healthItemCount == 2 && $ratingChange){ //We know that at least one rating item has changed and hence must update. 
 							$data;
@@ -159,18 +181,38 @@ function uploadXML($username) {
 								$i++;
 							}
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND daydate='$date'";
-							$rows = mysql_query($sql) or die (mysql_error());
+							$rows = mysql_query($sql);
+							
+							if (!$rows) {
+								echo "error-5";
+								exit();
+							}
 							
 							if (mysql_num_rows($rows) != 0) { //Wellness data already exists
 								$sql = "UPDATE training_records2 SET ratings='$data' WHERE student_id='$username' AND daydate='$date'";
-								mysql_query($sql) or die (mysql_error());
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
 							} else { //Wellness data does not already exist
 								$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
-								$rows = mysql_query($sql) or die (mysql_error());
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
 								$values = mysql_fetch_array($rows);
 								$class = $values["class_name"];
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class',null,null,null,'$data')";
-								mysql_query($sql) or die (mysql_error());
+								$rows = mysql_query($sql);
+								
+								if (!$rows) {
+									echo "error-5";
+									exit();
+								}
 							}
 						} else if ($healthItemCount == 3 && $edited == "YES") {
 							echo "<strong> Activity Data </strong>\n";
@@ -183,6 +225,7 @@ function uploadXML($username) {
 							//$sql = "UPDATE training_records2 SET ";
 						}						
 					}
+					echo "success";
 				}
 			} else {
 				echo "error-3";

@@ -19,7 +19,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])) { //check to see that we ha
 		echo "error-2"; //an invalid token should produce an error
 	}
 } else {
-	echo "Submission_Error";
+	echo "error-1";
 }
 
 function sync($username) {
