@@ -4,21 +4,14 @@ include "../api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
-	echo "1";
 	if (isset($_POST["token"]) && isset($_POST["data"])) { //now we check so see if we have both the token AND the xml data
-		echo "2";
 		$id = validateToken($_POST["token"]); //validate the token
-		echo "3";
 	} else if (isset($_GET["token"]) && isset($_GET["data"])) {
-		echo "4";
 		$id = validateToken($_GET["token"]);
-		echo "5";
 	} else {
 		echo "error-3";
 	}
-	echo "hello";
 	if ($id != "invalid") {
-		echo "upload";
 		uploadXML($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
@@ -35,12 +28,12 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$today = strtotime(date("Y-m-d"));
 		$window = $result["window"];
 		
-		echo "hello";
-		echo $_GET["data"];
+		//echo "hello";
+		//echo $_GET["data"];
 		$arr = json_decode($_GET["data"]);//!!!!!!!!!!!!!!!!! change this to POST
-		echo "fahsfhsaf------|";
+		//echo "fahsfhsaf------|";
 		echo json_encode($arr);
-		echo "|-----------fasfsdfsafa";
+		//echo "|-----------fasfsdfsafa";
 		
 		
 	}
