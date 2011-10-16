@@ -699,13 +699,20 @@ function createNewFitnessTest(){
 				if(r.rows.length==1){
 					var studentid = r.rows.item(0)['id'];
 					t.executeSql('Update Student Set time=? Where id=?', [currentTime.getTime()+900000,studentid], function (t, r) {},function (t, error) {alert('Obtaining Rating Items Error: '+error.message+' (Code '+error.code+')');;});
-					t.executeSql('Insert Into Fitness_Test(student_id,daydate,pushup,situp,chinup,hang,sitreach1,sitreach2,height,mass,waist,hip,uploaded) values(?,?,?,?,?,?,?,?,?,?,?,?,?)',[studentid,daydate.getTime(),pushup,situp,chinup,hang,sitreach1,sitreach2,height,mass,waist,hip,false],
-						function (t, r) {
-							document.location = "Fitness.html";
-						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-				} else {
-					document.location = "LoginTimedOut.html";
-				}
+					tx.executeSql('Select * From class Where start<? And finish>? And (Select count(student_id) From classmap Where student_id = ? And class_name=class.name)>0',[currentTime.getTime(),currentTime.getTime(),studentid],function (t, r) {
+					if(r.rows.length==1){
+						var class = r.rows.item(0)["name"];
+						t.executeSql('Insert Into Fitness_Test(student_id,group_id,daydate,pushup,situp,chinup,hang,sitreach1,sitreach2,height,mass,waist,hip,uploaded) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[studentid,class,daydate.getTime(),pushup,situp,chinup,hang,sitreach1,sitreach2,height,mass,waist,hip,false],
+							function (t, r) {
+								document.location = "Fitness.html";
+							},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+					} else {
+						document.location = "LoginTimedOut.html";
+					}
+					} else {
+						alert("You are currently enrolled in multiple classes or no classes. Sorry this application cannot handle this event.");
+					}
+				},function (t, error) {alert('Obtaining Class Error: '+error.message+' (Code '+error.code+')');;});
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 		});
 	}
