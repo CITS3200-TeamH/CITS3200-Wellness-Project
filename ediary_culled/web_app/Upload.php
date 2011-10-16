@@ -30,8 +30,10 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$window = $result["window"];
 		
 		$arr = json_decode($_GET["data"]);//!!!!!!!!!!!!!!!!! change this to POST
-		
+		echo $_GET["data"];
+		echo "fahsfhsaf------|";
 		echo json_encode($arr);
+		echo "|-----------fasfsdfsafa";
 		
 		
 	}
