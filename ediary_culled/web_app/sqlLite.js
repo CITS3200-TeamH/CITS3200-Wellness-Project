@@ -820,29 +820,27 @@ function downloadData(){
 				document.getElementById("content").innerHTML += "Compcodes<br>";}
 				,function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					}
-					if(json["training_records1"].length>0){
-						tx.executeSql('Delete From training_records1 Where student_id=?', [json["training_records1"][0]["student_id"]], function (t, r) {
+					//if(json["training_records1"].length>0){
+						tx.executeSql('Delete From training_records1 Where student_id=?', [studentid], function (t, r) {
 							for(var i=0;i<json["training_records1"].length;i++){
 								insertTrainingRecords1(json["training_records1"][i]);
 							}
 				document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-					
-					}
-					if(json["training_records2"].length>0){
-						tx.executeSql('Delete From training_records2 Where student_id=?', [json["training_records2"][0]["student_id"]], function (t, r) {
+					//}
+					//if(json["training_records2"].length>0){
+						tx.executeSql('Delete From training_records2 Where student_id=?', [studentid], function (t, r) {
 							for(var i=0;i<json["training_records2"].length;i++){
 								insertTrainingRecords2(json["training_records2"][i]);
 							}
 				document.getElementById("content").innerHTML += "Training 2<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-					
-					}
-					if(json["fitness_test"].length>0){
-						tx.executeSql('Delete From fitness_test Where student_id=?', [json["fitness_test"][0]["subject_id"]], function (t, r) {
+					//}
+					//if(json["fitness_test"].length>0){
+						tx.executeSql('Delete From fitness_test Where student_id=?', [studentid], function (t, r) {
 							for(var i=0;i<json["fitness_test"].length;i++){
 								insertFitnessTest(json["fitness_test"][i]);
 							}
 				document.getElementById("content").innerHTML += "Fitness Test<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-					}
+					//}
 					if(json["rating_item_map"].length>0){
 						tx.executeSql('Delete From rating_item_map Where groupname=?', [json["rating_item_map"][0]["groupname"]], function (t, r) {
 							for(var i=0;i<json["rating_item_map"].length;i++){
@@ -1087,7 +1085,7 @@ function extractedData(JSON){
 					var studentid = r.rows.item(0)['id'];
 					var xmlhttp;
 					xmlHttp=new XMLHttpRequest();
-					var url="Download.php";
+					var url="Upload.php";
 					xmlHttp.open("POST",url,false);
 					xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 					xmlHttp.send("token="+r.rows.item(0)["token"]);
