@@ -1104,7 +1104,8 @@ function extractedData(JSON){
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
 					//if(response=="success"){
-						document.location = "Download.html";
+						//document.location = "Download.html";
+						downloadData();
 					//} else {
 					//	alert("Sorry. We had trouble uploading your data. Please log in again.");
 					//	document.location = "Logon.html";
