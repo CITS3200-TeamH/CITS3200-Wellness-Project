@@ -1078,7 +1078,7 @@ function extractedData(JSON){
 	//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 		//alert("done");
 		if(dataBase==null){
-		openDB();
+			openDB();
 		}
 		dataBase.transaction(function (tx) {
 			var currentTime = new Date();
@@ -1101,7 +1101,7 @@ function extractedData(JSON){
 					}
 				}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-		}
+		});
 	}
 }
 
