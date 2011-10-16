@@ -1002,7 +1002,6 @@ if(dataBase==null){
 								insert["ratings"] = rr["ratings"];*/
 								JSON["training_records2"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
 							}
-							alert(JSON["training_records2"][0]["daydayte"])
 							extractedData(JSON);
 						},function (t, error) {alert('Obtaining Wellness Data Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
@@ -1019,7 +1018,7 @@ if(dataBase==null){
 function extractedData(JSON){
 	uploadDump--;
 	document.getElementById("content").innerHTML += uploadDump+"<br>";
-	document.getElementById("content").innerHTML += JSON["training_records2"][0]["daydate"]+"<br>";
+	document.getElementById("content").innerHTML += JSON.stringify(JSON)+"<br>";
 	if(uploadDump==0){
 		alert("done");
 		//document.location = "Home.html";
