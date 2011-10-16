@@ -762,7 +762,6 @@ function attemptLogon(){
 				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			});
 		} else {
-			//alert();
 			document.location = "InvalidLogon.html";//Need to create page
 		}
 	} else {
@@ -988,10 +987,10 @@ function insertRatingItemMap(ratingitemmap){
 
 function insertedData(){
 	insertDump--;
-	document.getElementById("content").innerHTML += insertDump+"<br>";
+	//document.getElementById("content").innerHTML += insertDump+"<br>";
 	if(insertDump==0){
-		alert("done");
-		//document.location = "Home.html";
+		//alert("done");
+		document.location = "Home.html";
 	}
 }
 
@@ -1041,7 +1040,7 @@ if(dataBase==null){
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
-						alert("You are currently enrolled in multiple classes or no classes. Sorry this application cannot handle this event.");
+						document.location = "Download.html";
 					}
 				},function (t, error) {alert('Obtaining Class Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
@@ -1074,11 +1073,34 @@ function tostring(obj) {
 
 function extractedData(JSON){
 	uploadDump--;
-	document.getElementById("content").innerHTML += uploadDump+"<br>";
+	//document.getElementById("content").innerHTML += uploadDump+"<br>";
 	if(uploadDump==0){
-	document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
+	//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 		//alert("done");
-		//document.location = "Home.html";
+		if(dataBase==null){
+		openDB();
+	}
+	dataBase.transaction(function (tx) {
+		var currentTime = new Date();
+		tx.executeSql('Select id,token From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
+			if(r.rows.length==1){
+				var studentid = r.rows.item(0)['id'];
+				var xmlhttp;
+				xmlHttp=new XMLHttpRequest();
+				var url="Download.php";
+				xmlHttp.open("POST",url,false);
+				xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+				xmlHttp.send("token="+r.rows.item(0)["token"]);
+				var response = xmlHttp.responseText;
+				//var json = jQuery.parseJSON(xmlHttp.responseText);
+				if(response=="success"){
+					document.location = "Download.html";
+				} else {
+					alert("Sorry. We had trouble uploading your data. Please log in again.");
+					document.location = "Logon.html";
+				}
+			}
+		},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 	}
 }
 
