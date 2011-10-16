@@ -992,14 +992,15 @@ if(dataBase==null){
 							alert(r.rows.length);
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								var insert = JSON["training_records2"][i];
+								/*var insert = JSON["training_records2"][i];
 								insert["daydate"] = rr["daydate"];
 								insert["student_id"] = rr["student_id"];
 								insert["class"] = rr["class"];
 								insert["heart_rate"] = rr["heart_rate"];
 								insert["sleep"] = rr["sleep"];
 								insert["health"] = rr["health"];
-								insert["ratings"] = rr["ratings"];
+								insert["ratings"] = rr["ratings"];*/
+								JSON["training_records2"][[i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
 							}
 							alert(JSON["training_records2"][0]["daydayte"])
 							extractedData(JSON);
