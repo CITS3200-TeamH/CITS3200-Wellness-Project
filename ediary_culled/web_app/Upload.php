@@ -19,7 +19,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	echo "hello";
 	if ($id != "invalid") {
 		echo "upload";
-		//uploadXML($id);
+		uploadXML($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
 	}
@@ -27,7 +27,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	echo "error-1";
 }
 
-	/*function uploadXML($username) {
+	function uploadXML($username) {
 		$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 		$result = mysql_fetch_array(mysql_query($sql));
 		$lower = strtotime($result["start"]);
@@ -43,7 +43,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		echo "|-----------fasfsdfsafa";
 		
 		
-	}*/
+	}
 
 
 
