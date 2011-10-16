@@ -751,7 +751,7 @@ function attemptLogon(){
 					t.executeSql('Update Student Set loggedOn = ?',[false], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					var currentTime = new Date();
 					if(r.rows.item(0).d>0){
-						t.executeSql('Update Student Set loggedOn = ?, time=?, password=?, token=? Where id=?',[true,password,currentTime.getTime()+900000,token], function (t, r) {
+						t.executeSql('Update Student Set loggedOn = ?, time=?, password=?, token=? Where id=?',[true,currentTime.getTime()+900000,password,token,username], function (t, r) {
 							document.location = "Upload.html";
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
