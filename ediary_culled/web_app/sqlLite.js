@@ -106,11 +106,11 @@ function saveRatingItems(){
 							var classname = r.rows.item(0)['name'];
 							tx.executeSql('Select * From training_records2 Where daydate=? And class=? And student_id=?',[d.getTime(),classname,studentid],function (t, r) {
 								if(r.rows.length==1){
-									tx.executeSql('Update training_records2 Set ratings=? Where daydate=? And class=? And student_id=?',[data,d.getTime(),classname,studentid],function (t, r) {
+									tx.executeSql('Update training_records2 Set ratings=?, uploaded=? Where daydate=? And class=? And student_id=?',[data,false,d.getTime(),classname,studentid,],function (t, r) {
 										document.location = "Day.html?date="+d.getTime();
 									},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 								} else {
-									tx.executeSql('Insert Into training_records2(ratings,daydate,class,student_id) values(?,?,?,?)',[data,d.getTime(),classname,studentid],function (t, r) {
+									tx.executeSql('Insert Into training_records2(ratings,daydate,class,student_id,uploaded) values(?,?,?,?,?)',[data,d.getTime(),classname,studentid,false],function (t, r) {
 										document.location = "Day.html?date="+d.getTime();
 									},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 								}
@@ -417,11 +417,11 @@ function saveWellnessData(){
 							var classname = r.rows.item(0)['name'];
 							tx.executeSql('Select * From training_records2 Where daydate=? And class=? And student_id=?',[d.getTime(),classname,studentid],function (t, r) {
 								if(r.rows.length==1){
-									tx.executeSql('Update training_records2 Set heart_rate=?, sleep=?, health=? Where daydate=? And class=? And student_id=?',[heartrate,sleep,health,d.getTime(),classname,studentid],function (t, r) {
+									tx.executeSql('Update training_records2 Set heart_rate=?, sleep=?, health=?, uploaded=? Where daydate=? And class=? And student_id=?',[heartrate,sleep,health,false,d.getTime(),classname,studentid],function (t, r) {
 										document.location = "Day.html?date="+d.getTime();
 									},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 								} else {
-									tx.executeSql('Insert Into training_records2(heart_rate,sleep,health,daydate,class,student_id) values(?,?,?,?,?,?)',[heartrate,sleep,health,d.getTime(),classname,studentid],function (t, r) {
+									tx.executeSql('Insert Into training_records2(heart_rate,sleep,health,daydate,class,student_id,uploaded) values(?,?,?,?,?,?,?)',[heartrate,sleep,health,d.getTime(),classname,studentid,false],function (t, r) {
 										document.location = "Day.html?date="+d.getTime();
 									},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 								}
@@ -1000,6 +1000,7 @@ if(dataBase==null){
 								insert["health"] = rr["health"];
 								insert["ratings"] = rr["ratings"];
 							}
+							alert(JSON["training_records2"][0]["daydayte"])
 							extractedData(JSON);
 						},function (t, error) {alert('Obtaining Wellness Data Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
