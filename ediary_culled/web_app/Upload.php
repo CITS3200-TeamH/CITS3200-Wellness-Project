@@ -34,7 +34,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		echo json_encode($arr);
 		
 		//Code for student
-			for($i=0;$i<count($arr["student"];i++){
+			for($i=0;$i<count($arr["student"]);i++){
 				/*
 				update student with id=$arr["student"][i]["student_id"]
 				variables to update:
@@ -47,7 +47,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			}
 			
 		//Code for training_records1
-			for($i=0;$i<count($arr["training_records1"];i++){
+			for($i=0;$i<count($arr["training_records1"]);i++){
 				/*
 				insert into training_records1 variables:
 					$arr["training_records1"][i]["daydate"] !!warning in milliseconds
@@ -61,7 +61,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			}
 			
 		//Code for training_records2
-			for($i=0;$i<count($arr["training_records1"];i++){
+			for($i=0;$i<count($arr["training_records1"]);i++){
 				/*
 				check if there is a record yet for this student,date and class
 				then update or insert appropriately
@@ -78,7 +78,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			}
 			
 		//Code for fitness_test
-			for($i=0;$i<count($arr["fitness_test"];i++){
+			for($i=0;$i<count($arr["fitness_test"]);i++){
 				/*
 				insert into training_records1 variables:
 					$arr["fitness_test"][i]["daydate"] !!warning in milliseconds
