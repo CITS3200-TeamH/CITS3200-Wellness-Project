@@ -990,7 +990,7 @@ function insertedData(){
 	//document.getElementById("content").innerHTML += insertDump+"<br>";
 	if(insertDump==0){
 		//alert("done");
-		document.location = locationAfterDownload;
+		/document.location = locationAfterDownload;
 	}
 }
 
