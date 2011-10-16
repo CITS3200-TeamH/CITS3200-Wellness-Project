@@ -783,9 +783,10 @@ function downloadData(){
 	}
 	var xmlhttp;
 	xmlHttp=new XMLHttpRequest();
-	var url="xml.xml";
-	xmlHttp.open("GET",url,false);
-	xmlHttp.send("");
+	var url="Download.php";
+	xmlHttp.open("POST",url,false);
+	xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	xmlHttp.send("token=1318666941%201234567");
 	var json = jQuery.parseJSON(xmlHttp.responseText);
 	var content;
 	
