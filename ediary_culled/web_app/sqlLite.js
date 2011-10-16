@@ -1091,12 +1091,12 @@ function extractedData(JSON){
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
-					if(response=="success"){
+					//if(response=="success"){
 						document.location = "Download.html";
-					} else {
-						alert("Sorry. We had trouble uploading your data. Please log in again.");
-						document.location = "Logon.html";
-					}
+					//} else {
+					//	alert("Sorry. We had trouble uploading your data. Please log in again.");
+					//	document.location = "Logon.html";
+					//}
 				}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 		});
