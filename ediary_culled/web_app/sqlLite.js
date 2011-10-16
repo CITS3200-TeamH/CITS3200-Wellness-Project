@@ -1000,7 +1000,7 @@ if(dataBase==null){
 								insert["sleep"] = rr["sleep"];
 								insert["health"] = rr["health"];
 								insert["ratings"] = rr["ratings"];*/
-								JSON["training_records2"][[i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
+								JSON["training_records2"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
 							}
 							alert(JSON["training_records2"][0]["daydayte"])
 							extractedData(JSON);
