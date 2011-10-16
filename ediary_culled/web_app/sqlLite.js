@@ -326,7 +326,7 @@ function saveExerciseLog(){
 								if(r.rows.length==1){
 								document.location = "Day.html?date="+d.getTime();
 								} else {
-									tx.executeSql('Insert Into training_records1(daydate,class,student_id,start,end,time_of_day,compcode) values(?,?,?,?,?,?,?)',[d.getTime(),classname,studentid,start,end,timeofday,compcode],function (t, r) {
+									tx.executeSql('Insert Into training_records1(daydate,class,student_id,start,end,time_of_day,compcode,uploaded) values(?,?,?,?,?,?,?,?)',[d.getTime(),classname,studentid,start,end,timeofday,compcode,false],function (t, r) {
 										document.location = "Day.html?date="+d.getTime();
 									},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 								}
@@ -586,7 +586,7 @@ if(dataBase==null){
 				//alert(athelete);
 				var sport = document.getElementById('sport').value;
 				var level = document.getElementById('level').value;
-				tx.executeSql('Update Student Set age=?,gender=?,athletic=?,sport=?,level=? Where id=?',[age,gender,athlete,sport,level,studentid], function (t, r) {
+				tx.executeSql('Update Student Set age=?,gender=?,athletic=?,sport=?,level=?,uploaded=? Where id=?',[age,gender,athlete,sport,level,false,studentid], function (t, r) {
 					document.location = 'Home.html';
 				},function (t, error) {alert('Setting Student Profile Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
@@ -986,24 +986,36 @@ if(dataBase==null){
 				tx.executeSql('Select name From class Where start<? And finish>? And (Select count(student_id) From classmap Where student_id = ? And class_name=class.name)>0',[currentTime.getTime(),currentTime.getTime(),studentid],function (t, r) {
 					if(r.rows.length==1){
 						var classname = r.rows.item(0)['name'];
-						var JSON = {"training_records2":[]};
-						uploadDump = 1;
+						var JSON = {"student":[],"training_records1":[],"training_records2":[],"fitness_test":[]};
+						uploadDump = 4;
 						tx.executeSql('Select * From training_records2 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
-							alert(r.rows.length);
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								/*var insert = JSON["training_records2"][i];
-								insert["daydate"] = rr["daydate"];
-								insert["student_id"] = rr["student_id"];
-								insert["class"] = rr["class"];
-								insert["heart_rate"] = rr["heart_rate"];
-								insert["sleep"] = rr["sleep"];
-								insert["health"] = rr["health"];
-								insert["ratings"] = rr["ratings"];*/
 								JSON["training_records2"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
 							}
 							extractedData(JSON);
-						},function (t, error) {alert('Obtaining Wellness Data Error: '+error.message+' (Code '+error.code+')');;});
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+						tx.executeSql('Select * From training_records1 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
+							for(var i =0;i<r.rows.length;i++){
+								var rr = r.rows.item(i);
+								JSON["training_records1"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"compcode":rr["compcode"],"start":rr["start"],"end":rr["end"],"time_of_day":rr["time_of_day"]};
+							}
+							extractedData(JSON);
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+						tx.executeSql('Select * From fitness_test Where group_id=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
+							for(var i =0;i<r.rows.length;i++){
+								var rr = r.rows.item(i);
+								JSON["fitness_test"][i] = {"subject_id":rr["student_id"],"group_id":rr["group_id"],"daydate":rr["daydate"],"pushup":rr["pushup"],"situp":rr["situp"],"chinup":rr["chinup"],"hang":rr["hang"],"sitreach1":rr["sitreach2"],"height":rr["height"],"mass":rr["mass"],"waist":rr["waist"],"hip":rr["hip"]};
+							}
+							extractedData(JSON);
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+						tx.executeSql('Select * From student Where student_id=? And Uploaded=?',[studentid,false],function (t,r) {
+							for(var i =0;i<r.rows.length;i++){
+								var rr = r.rows.item(i);
+								JSON["student"][i] = {"id":rr["id"],"first":rr["first"],"last":rr["last"],"active":rr["active"],"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
+							}
+							extractedData(JSON);
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
 						alert("You are currently enrolled in multiple classes or no classes. Sorry this application cannot handle this event.");
 					}
