@@ -1015,7 +1015,7 @@ if(dataBase==null){
 
 function extractedData(JSON){
 	uploadDump--;
-	document.getElementById("content").innerHTML += insertDump+"<br>";
+	document.getElementById("content").innerHTML += uploadDump+"<br>";
 	document.getElementById("content").innerHTMl += JSON+"<br>";
 	if(insertDump==0){
 		alert("done");
