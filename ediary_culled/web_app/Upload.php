@@ -13,6 +13,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	}
 
 	if ($id != "invalid") {
+		echo "upload";
 		uploadXML($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
