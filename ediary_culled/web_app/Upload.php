@@ -29,8 +29,9 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$today = strtotime(date("Y-m-d"));
 		$window = $result["window"];
 		
-		$arr = json_decode($_GET["data"]);//!!!!!!!!!!!!!!!!! change this to POST
+		echo "hello";
 		echo $_GET["data"];
+		$arr = json_decode($_GET["data"]);//!!!!!!!!!!!!!!!!! change this to POST
 		echo "fahsfhsaf------|";
 		echo json_encode($arr);
 		echo "|-----------fasfsdfsafa";
