@@ -989,6 +989,7 @@ if(dataBase==null){
 						var JSON;
 						uploadDump = 1;
 						tx.executeSql('Select * From training_records2 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
+							alert(r.rows.length);
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
 								var insert = JSON["training_records2"][i];
