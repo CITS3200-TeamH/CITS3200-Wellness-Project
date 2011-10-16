@@ -999,7 +999,7 @@ var uploadDump;
 function uploadPage(){
 	var locationstring = document.location.toString();
 	if(locationstring.indexOf("nextpage")!=-1){
-		locationAfterDownload = locationstring.substring(locationstring.indexOf("nextpage")+8)+".html";
+		locationAfterDownload = locationstring.substring(locationstring.indexOf("nextpage")+9)+".html";
 	} else {
 		locationAfterDownload = "Home.html";
 	}
