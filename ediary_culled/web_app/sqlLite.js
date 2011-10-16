@@ -761,6 +761,7 @@ function attemptLogon(){
 				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			});
 		} else {
+			alert();
 			document.location = "InvalidLogon.html";//Need to create page
 		}
 	} else {
