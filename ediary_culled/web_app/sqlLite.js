@@ -1015,10 +1015,31 @@ if(dataBase==null){
 	});
 }
 
+// implement JSON.stringify serialization  
+function tostring(obj) {  
+    var t = typeof (obj);  
+    if (t != "object" || obj === null) {  
+        // simple data type  
+        if (t == "string") obj = '"'+obj+'"';  
+        return String(obj);  
+    }  
+    else {  
+        // recurse array or object  
+        var n, v, json = [], arr = (obj && obj.constructor == Array);  
+        for (n in obj) {  
+            v = obj[n]; t = typeof(v);  
+            if (t == "string") v = '"'+v+'"';  
+            else if (t == "object" && v !== null) v = tostring(v);  
+            json.push((arr ? "" : '"' + n + '":') + String(v));  
+        }  
+        return (arr ? "[" : "{") + String(json) + (arr ? "]" : "}");  
+    }  
+};  
+
 function extractedData(JSON){
 	uploadDump--;
 	document.getElementById("content").innerHTML += uploadDump+"<br>";
-	document.getElementById("content").innerHTML += Object.toJSON(JSON)+"<br>";
+	document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 	if(uploadDump==0){
 		alert("done");
 		//document.location = "Home.html";
