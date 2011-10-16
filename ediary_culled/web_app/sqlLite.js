@@ -9,7 +9,7 @@ var dataBase;
 function openDB(){
 	dataBase = openDatabase('eDiary','2.0','Exercise eDiary',2*1024*1024);
 	dataBase.transaction(function (tx) {
-		tx.executeSql('Create Table If Not Exists Student(id int,first,last,password,age,gender,height,mass,athletic,sport,level,loggedOn bool,time date,uploaded bool)');
+		tx.executeSql('Create Table If Not Exists Student(id int,first,last,password,age,gender,height,mass,athletic,sport,level,loggedOn bool,time date,uploaded bool,token)');
 		tx.executeSql('Create Table If Not Exists Fitness_Test(id integer primary key,student_id int,group_id,daydate date,pushup int,situp int,chinup int,hang double,sitreach1 double,sitreach2 double,height double,mass double,waist double,hip double,uploaded bool)');
 		tx.executeSql('Create Table If Not Exists training_Records2(student_id int,class,daydate date,heart_rate int,sleep int,health int,ratings text, uploaded bool)');
 		tx.executeSql('Create Table If Not Exists Training_Records1(student_id int, daydate date, compcode, duration,class, start, end, time_of_day, uploaded bool)');
@@ -729,36 +729,41 @@ function attemptLogon(){
 	if(dataBase==null){
 		openDB();
 	}
-	/*if(navigator.onLine){
+	if(navigator.onLine){
 		var form = document.getElementById('form');
 		var xmlhttp;
 
 		xmlHttp=new XMLHttpRequest();
 		var username = document.getElementById("username").value;
 		var password = document.getElementById("password").value;
-		var url="http://www.foota.org/CITS3200-Wellness-Project/ediary_culled/api_auth.php";
+		var url="../api_auth.php";
 
 		xmlHttp.open("POST",url,false);
 		xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 		xmlHttp.send("username="+username+"&password="+password);
 		//convert xmlHttp.responseText so so I can get the data I need
-		var token = "fasifhsdfjdsfjs";
-		dataBase.transaction(function (t) {
-			t.executeSql('Select Count(*) As d From Student Where id=?', [username], function (t, r) {
-				t.executeSql('Update Student Set loggedOn = ?',[false], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-				var currentTime = new Date();
-				if(r.rows.item(0).d>0){
-					t.executeSql('Update Student Set loggedOn = ?, time=?, password=? Where id=?',[true,password,currentTime.getTime()+900000,username], function (t, r) {
-						document.location = "UpdateData.html";
-					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-				} else {
-					t.executeSql('Insert Into Student(id,password,loggedOn,time) values(?,?,?,?)',[username,password,true,currentTime.getTime()+900000], function (t, r) {
-						document.location = "UpdateData.html";
-					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-				}
-			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-		});
-	} else {*/
+		var token = xmlHttp.responseText;
+		if(token.indexOf("<token>")!=-1){
+			token = token.substring(token.indexOf("<token>")+7,token.indexOf("</token>"));
+			dataBase.transaction(function (t) {
+				t.executeSql('Select Count(*) As d From Student Where id=?', [username], function (t, r) {
+					t.executeSql('Update Student Set loggedOn = ?',[false], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+					var currentTime = new Date();
+					if(r.rows.item(0).d>0){
+						t.executeSql('Update Student Set loggedOn = ?, time=?, password=?, token=? Where id=?',[true,password,currentTime.getTime()+900000,token], function (t, r) {
+							document.location = "Upload.html";
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+					} else {
+						t.executeSql('Insert Into Student(id,password,loggedOn,time,token) values(?,?,?,?,?)',[username,password,true,currentTime.getTime()+900000,token], function (t, r) {
+							document.location = "Upload.html";
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+					}
+				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+			});
+		} else {
+			document.location = "InvalidLogon.html";//Need to create page
+		}
+	} else {
 		var stnumber = document.getElementById("username").value;
 		var pword = document.getElementById("password").value;
 		dataBase.transaction(function (t) {
@@ -781,7 +786,7 @@ function attemptLogon(){
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			
 		});
-	//}
+	}
 }
 
 var insertDump;
@@ -790,76 +795,84 @@ function downloadData(){
 	if(dataBase==null){
 		openDB();
 	}
-	var xmlhttp;
-	xmlHttp=new XMLHttpRequest();
-	var url="Download.php";
-	xmlHttp.open("POST",url,false);
-	xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlHttp.send("token=1318666941%201234567");
-	var json = jQuery.parseJSON(xmlHttp.responseText);
-	var content;
-	
-	insertDump = json["student"].length+json["class"].length+json["compcodes"].length+json["classmap"].length+json["training_records1"].length+json["training_records2"].length+json["fitness_test"].length+json["rating_item_map"].length+json["rating_item"].length;
-	
 	dataBase.transaction(function (tx) {
-		if(json["compcodes"].length>0){
-			tx.executeSql('Delete From compcodes', [], function (t, r) {
-				for(var i=0;i<json["compcodes"].length;i++){
-					insertCompcodes(json["compcodes"][i]);
-				}
-	document.getElementById("content").innerHTML += "Compcodes<br>";}
-	,function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		}
-		if(json["training_records1"].length>0){
-			tx.executeSql('Delete From training_records1 Where student_id=?', [json["training_records1"][0]["student_id"]], function (t, r) {
-				for(var i=0;i<json["training_records1"].length;i++){
-					insertTrainingRecords1(json["training_records1"][i]);
-				}
-	document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		
-		}
-		if(json["training_records2"].length>0){
-			tx.executeSql('Delete From training_records2 Where student_id=?', [json["training_records2"][0]["student_id"]], function (t, r) {
-				for(var i=0;i<json["training_records2"].length;i++){
-					insertTrainingRecords2(json["training_records2"][i]);
-				}
-	document.getElementById("content").innerHTML += "Training 2<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		
-		}
-		if(json["fitness_test"].length>0){
-			tx.executeSql('Delete From fitness_test Where student_id=?', [json["fitness_test"][0]["subject_id"]], function (t, r) {
-				for(var i=0;i<json["fitness_test"].length;i++){
-					insertFitnessTest(json["fitness_test"][i]);
-				}
-	document.getElementById("content").innerHTML += "Fitness Test<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		}
-		if(json["rating_item_map"].length>0){
-			tx.executeSql('Delete From rating_item_map Where groupname=?', [json["rating_item_map"][0]["groupname"]], function (t, r) {
-				for(var i=0;i<json["rating_item_map"].length;i++){
-					insertRatingItemMap(json["rating_item_map"][i]);
-				}
-	document.getElementById("content").innerHTML += "Rating Map<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		}
-		tx.executeSql('Select id From Student', [], function (t, r) {
-			for(var i=0;i<json["rating_item"].length;i++){
-				insertRatingItem(json["rating_item"][i]);
+		var currentTime = new Date();
+		tx.executeSql('Select id,token From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
+			if(r.rows.length==1){
+				var studentid = r.rows.item(0)['id'];
+				var xmlhttp;
+				xmlHttp=new XMLHttpRequest();
+				var url="Download.php";
+				xmlHttp.open("POST",url,false);
+				xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+				xmlHttp.send("token="+r.rows.item(0)["token"]);
+				var json = jQuery.parseJSON(xmlHttp.responseText);
+				var content;
+				
+				insertDump = json["student"].length+json["class"].length+json["compcodes"].length+json["classmap"].length+json["training_records1"].length+json["training_records2"].length+json["fitness_test"].length+json["rating_item_map"].length+json["rating_item"].length;
+				
+					if(json["compcodes"].length>0){
+						tx.executeSql('Delete From compcodes', [], function (t, r) {
+							for(var i=0;i<json["compcodes"].length;i++){
+								insertCompcodes(json["compcodes"][i]);
+							}
+				document.getElementById("content").innerHTML += "Compcodes<br>";}
+				,function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					}
+					if(json["training_records1"].length>0){
+						tx.executeSql('Delete From training_records1 Where student_id=?', [json["training_records1"][0]["student_id"]], function (t, r) {
+							for(var i=0;i<json["training_records1"].length;i++){
+								insertTrainingRecords1(json["training_records1"][i]);
+							}
+				document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					
+					}
+					if(json["training_records2"].length>0){
+						tx.executeSql('Delete From training_records2 Where student_id=?', [json["training_records2"][0]["student_id"]], function (t, r) {
+							for(var i=0;i<json["training_records2"].length;i++){
+								insertTrainingRecords2(json["training_records2"][i]);
+							}
+				document.getElementById("content").innerHTML += "Training 2<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					
+					}
+					if(json["fitness_test"].length>0){
+						tx.executeSql('Delete From fitness_test Where student_id=?', [json["fitness_test"][0]["subject_id"]], function (t, r) {
+							for(var i=0;i<json["fitness_test"].length;i++){
+								insertFitnessTest(json["fitness_test"][i]);
+							}
+				document.getElementById("content").innerHTML += "Fitness Test<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					}
+					if(json["rating_item_map"].length>0){
+						tx.executeSql('Delete From rating_item_map Where groupname=?', [json["rating_item_map"][0]["groupname"]], function (t, r) {
+							for(var i=0;i<json["rating_item_map"].length;i++){
+								insertRatingItemMap(json["rating_item_map"][i]);
+							}
+				document.getElementById("content").innerHTML += "Rating Map<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					}
+					tx.executeSql('Select id From Student', [], function (t, r) {
+						for(var i=0;i<json["rating_item"].length;i++){
+							insertRatingItem(json["rating_item"][i]);
+						}
+				document.getElementById("content").innerHTML += "Rating Item<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					tx.executeSql('Select id From Student', [], function (t, r) {
+						for(var i=0;i<json["student"].length;i++){
+							insertStudent(json["student"][i]);
+						}
+				document.getElementById("content").innerHTML += "Student<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					tx.executeSql('Select id From Student', [], function (t, r) {
+						for(var i=0;i<json["class"].length;i++){
+							insertClass(json["class"][i]);
+						}
+				document.getElementById("content").innerHTML += "Class<br>";});
+					tx.executeSql('Select id From Student', [], function (t, r) {
+						for(var i=0;i<json["classmap"].length;i++){
+							insertClassmap(json["classmap"][i]);
+						}
+				document.getElementById("content").innerHTML += "ClassMao<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+			} else {
+				document.location = "LoginTimedOut.html";
 			}
-	document.getElementById("content").innerHTML += "Rating Item<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		tx.executeSql('Select id From Student', [], function (t, r) {
-			for(var i=0;i<json["student"].length;i++){
-				insertStudent(json["student"][i]);
-			}
-	document.getElementById("content").innerHTML += "Student<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
-		tx.executeSql('Select id From Student', [], function (t, r) {
-			for(var i=0;i<json["class"].length;i++){
-				insertClass(json["class"][i]);
-			}
-	document.getElementById("content").innerHTML += "Class<br>";});
-		tx.executeSql('Select id From Student', [], function (t, r) {
-			for(var i=0;i<json["classmap"].length;i++){
-				insertClassmap(json["classmap"][i]);
-			}
-	document.getElementById("content").innerHTML += "ClassMao<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+		},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 	});
 }
 
