@@ -40,6 +40,8 @@
                 // Check if student is active
                 if($row['active']=1) {
                     generateToken($row['id']); 
+                } else {
+                    echo "Invalid username and/or password";
                 }
 			} else {
 				echo "Invalid username and/or password";
