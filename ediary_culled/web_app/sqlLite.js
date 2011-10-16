@@ -741,11 +741,11 @@ function attemptLogon(){
 		xmlHttp.open("POST",url,false);
 		xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 		xmlHttp.send("username="+username+"&password="+password);
-		alert(xmlHttp.responseText);
+		//alert(xmlHttp.responseText);
 		//convert xmlHttp.responseText so so I can get the data I need
 		var token = xmlHttp.responseText;
-		if(token.indexOf("<token>")!=-1){
-			token = token.substring(token.indexOf("<token>")+7,token.indexOf("</token>"));
+		if(token.indexOf("&lt;token&gt;")!=-1){
+			token = token.substring(token.indexOf("&lt;token&gt;")+13,token.indexOf("&lt;/token&gt;"));
 			dataBase.transaction(function (t) {
 				t.executeSql('Select Count(*) As d From Student Where id=?', [username], function (t, r) {
 					t.executeSql('Update Student Set loggedOn = ?',[false], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
@@ -762,7 +762,7 @@ function attemptLogon(){
 				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			});
 		} else {
-			alert();
+			//alert();
 			document.location = "InvalidLogon.html";//Need to create page
 		}
 	} else {
