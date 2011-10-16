@@ -1,6 +1,6 @@
 success
 <?php
-include "..\api_authFunctions.php";
+include "../api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
