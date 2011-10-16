@@ -986,7 +986,7 @@ if(dataBase==null){
 				tx.executeSql('Select name From class Where start<? And finish>? And (Select count(student_id) From classmap Where student_id = ? And class_name=class.name)>0',[currentTime.getTime(),currentTime.getTime(),studentid],function (t, r) {
 					if(r.rows.length==1){
 						var classname = r.rows.item(0)['name'];
-						var JSON;
+						var JSON = {"training_records2":[]};
 						uploadDump = 1;
 						tx.executeSql('Select * From training_records2 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
 							alert(r.rows.length);
