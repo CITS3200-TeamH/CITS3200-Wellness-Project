@@ -1009,7 +1009,7 @@ if(dataBase==null){
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
-						tx.executeSql('Select * From student Where student_id=? And Uploaded=?',[studentid,false],function (t,r) {
+						tx.executeSql('Select * From student Where id=? And Uploaded=?',[studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
 								JSON["student"][i] = {"id":rr["id"],"first":rr["first"],"last":rr["last"],"active":rr["active"],"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
@@ -1051,9 +1051,9 @@ function tostring(obj) {
 function extractedData(JSON){
 	uploadDump--;
 	document.getElementById("content").innerHTML += uploadDump+"<br>";
-	document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 	if(uploadDump==0){
-		alert("done");
+	document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
+		//alert("done");
 		//document.location = "Home.html";
 	}
 }
