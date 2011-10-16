@@ -538,7 +538,8 @@ else // for older IE 5/6
 
 //var url="xml.xml";
 //var url="http://www.foota.org/CITS3200-Wellness-Project/ediary_culled/api_auth.php?username=1234567&password=lolcano";
-var url="api_auth.php?username=1234567&password=lolcano";
+var url="../api_auth.php?username="+document.getElementById("username").value+"&password="+document.getElementById("password").value;
+//var url="../api_auth.php?username="+document.getElementById("username").value;
 
 //alert(5);
 
@@ -550,6 +551,7 @@ xmlHttp.send("");
 //alert(3);
 
 alert(xmlHttp.responseText);
+myJsonObject = xml2json.parser(xmlHttp.responseText);
 
 	} else {
 		if(dataBase==null){
