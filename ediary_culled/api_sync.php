@@ -23,6 +23,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])) { //check to see that we ha
 }
 
 function sync($username) {
+	$ratingValues = array(5 => "Excellent", 4 => "Good", 3 => "Ok", 2 => "Poor", 1 => "Awful");
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
 	$lower = strtotime($result["start"]);
@@ -50,17 +51,14 @@ function sync($username) {
 
 			$nextDate = date("Y-m-d", mktime(0, 0, 0, $month, ($date-$i), $year)); //make the date based on how far we have gone backwards from the current date
 			//the section from here to the bottom of the page will have to be modified to reflect the new schema. The XML schema used will almost certainly change as well
-			$sql = "SELECT * FROM training_records1 WHERE id='$username' AND daydate='$nextDate'";
-			$fitnessData = mysql_query($sql); //has fitness data
+			$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$nextDate'";
+			$fitnessData = mysql_query($sql); //stores fitness data
 
 			$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND dayDate='$nextDate'";
 			$ratingData = mysql_query($sql); //has heart rate, sleep hours, health and ratings. Ratings are in form 2,4,5,3,1 etc... where 2 corresponds to the value for the first rating for this group etc...
 
 			$sql = "SELECT rating_item.description FROM rating_item, rating_item_map, classmap WHERE classmap.student_id=\"$username\" AND rating_item_map.groupname=classmap.class_name AND rating_item.id=rating_item_map.id";
 			$availableRatings = mysql_query($sql); //use this to get the names of the ratings
-
-			$sql = "SELECT compcodes.heading, training_records1.duration FROM training_records1, compcodes WHERE training_records1.student_id=\"$username\" AND daydate='$nextDate' AND compcodes.compcode=training_records1.compcode";
-			$activityData = mysql_query($sql);//use this to get the names of the activities
 
 			if (mysql_num_rows($ratingData) != 0) { //we have an entry for this day
 				$temp = mysql_fetch_array($ratingData);
@@ -82,9 +80,9 @@ function sync($username) {
 			echo "<key>completed</key>\n";
 		
 			if ($hr != "Enter Data") { //Set the complete value in the XML file
-				echo "<string>YES</string>\n";
+				echo "<true/>\n";
 			} else {
-				echo "<string>NO</string>\n";
+				echo "<false/>\n";
 			}
 			//this is all trival and will depend on the XML schema
 			echo "<key>data</key>\n";
@@ -94,41 +92,35 @@ function sync($username) {
 			echo "<string>Resting HR</string>\n";
 			echo "<key>rating</key>\n";
 			echo "<string>$hr</string>\n";
-			echo "<key>picker</key>\n";
-			echo "<true/>\n";
-			echo "<key> edited </key>\n";
-			echo "<string>NO</string>\n";
+			echo "<key>type</key>\n";
+			echo "<integer>0</integer>\n";
 			echo "</dict>\n";
 			echo "<dict>\n";
 			echo "<key>name</key>\n";
 			echo "<string>Sleep hours</string>\n";
 			echo "<key>rating</key>\n";
 			echo "<string>$sleep</string>\n";
-			echo "<key>picker</key>\n";
-			echo "<true/>\n";
-			echo "<key> edited </key>\n";
-			echo "<string>NO</string>\n";
+			echo "<key>type</key>\n";
+			echo "<integer>0</integer>\n";;
 			echo "</dict>\n";
 			echo "<dict>\n";
 			echo "<key>name</key>\n";
 			echo "<string>Health</string>\n";
 			echo "<key>rating</key>\n";
-			echo "<string>$health</string>\n";
-			echo "<key>picker</key>\n";
-			echo "<false/>\n";
-			echo "<key> edited </key>\n";
-			echo "<string>NO</string>\n";
+			echo "<string>" . $ratingValues[$health] . "</string>\n";
+			echo "<key>type</key>\n";
+			echo "<integer>1</integer>\n";
 			echo "</dict>\n";
 			echo "</array>\n";
 			echo "</dict>\n";
 			
 			echo "<dict>\n";
 			echo "<key>title</key>\n";
-			echo "<string>Exercise Data</string>\n";
+			echo "<string>Rating Items</string>\n";
 			echo "<key>completed</key>\n";
 
 			if (isset($ratings)) { //we may have no rating data
-				echo "<string>YES</string>\n";
+				echo "<true/>\n";
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 
@@ -138,30 +130,26 @@ function sync($username) {
 					echo "<key>name</key>\n";
 					echo "<string>" . $r[0] . "</string>\n"; //the rating name
 					echo "<key>rating</key>\n";
-					echo "<string>" . $ratings[$count] . "</string>\n"; //the rating value
-					echo "<key>picker</key>\n";
-					echo "<false/>\n";
-					echo "<key> edited </key>\n";
-					echo "<string>NO</string>\n";
+					echo "<string>" . $ratingValues[$ratings[$count]] . "</string>\n"; //the rating value
+					echo "<key>type</key>\n";
+					echo "<integer>1</integer>\n";
 					echo "</dict>\n";
 
 					$count++;	
 				}					
 			} else {
-				echo "<string>NO</string>\n";
+				echo "<false/>\n";
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 
-			while (($r = mysql_fetch_array($availableRatings)) != null) { //same as above
+				while (($r = mysql_fetch_array($availableRatings)) != null) { //same as above
 					echo "<dict>\n";
 					echo "<key>name</key>\n";
 					echo "<string>" . $r[0] . "</string>\n";
 					echo "<key>rating</key>\n";
 					echo "<string>Enter Data</string>\n"; //use the default value this time
-					echo "<key>picker</key>\n";
-					echo "<false/>\n";
-					echo "<key> edited </key>\n";
-					echo "<string>NO</string>\n";
+					echo "<key>type</key>\n";
+					echo "<integer>1</integer>\n";
 					echo "</dict>\n";
 				}					
 			}
@@ -172,40 +160,30 @@ function sync($username) {
 			echo "<dict>\n";
 					
 			echo "<key>title</key>\n";
-			echo "<string>Rating Items</string>\n";
+			echo "<string>Exercise Data</string>\n";
 			echo "<key>completed</key>\n";
 
-			if (mysql_num_rows($activityData) != 0) {
-				echo "<string>YES</string>\n";
+			if (mysql_num_rows($fitnessData) != 0) {
+				echo "<true/>\n";
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 				
-				while (($activities = mysql_fetch_array($activityData)) != null) {
-					echo "<dict>\n";
-					echo "<key>name</key>\n";
-					echo "<string>" . $activities[0] . "</string>\n"; //activity name
-					echo "<key>rating</key>\n";
-					echo "<string>" . $activities[1] . "</string>\n"; //activity duration
-					echo "<key>picker</key>\n";
-					echo "<false/>\n";
-					echo "<key>edited</key>\n";
-					echo "<string>NO</string>\n";
-					echo "</dict>\n";
+				while (($activities = mysql_fetch_array($fitnessData)) != null) {
+					echo "<array>\n";
+					echo "<string>" . $activities["compcode"] . "</string>\n"; //activity name
+					echo "<string>" . $activities["start"] . "</string>\n"; //activity duration
+					echo "<string>" . $activities["end"] . "</string>\n"; //activity duration
+					echo "<string>" . $activities["comments"] . "</string>\n"; //comments
+					echo "</array>\n";
 				}	
 			} else {
-				echo "<string>NO</string>\n";
-				echo "<key>data</key>\n";
+				echo "<false/>\n";				
 				echo "<array>\n";
-				echo "<dict>\n";
-				echo "<key>name</key>\n";
-				echo "<string>Activity</string>\n";
-				echo "<key>rating</key>\n";
-				echo "<string>Enter Data</string>\n";
-				echo "<key>picker</key>\n";
-				echo "<false/>\n";
-				echo "<key>edited</key>\n";
-				echo "<string>NO</string>\n";
-				echo "</dict>\n";
+				echo "<string>COMPCODE</string>\n"; //activity name
+				echo "<string>Start</string>\n"; //activity duration
+				echo "<string>End</string>\n"; //activity duration
+				echo "<string>Comments</string>\n";
+				echo "</array>\n";
 			}
 
 			echo "</array>\n";

@@ -1,4 +1,9 @@
 <?php
+    
+// --- Modifiable Variables --- //
+$validPeriod = 86400;
+// --- End Of Modifiable Variables --- //
+
 
 include "config.php";
 include "layout.php";
@@ -17,19 +22,21 @@ include "connect.php";
     }
 
     function validateToken($token) {
-		$validPeriod = 86400;
-        $id = null;
 		
-        $time = (int) substr($token,0 ,strpos($token," "));
-
-        if((idate("U") - $time) < $validPeriod) {
-            $id = (int) substr($token,strpos($token," "));
-        }
-        
         if($id != null){
-            return $id;
+            
+            $time = (int) substr($token,0 ,strpos($token," "));
+            
+            if((idate("U") - $time) < $validPeriod) {
+                $id = (int) substr($token,strpos($token," "));
+                return $id;
+            } else {
+                return "error-2";
+            }
+                
+           
         }else{
-            return "invalid";
+            return "error-3";
         }      
     }
 ?>
