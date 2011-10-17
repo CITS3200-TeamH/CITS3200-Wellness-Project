@@ -34,7 +34,8 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		echo json_encode($arr);
 		
 		//Code for student
-			for($i=0;$i<count($arr["student"]);i++){
+			for($i=0; $i<count($arr); i++){
+                echo $i;
 				/*
 				update student with id=$arr["student"][i]["student_id"]
 				variables to update:
@@ -46,7 +47,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 				*/
 			}
 			
-		//Code for training_records1
+	/*	//Code for training_records1
 			for($i=0;$i<count($arr["training_records1"]);i++){
 				/*
 				insert into training_records1 variables:
@@ -57,7 +58,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 					$arr["training_records1"][i]["student_id"]
 					$arr["training_records1"][i]["time_of_day"]
 					$arr["training_records1"][i]["class"]
-				*/
+				
 			}
 			
 		//Code for training_records2
@@ -74,7 +75,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 					$arr["training_records2"][i]["student_id"]
 					$arr["training_records2"][i]["health"]
 					$arr["training_records2"][i]["class"]
-				*/
+				
 			}
 			
 		//Code for fitness_test
@@ -94,7 +95,9 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 					$arr["fitness_test"][i]["mass"]
 					$arr["fitness_test"][i]["waist"]
 					$arr["fitness_test"][i]["hip"]
-				*/
+				
 			}
+    */
+    
 	}
 ?>
