@@ -1,4 +1,9 @@
-success
+
+This page is allowing invalid tokens.
+<br>
+Stuck? try this: Upload.php?data={"student":[1,2,3,4]}
+<br>
+
 <?php
 include "../api_authFunctions.php";
 
@@ -11,13 +16,14 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	} else {
 		echo "error-3";
 	}
-	if ($id != "invalid") {
+	if ($id != "error-2") {
 		uploadXML($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
 	}
 } else {
-	echo "error-1";
+	//echo "error-1";
+	uploadXML(1234567);
 }
 
 	function uploadXML($username) {
@@ -28,16 +34,23 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$today = strtotime(date("Y-m-d"));
 		$window = $result["window"];
 		
-		$arr = json_decode($_GET["data"]);//!!!!!!!!!!!!!!!!! change this to POST
+		//!!!!!!!!!!!!!!!!! change this to POST
+		$json_arr=json_decode($_GET['data'],true);
+		echo "<br> Received JSON message: <br>";
+		
 		
 		//Uncomment this if you wish it will reprint the json array
-		echo json_encode($arr);
-		
+		echo json_encode($json_arr);
+		echo "<br>";
+		//echo " "+$json_arr;	
 		//Code for student
-			for($i=0; $i<count($arr); i++){
-                echo $i;
-				/*
-				update student with id=$arr["student"][i]["student_id"]
+	echo "number of students given: " . count($json_arr[student]);
+	echo "<br>";
+		for($i=0; $i<count($json_arr[student]); $i++){
+			echo "student id =". $json_arr[student][$i] . "<br>";
+			
+		}
+		/*	update student with id=$arr["student"][i]["student_id"]
 				variables to update:
 					age
 					active
@@ -45,7 +58,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 					athletic
 					sport
 				*/
-			}
+			
 			
 	/*	//Code for training_records1
 			for($i=0;$i<count($arr["training_records1"]);i++){
