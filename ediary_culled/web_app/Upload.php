@@ -147,7 +147,7 @@ function uploadXML($username) {
         $subject_id  = $json_arr[fitness_test][$i][subject_id];
         $group_id  = $json_arr[fitness_test][$i][group_id];
         $daydate_millisec  = $json_arr[fitness_test][$i][daydate];
-        $test_num = $json_arr[fitness_test][$i][test_num;
+        $test_num = $json_arr[fitness_test][$i][test_num];
         $pushup  = $json_arr[fitness_test][$i][pushup];
         $situp  = $json_arr[fitness_test][$i][situp];
         $chinup  = $json_arr[fitness_test][$i][chinup];
