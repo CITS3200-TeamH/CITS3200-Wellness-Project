@@ -38,7 +38,7 @@ function loadRatingsPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -185,7 +185,7 @@ function loadFitnessCategories(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -351,7 +351,7 @@ function loadWellnessPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
