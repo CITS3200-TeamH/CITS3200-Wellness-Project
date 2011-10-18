@@ -6,7 +6,7 @@ This page is allowing invalid tokens!!
 <?php
 include "../api_authFunctions.php";
 include "../rating_calc.php";
-/*
+
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
 	if (isset($_POST["token"]) && isset($_POST["data"])) { //now we check so see if we have both the token AND the xml data
@@ -25,7 +25,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	//echo "error-1";
 	uploadXML(1234567);
 }
-*/
+
 uploadXML(1234567);
 
 function uploadXML($username) {
@@ -40,15 +40,15 @@ function uploadXML($username) {
         echo json_encode($json_arr) . "<br>";
         
     // Print the student id    
-       // echo "student id = ". $json_arr[student][0][id] . "<br>";
+        echo "student id = ". $json_arr[student][0][id] . "<br>";
         
     // Print some training data
-       // echo "training data = ". $json_arr[training_records1][0][daydate] . "<br>";
+        echo "training data = ". $json_arr[training_records1][0][daydate] . "<br>";
         
     // Print success story
         echo "<br> Yay :D it worked, below we'll start to build the actual page. <br><br><br><br>";
 
-/*
+
 
     // Student
     echo "Starting Student<br>";
@@ -65,8 +65,8 @@ function uploadXML($username) {
         echo "query #1 run"; 
     // End of Student
         
-*/        
-/*
+        
+
     // Training Records 1
     echo "Starting Training Records 2<br>";
 	for($i=0; $i<count($json_arr[training_records1]); $i++) {
@@ -103,8 +103,8 @@ function uploadXML($username) {
     // End of Training Records 1
 
 
-*/
-  /*
+
+ 
     // Training Records 2
     echo "Starting Training Records 2<br>";
     for($i=0; $i<count($json_arr[training_records2]); $i++) {
@@ -140,7 +140,7 @@ function uploadXML($username) {
     echo "Training Records 2 done<br>";    
     // End of Training Records 2
         
-  */      
+        
   /*  
     // Fitness Test
     for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
