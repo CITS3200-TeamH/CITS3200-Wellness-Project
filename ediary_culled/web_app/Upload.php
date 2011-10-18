@@ -5,6 +5,7 @@ This page is allowing invalid tokens!!
 
 <?php
 include "../api_authFunctions.php";
+include "../rating_calc.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
@@ -13,7 +14,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	} else if (isset($_GET["token"]) && isset($_GET["data"])) {
 		$id = validateToken($_GET["token"]);
 	} else {
-		echo "error-3";
+		echo "error-2";
 	}
 	if ($id != "error-2") {
 		uploadXML($id);
@@ -58,7 +59,9 @@ function uploadXML($username) {
         $sport = $json_arr[student][0][sport];
     
         // Update given fields
-    echo "Student done<br>";
+        $sql = "UPDATE student SET age='$age', active='$active', gender='$gender', athletic='$athletic', sport='$sport' WHERE id='$username'";
+        mysql_query($sql) or die("error-5 #2 <br>");
+        echo "query #1 run"; 
     // End of Student
         
         
@@ -137,7 +140,7 @@ function uploadXML($username) {
     // End of Training Records 2
         
         
-/*    
+    
     // Fitness Test
     for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
         // Get needed data
@@ -150,6 +153,7 @@ function uploadXML($username) {
         $chinup  = $json_arr[fitness_test][$i][chinup];
         $hang  = $json_arr[fitness_test][$i][hang];
         $sitreach1  = $json_arr[fitness_test][$i][sitreach1];
+        $sitreach2  = $json_arr[fitness_test][$i][sitreach2];
         $height  = $json_arr[fitness_test][$i][height];
         $mass  = $json_arr[fitness_test][$i][mass];
         $waist  = $json_arr[fitness_test][$i][waist];
@@ -157,27 +161,33 @@ function uploadXML($username) {
         
         // Work variables to use with database	
 		$daydate = date("Y-m-d", $daydate_millisec/1000);
+        $bmi = round($mass/ pow(($height/100),2),3);
+        $ratio = round($waist/$hip,3);
+        $wh_rating = getWHRating($age,$gender,$ratio);
+        $bmi_rating = getBMIRating($bmi);
         
-        // Query whether entry is already in database
-		$sql = "SELECT * FROM fitness_test WHERE subject_id='$subject_id' AND group_id='$group_id' AND test_num='$test_num'";
-        $rows = mysql_query($sql) or die("error-5 #1");
+        // Generate a test_num
+        $sql = "SELECT test_num FROM fitness_test WHERE test_num = (SELECT MAX(test_num) FROM fitness_test WHERE subject_id='$username')";
+        $result = mysql_query($sql) or die("error-5 #1");
         echo "query #1 run <br>";		
-		echo "rows found:" . mysql_num_rows($rows) . "<br>";		
+		echo "rows found:" . mysql_num_rows($result) . "<br>";
+        if ($row = mysql_fetch_assoc($result)) {
+            $test_num = $row["test_num"];
+        } else {
+            $test_num = 1;
+        }
+        echo "test_num" . $test_num . "<br>";
         
-        // If an entry was found update it, otherwise create a new entry
-        if (mysql_num_rows($rows) != 0) {
-            $sql = "UPDATE fitness_test SET pushup='$pushup', situp='$situp', chinup='$chinup', hang='$hang', sitreach1='$sitreach1', height='$height', mass='$mass', waist='$waist', hip='$hip' WHERE subject_id='$subject_id' AND group_id='$group_id' AND test_num='$test_num'"; // note this query should really update bmi, ratio, bmi_rating and wh_rating too.
-            mysql_query($sql) or die("error-5 #2 <br>");
-			echo "query #2 run"; 
-		} else {
-            $sql = "INSERT INTO fitness_test VALUES('$subject_id', '$group_id', '$daydate', '$test_num', '$pushup', '$situp', '$chinup', '$hang', '$sitreach1', '$sitreach2', '$height', '$mass', '$bmi', '$bmi_rating', '$waist', '$hip', '$ratio', '$wh_rating')";
-            mysql_query($sql) or die("error-5 #3");
-			echo "query #3 run";
-		}
+        
+        // Create and execute query
+        $sql = "INSERT INTO fitness_test VALUES('$subject_id', '$group_id', '$daydate', '$test_num', '$pushup', '$situp', '$chinup', '$hang', '$sitreach1', '$sitreach2', '$height', '$mass', '$bmi', '$bmi_rating', '$waist', '$hip', '$ratio', '$wh_rating')";
+        mysql_query($sql) or die("error-5 #2");
+        echo "query #2 run";
+		
     }
         
     // End of Fitness Test
-*/
+
         
     }
 ?>        
