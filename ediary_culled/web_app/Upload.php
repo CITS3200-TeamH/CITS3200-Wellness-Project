@@ -60,17 +60,16 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$compcode = $json_arr[training_records1][$i][compcode];
 		$start = $json_arr[training_records1][$i][start];
 		$end = $json_arr[training_records1][$i][end];
-		$time_of_day = $json_arr[training_records1][$i][time_of_day];
+		$TOD = $json_arr[training_records1][$i][time_of_day];
 		$class = $json_arr[training_records1][$i]['class'];
 
 	  // Work variables to use with database
 		$daydate = date("Y-m-d", $daydate_millisec/1000); 
-		echo strtotime($start). "<br>";
-		echo strtotime($end). "<br>";
-		echo "difference = ". (strtotime($end)-strtotime($start))/60;	 
+		$duration = (strtotime($end)-strtotime($start))/60;	 
 
 	 // Query whether entry is already in database
 		
+		$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
 
 
 	}
