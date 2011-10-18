@@ -60,9 +60,10 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		//Code for training_records1
 
 			for($i=0; $i<count($json_arr[training_records1]); $i++) {
+                echo "<br> " . json_decode($json_arr[training_records1][$i] . "<br>";
 				$training_record = json_decode($json_arr[training_records1][$i], true);
-                echo "daydate = " . $training_record[daydate];
-                echo "compcode = " . $training_record[compcode];
+                echo "daydate = " . $training_record[daydate] . "<br>";
+                echo "compcode = " . $training_record[compcode] . "<br>";
 			}					
 
         /*
