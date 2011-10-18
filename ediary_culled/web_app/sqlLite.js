@@ -632,7 +632,7 @@ function loadTest(){
 	testid = testid.substring(testid.indexOf("test=")+5);
 	dataBase.transaction(function (tx) {
 		tx.executeSql('Select * From Fitness_Test Where id=?',[testid],function (t, r) {
-			var content = document.getElementById("content");
+			var content = document.getElementById("list");
 			var rr = r.rows.item(0);
 			var currentDate = new Date();
 			currentDate.setTime(rr['daydate']);
