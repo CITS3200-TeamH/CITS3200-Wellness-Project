@@ -25,13 +25,15 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	uploadXML(1234567);
 }
 
-	function uploadXML($username) {
+
+function uploadXML($username) {
 		
     
 
 // Decode the json array
         //$json_arr=json_decode($test_string, true);
         $json_arr=json_decode($_GET['data'],true);
+        //$json_arr=json_decode($_POST['data'],true);
     // Print the given array
         echo json_encode($json_arr) . "<br>";
         
@@ -46,14 +48,17 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 
 
 
-    // Student data
+    // Student
 	echo "Student data here  <br>";
-
-
-
-//echo $test_string;
-
-
+        $age = $json_arr[student][0][age];
+        $active = $json_arr[student][0][active];
+        $gender = $json_arr[student][0][gender];
+        $athletic = $json_arr[student][0][athletic];
+        $sport = $json_arr[student][0][sport];
+    
+    // End of Student
+        
+        
 
     // Training Records 1
 	for($i=0; $i<count($json_arr[training_records1]); $i++) {
@@ -65,8 +70,9 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		$TOD = $json_arr[training_records1][$i][time_of_day];
 		$class = $json_arr[training_records1][$i]['class'];
 
-	  // Work variables to use with database
+     // Work variables to use with database
 		$daydate = date("Y-m-d", $daydate_millisec/1000); 
+        echo "daydate = " . $daydate . "<br>";
 		$duration = (strtotime($end)-strtotime($start))/60;	 
 
 	 // Query whether entry is already in database
@@ -87,16 +93,49 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			echo "query #3 run";
 		}
 	}
-   // End of Trainging Records 1
+    // End of Training Records 1
 
 
 
 
-  // Training Records 2
+    // Training Records 2
+    for($i=0; $i<count($json_arr[training_records2]); $i++) {
+        // Get needed data
+        $daydate_millisec = $json_arr[training_records2][$i][daydate];
+        $class = $json_arr[training_records2][$i]['class'];
+        $sleep = $json_arr[training_records2][$i][sleep];
+        $heart_rate = $json_arr[training_records2][$i][sleep_rate];
+        $health = $json_arr[training_records2][$i][health];
+
+        
+    }
+        
+    // End of Training Records 2
         
         
+    
+    // Fitness Test
+    for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
+        // Get needed data
+        $subject_id  = $json_arr[fitness_test][$i][subject_id];
+        $group_id  = $json_arr[fitness_test][$i][group_id];
+        $daydate_millisec  = $json_arr[fitness_test][$i][daydate];
+        $pushup  = $json_arr[fitness_test][$i][pushup];
+        $situp  = $json_arr[fitness_test][$i][situp];
+        $chinup  = $json_arr[fitness_test][$i][chinup];
+        $hang  = $json_arr[fitness_test][$i][hang];
+        $sitreach  = $json_arr[fitness_test][$i][sitreach];
+        $height  = $json_arr[fitness_test][$i][height];
+        $mass  = $json_arr[fitness_test][$i][mass];
+        $waist  = $json_arr[fitness_test][$i][waist];
+        $hip  = $json_arr[fitness_test][$i][hip];
+        
+        //
         
         
+    }
+        
+    // Eod of Fitness Test
         
         
         
