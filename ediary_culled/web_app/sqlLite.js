@@ -817,8 +817,7 @@ function downloadData(){
 							for(var i=0;i<json["compcodes"].length;i++){
 								insertCompcodes(json["compcodes"][i]);
 							}
-				document.getElementById("content").innerHTML += "Compcodes<br>";}
-				,function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					}
 					//if(json["training_records1"].length>0){
 						tx.executeSql('Delete From training_records1 Where student_id=?', [studentid], function (t, r) {
@@ -832,42 +831,42 @@ function downloadData(){
 							for(var i=0;i<json["training_records2"].length;i++){
 								insertTrainingRecords2(json["training_records2"][i]);
 							}
-				document.getElementById("content").innerHTML += "Training 2<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					//}
 					//if(json["fitness_test"].length>0){
 						tx.executeSql('Delete From fitness_test Where student_id=?', [studentid], function (t, r) {
 							for(var i=0;i<json["fitness_test"].length;i++){
 								insertFitnessTest(json["fitness_test"][i]);
 							}
-				document.getElementById("content").innerHTML += "Fitness Test<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					//}
 					if(json["rating_item_map"].length>0){
 						tx.executeSql('Delete From rating_item_map Where groupname=?', [json["rating_item_map"][0]["groupname"]], function (t, r) {
 							for(var i=0;i<json["rating_item_map"].length;i++){
 								insertRatingItemMap(json["rating_item_map"][i]);
 							}
-				document.getElementById("content").innerHTML += "Rating Map<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					}
 					tx.executeSql('Select id From Student', [], function (t, r) {
 						for(var i=0;i<json["rating_item"].length;i++){
 							insertRatingItem(json["rating_item"][i]);
 						}
-				document.getElementById("content").innerHTML += "Rating Item<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					tx.executeSql('Select id From Student', [], function (t, r) {
 						for(var i=0;i<json["student"].length;i++){
 							insertStudent(json["student"][i]);
 						}
-				document.getElementById("content").innerHTML += "Student<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					tx.executeSql('Select id From Student', [], function (t, r) {
 						for(var i=0;i<json["class"].length;i++){
 							insertClass(json["class"][i]);
 						}
-				document.getElementById("content").innerHTML += "Class<br>";});
+					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					tx.executeSql('Select id From Student', [], function (t, r) {
 						for(var i=0;i<json["classmap"].length;i++){
 							insertClassmap(json["classmap"][i]);
 						}
-				document.getElementById("content").innerHTML += "ClassMao<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+					},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 			} else {
 				document.location = "LoginTimedOut.html";
 			}
