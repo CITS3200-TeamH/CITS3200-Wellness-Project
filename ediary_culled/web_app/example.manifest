@@ -21,6 +21,7 @@ LoginTimedOut.html
 #javascript
 jQuery.js
 javascript/functions.js
+sqlLite.js
 
 #css
 css/style.css
