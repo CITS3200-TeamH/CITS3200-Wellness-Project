@@ -1049,7 +1049,8 @@ if(dataBase==null){
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
-						document.location = "Download.html";
+						uploadDump = 1;
+						extractedData(JSON);
 					}
 				},function (t, error) {alert('Obtaining Class Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
@@ -1105,7 +1106,6 @@ function extractedData(JSON){
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
 					//if(response=="success"){
-						//document.location = "Download.html";
 						downloadData();
 					//} else {
 					//	alert("Sorry. We had trouble uploading your data. Please log in again.");
