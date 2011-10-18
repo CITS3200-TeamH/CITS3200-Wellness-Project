@@ -26,6 +26,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	uploadXML(1234567);
 }
 
+uploadXML(1234567);
 
 function uploadXML($username) {
 		
@@ -103,7 +104,7 @@ function uploadXML($username) {
 
 
 
-
+ 
     // Training Records 2
     echo "Starting Training Records 2<br>";
     for($i=0; $i<count($json_arr[training_records2]); $i++) {
@@ -140,7 +141,7 @@ function uploadXML($username) {
     // End of Training Records 2
         
         
-    
+  /*  
     // Fitness Test
     for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
         // Get needed data
@@ -187,7 +188,8 @@ function uploadXML($username) {
     }
         
     // End of Fitness Test
-
+		
+    */
         
     }
 ?>        
