@@ -1,7 +1,6 @@
 <?php
     
 // --- Modifiable Variables --- //
-$validPeriod = 86400;
 // --- End Of Modifiable Variables --- //
 
 
@@ -22,11 +21,10 @@ include "connect.php";
     }
 
     function validateToken($token) {
-		
+		$validPeriod = 86400;
        // if($id != null){
             
             $time = (int) substr($token,0 ,strpos($token," "));
-            
             if((idate("U") - $time) < $validPeriod) {
                 $id = (int) substr($token,strpos($token," "));
                 return $id;
