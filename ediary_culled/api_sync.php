@@ -13,7 +13,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])) { //check to see that we ha
 		$id = validateToken($_GET["token"]);
 	}
 		
-	if ($id != "invalid") {
+	if ($id != "error-2") {
 		sync($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
