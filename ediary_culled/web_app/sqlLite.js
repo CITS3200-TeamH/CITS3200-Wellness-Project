@@ -636,17 +636,17 @@ function loadTest(){
 			var rr = r.rows.item(0);
 			var currentDate = new Date();
 			currentDate.setTime(rr['daydate']);
-			content.innerHTML = "Date: "+currentDate.toDateString()+"<br>";
-			content.innerHTML += "Push Up's in 30 seconds: "+rr['pushup']+"<br>";
-			content.innerHTML += "Sit Up Candance Test: "+rr['situp']+"<br>";
-			content.innerHTML += "Number of Chin Up's: "+rr['chinup']+"<br>";
-			content.innerHTML += "Hang Duration: "+rr['hang']+" seconds<br>";
-			content.innerHTML += "Sit & Reach Trial 1: "+rr['sitreach1']+" cm<br>";
-			content.innerHTML += "Sit & Reach Trial 2: "+rr['sitreach2']+" cm<br>";
-			content.innerHTML += "Height: "+rr['height']+" cm<br>";
-			content.innerHTML += "Mass: "+rr['mass']+" kg<br>";
-			content.innerHTML += "Waist Measurement: "+rr['waist']+" cm<br>";
-			content.innerHTML += "Hip Measurement: "+rr['hip']+" cm<br>";
+			content.innerHTML = "<span class='header'>Date:</span><p>"+currentDate.toDateString()+"</p>";
+			content.innerHTML += "<span class='header'>Push Up's in 30 seconds:</span><p>"+rr['pushup']+"</p>";
+			content.innerHTML += "<span class='header'>Sit Up Candance Test:</span><p>"+rr['situp']+"</p>";
+			content.innerHTML += "<span class='header'>Number of Chin Up's:</span><p>"+rr['chinup']+"</p>";
+			content.innerHTML += "<span class='header'>Hang Duration:</span><p>"+rr['hang']+" seconds</p>";
+			content.innerHTML += "<span class='header'>Sit & Reach Trial 1:</span><p>"+rr['sitreach1']+" cm</p>";
+			content.innerHTML += "<span class='header'>Sit & Reach Trial 2:</span><p>"+rr['sitreach2']+" cm</p>";
+			content.innerHTML += "<span class='header'>Height:</span><p>"+rr['height']+" cm</p>";
+			content.innerHTML += "<span class='header'>Mass:</span><p>"+rr['mass']+" kg</p>";
+			content.innerHTML += "<span class='header'>Waist Measurement:</span><p>"+rr['waist']+" cm</p>";
+			content.innerHTML += "<span class='header'>Hip Measurement:</span><p>"+rr['hip']+" cm</p>";
 		},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 	});
 }
