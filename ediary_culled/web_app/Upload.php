@@ -1,6 +1,6 @@
 
 <br>
-This page is allowing invalid tokens.
+This page is allowing invalid tokens!!
 <br>
 
 <?php
@@ -49,18 +49,22 @@ function uploadXML($username) {
 
 
     // Student
-	echo "Student data here  <br>";
+    echo "Starting Student<br>";
+        // Get needed data
         $age = $json_arr[student][0][age];
         $active = $json_arr[student][0][active];
         $gender = $json_arr[student][0][gender];
         $athletic = $json_arr[student][0][athletic];
         $sport = $json_arr[student][0][sport];
     
+        // Update given fields
+    echo "Student done<br>";
     // End of Student
         
         
 
     // Training Records 1
+    echo "Starting Training Records 2<br>";
 	for($i=0; $i<count($json_arr[training_records1]); $i++) {
 	   // Get needed data
 		$daydate_millisec = $json_arr[training_records1][$i][daydate];
@@ -75,7 +79,6 @@ function uploadXML($username) {
 		$duration = (strtotime($end)-strtotime($start))/60;	 
 
 	 // Query whether entry is already in database
-		
 		$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
 		$rows = mysql_query($sql) or die("error-5 #1");
 		echo "query #1 run <br>";		
@@ -92,49 +95,92 @@ function uploadXML($username) {
 			echo "query #3 run";
 		}
 	}
+    echo "Training Records 1 done<br>";
     // End of Training Records 1
 
 
 
 
     // Training Records 2
+    echo "Starting Training Records 2<br>";
     for($i=0; $i<count($json_arr[training_records2]); $i++) {
         // Get needed data
         $daydate_millisec = $json_arr[training_records2][$i][daydate];
         $class = $json_arr[training_records2][$i]['class'];
         $sleep = $json_arr[training_records2][$i][sleep];
-        $heart_rate = $json_arr[training_records2][$i][sleep_rate];
+        $heart_rate = $json_arr[training_records2][$i][heart_rate];
         $health = $json_arr[training_records2][$i][health];
+        $ratings = $json_arr[training_records2][$i][ratings];
 
+        // Work variables to use with database	
+		$daydate = date("Y-m-d", $daydate_millisec/1000);
         
-    }
+        // Query whether entry is already in database
+		
+		$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND daydate='$daydate' AND class='$class'";
+        $rows = mysql_query($sql) or die("error-5 #1");
+        echo "query #1 run <br>";		
+		echo "rows found:" . mysql_num_rows($rows) . "<br>";		
         
+        // If an entry was found update it, otherwise create a new entry
+        if (mysql_num_rows($rows) != 0) {
+            $sql = "UPDATE training_records2 SET sleep='$sleep', heart_rate='$heart_rate', health='$health', ratings='$ratings' WHERE student_id='$username' AND daydate='$daydate' AND class='$class'";
+            mysql_query($sql) or die("error-5 #2 <br>");
+			echo "query #2 run"; 
+		} else {
+            $sql = "INSERT INTO training_records2 VALUES('$daydate', '$username', '$class', '$heart_rate', '$health', '$ratings')";
+            mysql_query($sql) or die("error-5 #3");
+			echo "query #3 run";
+		}
+	}
+    echo "Training Records 2 done<br>";    
     // End of Training Records 2
         
         
-    
+/*    
     // Fitness Test
     for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
         // Get needed data
         $subject_id  = $json_arr[fitness_test][$i][subject_id];
         $group_id  = $json_arr[fitness_test][$i][group_id];
         $daydate_millisec  = $json_arr[fitness_test][$i][daydate];
+        $test_num = $json_arr[fitness_test][$i][test_num;
         $pushup  = $json_arr[fitness_test][$i][pushup];
         $situp  = $json_arr[fitness_test][$i][situp];
         $chinup  = $json_arr[fitness_test][$i][chinup];
         $hang  = $json_arr[fitness_test][$i][hang];
-        $sitreach  = $json_arr[fitness_test][$i][sitreach];
+        $sitreach1  = $json_arr[fitness_test][$i][sitreach1];
         $height  = $json_arr[fitness_test][$i][height];
         $mass  = $json_arr[fitness_test][$i][mass];
         $waist  = $json_arr[fitness_test][$i][waist];
         $hip  = $json_arr[fitness_test][$i][hip];
         
-        //
+        // Work variables to use with database	
+		$daydate = date("Y-m-d", $daydate_millisec/1000);
         
+        // Query whether entry is already in database
+		$sql = "SELECT * FROM fitness_test WHERE subject_id='$subject_id' AND group_id='$group_id' AND test_num='$test_num'";
+        $rows = mysql_query($sql) or die("error-5 #1");
+        echo "query #1 run <br>";		
+		echo "rows found:" . mysql_num_rows($rows) . "<br>";		
         
+        // If an entry was found update it, otherwise create a new entry
+        if (mysql_num_rows($rows) != 0) {
+            $sql = "UPDATE fitness_test SET pushup='$pushup', situp='$situp', chinup='$chinup', hang='$hang', sitreach1='$sitreach1', height='$height', mass='$mass', waist='$waist', hip='$hip' WHERE subject_id='$subject_id' AND group_id='$group_id' AND test_num='$test_num'"; // note this query should really update bmi, ratio, bmi_rating and wh_rating too.
+            mysql_query($sql) or die("error-5 #2 <br>");
+			echo "query #2 run"; 
+		} else {
+            $sql = "INSERT INTO fitness_test VALUES('$subject_id', '$group_id', '$daydate', '$test_num', '$pushup', '$situp', '$chinup', '$hang', '$sitreach1', '$sitreach2', '$height', '$mass', '$bmi', '$bmi_rating', '$waist', '$hip', '$ratio', '$wh_rating')";
+            mysql_query($sql) or die("error-5 #3");
+			echo "query #3 run";
+		}
     }
         
     // End of Fitness Test
+*/
+        
+    }
+?>        
         
         
         
@@ -152,131 +198,4 @@ function uploadXML($username) {
         
         
         
-        
-        
-        
-        
-        
-        /*
-        
-        $sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
-		$result = mysql_fetch_array(mysql_query($sql));
-		$lower = strtotime($result["start"]);
-		$upper = strtotime($result["finish"]);
-		$today = strtotime(date("Y-m-d"));
-		$window = $result["window"];
-		
-		//!!!!!!!!!!!!!!!!! change this to POST
-		$json_arr=json_decode($_GET['data'],true);
-		echo "<br>" . $json_arr;
-		echo "<br> Received JSON message: <br>";
-		echo json_encode($json_arr);
-		echo "<br>";
-			
-		//Code for student
-	//echo "number of students given: " . count($json_arr[student]);
-	//echo "<br>";
-		//for($i=0; $i<count($json_arr[student]); $i++){
-			echo "student id =". $json_arr["student"] . "<br>";
-			
-		//}
-			update student with id=$arr["student"][i]["student_id"]
-				variables to update:
-					age
-					active
-					gender
-					athletic
-					sport
-				
-			
-			
-		//Code for training_records1
-//	echo  $json_arr["training_records1"][0];
-//	echo $record["daydate"];
-	
-		for($i=0; $i<count($json_arr[training_records1]); $i++) {
-                		//echo json_decode($json_arr[training_records1][$i]) . "<br>";
-				$training_record = json_decode($json_arr[training_records1][$i], true);
-		                echo $training_record;
-				//echo "daydate = " . $training_record[daydate] . "<br>";
-                		//echo "compcode = " . $training_record[compcode] . "<br>";
-			}					
-
-        
-        for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
-            echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
-            
-             
-             }	
-
-
-			
-
-				insert into training_records1 variables:
-					$arr["training_records1"][i]["daydate"] !!warning in milliseconds
-					$arr["training_records1"][i]["compcode"]
-					$arr["training_records1"][i]["start"]
-					$arr["training_records1"][i]["end"]
-					$arr["training_records1"][i]["student_id"]
-					$arr["training_records1"][i]["time_of_day"]
-					$arr["training_records1"][i]["class"]
-				
-			} 
-                          
-        //Code for training_records2
-        
-        for($i=0; $i<count($json_arr[training_records2]); $i++) {
-            for($j=0; $j<count($json_arr[training_records2][$i]); $j++) {
-                echo "value for $i $j  = " . $json_arr[training_records2][$i][$j] . " <br>";
-            }
-        }
-			
-		
-			for($i=0;$i<count($arr["training_records1"]);i++){
-				
-				check if there is a record yet for this student,date and class
-				then update or insert appropriately
-				
-				training_records2 variables:
-					$arr["training_records2"][i]["daydate"] !!warning in milliseconds
-					$arr["training_records2"][i]["heart_rate"]
-					$arr["training_records2"][i]["sleep"]
-					$arr["training_records2"][i]["ratings"]
-					$arr["training_records2"][i]["student_id"]
-					$arr["training_records2"][i]["health"]
-					$arr["training_records2"][i]["class"]
-				
-			}
-			
-        
-		//Code for fitness_test
-             
-        for($i=0; $i<count($json_arr[fitness_test]); $i++) {
-            for($j=0; $j<count($json_arr[fitness_test][$i]); $j++) {
-                echo "value for $i $j  = " . $json_arr[fitness_test][$i][$j] . " <br>";
-            }
-        }
-        
-             
-			for($i=0;$i<count($arr["fitness_test"]);i++){
-				
-				insert into training_records1 variables:
-					$arr["fitness_test"][i]["daydate"] !!warning in milliseconds
-					$arr["fitness_test"][i]["subject_id"]
-					$arr["fitness_test"][i]["group_id"]
-					$arr["fitness_test"][i]["situp"]
-					$arr["fitness_test"][i]["pushup"]
-					$arr["fitness_test"][i]["chinup"]
-					$arr["fitness_test"][i]["hang"]
-					$arr["fitness_test"][i]["sitreach1"]
-					$arr["fitness_test"][i]["sitreach2"]
-					$arr["fitness_test"][i]["height"]
-					$arr["fitness_test"][i]["mass"]
-					$arr["fitness_test"][i]["waist"]
-					$arr["fitness_test"][i]["hip"]
-				
-			}
-    */
-    
-	}
-?>
+     
