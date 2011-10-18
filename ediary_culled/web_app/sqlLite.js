@@ -824,7 +824,8 @@ function downloadData(){
 							for(var i=0;i<json["training_records1"].length;i++){
 								insertTrainingRecords1(json["training_records1"][i]);
 							}
-				//document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+				//document.getElementById("content").innerHTML += "Training 1<br>";
+				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					//}
 					//if(json["training_records2"].length>0){
 						tx.executeSql('Delete From training_records2 Where student_id=?', [studentid], function (t, r) {
