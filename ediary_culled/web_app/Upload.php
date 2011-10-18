@@ -60,11 +60,17 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		//Code for training_records1
 
 			for($i=0; $i<count($json_arr[training_records1]); $i++) {
-				for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
-					echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
-				}	
+				$training_record = json_decode($json_arr[training_records1][$i], true);
+                echo "daydate = " . $training_record[daydate];
+                echo "compcode = " . $training_record[compcode];
 			}					
 
+        /*
+        for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
+            echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
+            /*
+             
+             }	
 
 
 			/*
@@ -78,11 +84,19 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 					$arr["training_records1"][i]["time_of_day"]
 					$arr["training_records1"][i]["class"]
 				
-			}
+			} 
+                          
+        //Code for training_records2
+        
+        for($i=0; $i<count($json_arr[training_records2]); $i++) {
+            for($j=0; $j<count($json_arr[training_records2][$i]); $j++) {
+                echo "value for $i $j  = " . $json_arr[training_records2][$i][$j] . " <br>";
+            }
+        }
 			
-		//Code for training_records2
-			for($i=0;$i<count($arr["training_records1"]);i++){
-				/*
+		
+			/*for($i=0;$i<count($arr["training_records1"]);i++){
+				
 				check if there is a record yet for this student,date and class
 				then update or insert appropriately
 				
@@ -97,7 +111,16 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 				
 			}
 			
+        
 		//Code for fitness_test
+             
+        for($i=0; $i<count($json_arr[fitness_test]); $i++) {
+            for($j=0; $j<count($json_arr[fitness_test][$i]); $j++) {
+                echo "value for $i $j  = " . $json_arr[fitness_test][$i][$j] . " <br>";
+            }
+        }
+        
+         /*    
 			for($i=0;$i<count($arr["fitness_test"]);i++){
 				/*
 				insert into training_records1 variables:
