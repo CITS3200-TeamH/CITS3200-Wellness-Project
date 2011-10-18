@@ -70,9 +70,23 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	 // Query whether entry is already in database
 		
 		$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
-
-
+		$rows = mysql_query($sql) or die("error-5");
+	
+	 // If an entry was found update it, otherwise create a new entry
+		if (mysql_num_rows($rows) != 0) {
+			$sql = "UPDATE training_records1 SET start='$start', end='$end', duration='$duration'  WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
+			mysql_query($sql) or die("error-5"); 
+		} else {										
+			$sql = "INSERT INTO training_records1 VALUES('$daydate', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\' \' )";
+			mysql_query($sql) or die("error-5");
+		}
 	}
+   // End of Trainging Records 1
+
+
+
+
+  // Training Records 2
         
         
         
@@ -122,20 +136,20 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			echo "student id =". $json_arr["student"] . "<br>";
 			
 		//}
-		/*	update student with id=$arr["student"][i]["student_id"]
+			update student with id=$arr["student"][i]["student_id"]
 				variables to update:
 					age
 					active
 					gender
 					athletic
 					sport
-				*/
+				
 			
 			
 		//Code for training_records1
 //	echo  $json_arr["training_records1"][0];
 //	echo $record["daydate"];
-/*	
+	
 		for($i=0; $i<count($json_arr[training_records1]); $i++) {
                 		//echo json_decode($json_arr[training_records1][$i]) . "<br>";
 				$training_record = json_decode($json_arr[training_records1][$i], true);
@@ -144,15 +158,15 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
                 		//echo "compcode = " . $training_record[compcode] . "<br>";
 			}					
 
-        /*
-  /*      for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
+        
+        for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
             echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
-            /*
+            
              
              }	
 
 
-			/*
+			
 
 				insert into training_records1 variables:
 					$arr["training_records1"][i]["daydate"] !!warning in milliseconds
@@ -174,7 +188,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
         }
 			
 		
-			/*for($i=0;$i<count($arr["training_records1"]);i++){
+			for($i=0;$i<count($arr["training_records1"]);i++){
 				
 				check if there is a record yet for this student,date and class
 				then update or insert appropriately
@@ -199,9 +213,9 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
             }
         }
         
-         /*    
+             
 			for($i=0;$i<count($arr["fitness_test"]);i++){
-				/*
+				
 				insert into training_records1 variables:
 					$arr["fitness_test"][i]["daydate"] !!warning in milliseconds
 					$arr["fitness_test"][i]["subject_id"]
