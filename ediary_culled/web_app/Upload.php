@@ -68,7 +68,7 @@ function uploadXML($username) {
         
 
     // Training Records 1
-    echo "Starting Training Records 2<br>";
+    echo "Starting Training Records 1<br>";
 	for($i=0; $i<count($json_arr[training_records1]); $i++) {
 	   // Get needed data
 		$daydate_millisec = $json_arr[training_records1][$i][daydate];
@@ -132,7 +132,7 @@ function uploadXML($username) {
             mysql_query($sql) or die("error-5 #2 <br>");
 			echo "query #2 run"; 
 		} else {
-            $sql = "INSERT INTO training_records2 VALUES('$daydate', '$username', '$class', '$heart_rate', '$health', '$ratings')";
+            $sql = "INSERT INTO training_records2 VALUES('$daydate', '$username', '$class', '$heart_rate', '$sleep', '$health', '$ratings')";
             mysql_query($sql) or die("error-5 #3");
 			echo "query #3 run";
 		}
