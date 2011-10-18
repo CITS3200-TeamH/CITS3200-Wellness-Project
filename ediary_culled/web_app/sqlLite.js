@@ -38,7 +38,7 @@ function loadRatingsPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString().substring(0,d.toDateString().indexOf(' '))+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -185,7 +185,7 @@ function loadFitnessCategories(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString().substring(0,d.toDateString().indexOf(' '))+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -351,7 +351,7 @@ function loadWellnessPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString().substring(0,d.toDateString().indexOf(' '))+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -455,7 +455,7 @@ function loadDay(){
 						dateValue = dateValue.substring(dateValue.indexOf("date=")+5);
 						var d = new Date();
 						d.setTime(dateValue);
-						document.getElementById("title").innerHTML = d.toDateString();
+						document.getElementById("title").innerHTML = d.toDateString().substring(0,d.toDateString().lastIndexOf(' '));
 						tx.executeSql('Select * From training_records1 Where daydate=? And class=? And student_id=?',[d.getTime(),classname,studentid],function (t, r) {
 							if(r.rows.length>0){
 								list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Exercise.html?date="+dateValue+'"'+"'><a><img src='images/ExerciseCompleted.jpg'/><span class='name'>Exercise Data Completed";
@@ -1107,15 +1107,15 @@ function extractedData(JSON){
 					xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
 					//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
-					alert(tostring(JSON));
+					//alert(tostring(JSON));
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
-					//if(response=="success"){
+					if(response=="success"){
 						downloadData();
-					//} else {
-					//	alert("Sorry. We had trouble uploading your data. Please log in again.");
-					//	document.location = "Logon.html";
-					//}
+					} else {
+						alert("Sorry. We had trouble uploading your data. Please log in again.");
+						document.location = "Logon.html";
+					}
 				}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 		});
