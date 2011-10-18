@@ -37,12 +37,9 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		//!!!!!!!!!!!!!!!!! change this to POST
 		$json_arr=json_decode($_GET['data'],true);
 		echo "<br> Received JSON message: <br>";
-		
-		
-		//Uncomment this if you wish it will reprint the json array
 		echo json_encode($json_arr);
 		echo "<br>";
-		//echo " "+$json_arr;	
+			
 		//Code for student
 	echo "number of students given: " . count($json_arr[student]);
 	echo "<br>";
@@ -60,9 +57,18 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 				*/
 			
 			
-	/*	//Code for training_records1
-			for($i=0;$i<count($arr["training_records1"]);i++){
-				/*
+		//Code for training_records1
+
+			for($i=0; $i<count($json_arr[training_records1]); $i++) {
+				for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
+					echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
+				}	
+			}					
+
+
+
+			/*
+
 				insert into training_records1 variables:
 					$arr["training_records1"][i]["daydate"] !!warning in milliseconds
 					$arr["training_records1"][i]["compcode"]
