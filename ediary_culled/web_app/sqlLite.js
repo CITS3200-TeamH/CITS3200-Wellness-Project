@@ -1028,28 +1028,28 @@ if(dataBase==null){
 						tx.executeSql('Select * From training_records2 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								JSON["training_records2"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
+								JSON["training_records2"][i] = {"daydate":rr["daydate"],"class":rr["class"],"heart_rate":rr["heart_rate"],"sleep":rr["sleep"],"health":rr["health"],"ratings":rr["ratings"]};
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 						tx.executeSql('Select * From training_records1 Where class=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								JSON["training_records1"][i] = {"daydate":rr["daydate"],"student_id":rr["student_id"],"class":rr["class"],"compcode":rr["compcode"],"start":rr["start"],"end":rr["end"],"time_of_day":rr["time_of_day"]};
+								JSON["training_records1"][i] = {"daydate":rr["daydate"],"class":rr["class"],"compcode":rr["compcode"],"start":rr["start"],"end":rr["end"],"time_of_day":rr["time_of_day"]};
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 						tx.executeSql('Select * From fitness_test Where group_id=? And student_id=? And Uploaded=?',[classname,studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								JSON["fitness_test"][i] = {"subject_id":rr["student_id"],"group_id":rr["group_id"],"daydate":rr["daydate"],"pushup":rr["pushup"],"situp":rr["situp"],"chinup":rr["chinup"],"hang":rr["hang"],"sitreach1":rr["sitreach2"],"height":rr["height"],"mass":rr["mass"],"waist":rr["waist"],"hip":rr["hip"]};
+								JSON["fitness_test"][i] = {"group_id":rr["group_id"],"daydate":rr["daydate"],"pushup":rr["pushup"],"situp":rr["situp"],"chinup":rr["chinup"],"hang":rr["hang"],"sitreach1":rr["sitreach1"],"sitreach2":rr["sitreach2"],"height":rr["height"],"mass":rr["mass"],"waist":rr["waist"],"hip":rr["hip"]};
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 						tx.executeSql('Select * From student Where id=? And Uploaded=?',[studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								JSON["student"][i] = {"id":rr["id"],"first":rr["first"],"last":rr["last"],"active":rr["active"],"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
+								JSON["student"][i] = {"active":rr["active"],"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
