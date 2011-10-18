@@ -989,7 +989,11 @@ function insertedData(){
 	//document.getElementById("content").innerHTML += insertDump+"<br>";
 	if(insertDump==0){
 		//alert("done");
-		document.location = locationAfterDownload;
+		if(locationAfterDownload!=null){
+			document.location = locationAfterDownload;
+		} else {
+			document.location = "Home.html";
+		}
 	}
 }
 
