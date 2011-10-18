@@ -458,31 +458,31 @@ function loadDay(){
 						document.getElementById("title").innerHTML = d.toDateString();
 						tx.executeSql('Select * From training_records1 Where daydate=? And class=? And student_id=?',[d.getTime(),classname,studentid],function (t, r) {
 							if(r.rows.length>0){
-								list.innerHTML += "<li class='menu'><a href='Exercise.html?date="+dateValue+"'><img src='images/ExerciseCompleted.jpg'/><span class='name'>Exercise Data Completed";
+								list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Exercise.html?date="+dateValue+'"'+"'><a><img src='images/ExerciseCompleted.jpg'/><span class='name'>Exercise Data Completed";
 							} else {
 								
-							list.innerHTML += "<li class='menu'><a href='Exercise.html?date="+dateValue+"'><img src='images/ExerciseNotCompleted.jpg'/><span class='name'>Exercise Data Incomplete";
+							list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Exercise.html?date="+dateValue+'"'+"'><a><img src='images/ExerciseNotCompleted.jpg'/><span class='name'>Exercise Data Incomplete";
 							}
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 						list.innerHTML += "</span><span class='arrow'/></a></li>";
 						tx.executeSql('Select * From training_records2 Where daydate=? And class=? And student_id=?',[d.getTime(),classname,studentid],function (t, r) {
 							if(r.rows.length==1){
 								if(r.rows.item(0)['ratings']!=null&&r.rows.item(0)['ratings'].toString().length>0){
-									list.innerHTML += "<li class='menu'><a href='Ratings.html?date="+dateValue+"'><img src='images/RatingCompleted.png'/><span class='name'>Rating Items Completed";
+									list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Ratings.html?date="+dateValue+'"'+"'><a><img src='images/RatingCompleted.png'/><span class='name'>Rating Items Completed";
 								} else {
-									list.innerHTML += "<li class='menu'><a href='Ratings.html?date="+dateValue+"'><img src='images/RatingNotCompleted.png'/><span class='name'>Rating Items Incomplete";
+									list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Ratings.html?date="+dateValue+'"'+"'><a><img src='images/RatingNotCompleted.png'/><span class='name'>Rating Items Incomplete";
 								}
 								list.innerHTML += "</span><span class='arrow'/></a></li>";
 								if(r.rows.item(0)['health']!=null&&r.rows.item(0)['health'].toString()>0){
-									list.innerHTML += "<li class='menu'><a href='Wellness.html?date="+dateValue+"'><img src='images/WellnessCompleted.jpg'/><span class='name'>Wellness Data Completed";
+									list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Wellness.html?date="+dateValue+'"'+"'><a><img src='images/WellnessCompleted.jpg'/><span class='name'>Wellness Data Completed";
 								} else {
-									list.innerHTML += "<li class='menu'><a href='Wellness.html?date="+dateValue+"'><img src='images/WellnessNotCompleted.jpg'/><span class='name'>Wellness Data Incomplete";
+									list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Wellness.html?date="+dateValue+'"'+"'><a><img src='images/WellnessNotCompleted.jpg'/><span class='name'>Wellness Data Incomplete";
 								}
 								list.innerHTML += "</span><span class='arrow'/></a></li>";
 							} else {
-								list.innerHTML += "<li class='menu'><a href='Ratings.html?date="+dateValue+"'><img src='images/RatingNotCompleted.png'/><span class='name'>Rating Items Incomplete";
+								list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Ratings.html?date="+dateValue+'"'+"'><a><img src='images/RatingNotCompleted.png'/><span class='name'>Rating Items Incomplete";
 								list.innerHTML += "</span><span class='arrow'/></a></li>";
-								list.innerHTML += "<li class='menu'><a href='Wellness.html?date="+dateValue+"'><img src='images/WellnessNotCompleted.jpg'/><span class='name'>Wellness Data Incomplete";
+								list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Wellness.html?date="+dateValue+'"'+"'><a><img src='images/WellnessNotCompleted.jpg'/><span class='name'>Wellness Data Incomplete";
 								list.innerHTML += "</span><span class='arrow'/></a></li>";
 							}
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
@@ -516,7 +516,7 @@ function loadCalendar(){
 						d.setSeconds(0);
 						d.setMilliseconds(0);
 						for(var i=0;i<r.rows.item(0)['window'];i++){
-							list.innerHTML += "<li class='menu'><a href='Day.html?date="+d.getTime()+"'><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>";
+							list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"Day.html?date="+d.getTime()+'"'+"'><a><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>";
 							d.setDate(d.getDate()-1);
 						}
 					} else {
@@ -989,7 +989,11 @@ function insertedData(){
 	//document.getElementById("content").innerHTML += insertDump+"<br>";
 	if(insertDump==0){
 		//alert("done");
-		document.location = locationAfterDownload;
+		if(locationAfterDownload!=null){
+			document.location = locationAfterDownload;
+		} else {
+			document.location = "Home.html";
+		}
 	}
 }
 
@@ -1049,7 +1053,8 @@ if(dataBase==null){
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 					} else {
-						document.location = "Download.html";
+						uploadDump = 1;
+						extractedData(JSON);
 					}
 				},function (t, error) {alert('Obtaining Class Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
@@ -1105,7 +1110,6 @@ function extractedData(JSON){
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
 					//if(response=="success"){
-						//document.location = "Download.html";
 						downloadData();
 					//} else {
 					//	alert("Sorry. We had trouble uploading your data. Please log in again.");
