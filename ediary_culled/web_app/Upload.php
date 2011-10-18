@@ -36,17 +36,18 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 		
 		//!!!!!!!!!!!!!!!!! change this to POST
 		$json_arr=json_decode($_GET['data'],true);
+		echo "<br>" . $json_arr;
 		echo "<br> Received JSON message: <br>";
 		echo json_encode($json_arr);
 		echo "<br>";
 			
 		//Code for student
-	echo "number of students given: " . count($json_arr[student]);
-	echo "<br>";
-		for($i=0; $i<count($json_arr[student]); $i++){
-			echo "student id =". $json_arr[student][$i] . "<br>";
+	//echo "number of students given: " . count($json_arr[student]);
+	//echo "<br>";
+		//for($i=0; $i<count($json_arr[student]); $i++){
+			echo "student id =". $json_arr["student"] . "<br>";
 			
-		}
+		//}
 		/*	update student with id=$arr["student"][i]["student_id"]
 				variables to update:
 					age
@@ -58,16 +59,19 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 			
 			
 		//Code for training_records1
-
-			for($i=0; $i<count($json_arr[training_records1]); $i++) {
-                echo "<br> " . json_decode($json_arr[training_records1][$i] . "<br>";
+//	echo  $json_arr["training_records1"][0];
+//	echo $record["daydate"];
+/*	
+		for($i=0; $i<count($json_arr[training_records1]); $i++) {
+                		//echo json_decode($json_arr[training_records1][$i]) . "<br>";
 				$training_record = json_decode($json_arr[training_records1][$i], true);
-                echo "daydate = " . $training_record[daydate] . "<br>";
-                echo "compcode = " . $training_record[compcode] . "<br>";
+		                echo $training_record;
+				//echo "daydate = " . $training_record[daydate] . "<br>";
+                		//echo "compcode = " . $training_record[compcode] . "<br>";
 			}					
 
         /*
-        for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
+  /*      for($j=0; $j<count($json_arr[training_records1][$i]); $j++) {
             echo "value for $i $j  = " . $json_arr[training_records1][$i][$j] . " <br>";
             /*
              
