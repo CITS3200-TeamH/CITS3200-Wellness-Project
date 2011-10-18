@@ -824,7 +824,7 @@ function downloadData(){
 							for(var i=0;i<json["training_records1"].length;i++){
 								insertTrainingRecords1(json["training_records1"][i]);
 							}
-				document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
+				//document.getElementById("content").innerHTML += "Training 1<br>";},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');});
 					//}
 					//if(json["training_records2"].length>0){
 						tx.executeSql('Delete From training_records2 Where student_id=?', [studentid], function (t, r) {
@@ -1105,7 +1105,7 @@ function extractedData(JSON){
 					xmlHttp.open("POST",url,false);
 					xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
-					document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
+					//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 					alert(tostring(JSON));
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
