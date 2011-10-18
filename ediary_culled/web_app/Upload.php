@@ -1,7 +1,6 @@
 
-This page is allowing invalid tokens.
 <br>
-Stuck? try this: Upload.php?data={"student":[1,2,3,4]}
+This page is allowing invalid tokens.
 <br>
 
 <?php
@@ -28,14 +27,16 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 
 	function uploadXML($username) {
 		
-    // Decode the json array
+    
+
+// Decode the json array
+        //$json_arr=json_decode($test_string, true);
         $json_arr=json_decode($_GET['data'],true);
-        
     // Print the given array
         echo json_encode($json_arr) . "<br>";
         
     // Print the student id    
-        echo "student id = ". $json_arr[student] . "<br>";
+        echo "student id = ". $json_arr[student][0][id] . "<br>";
         
     // Print some training data
         echo "training data = ". $json_arr[training_records1][0][daydate] . "<br>";
@@ -46,10 +47,11 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 
 
     // Student data
-	echo "age:2   <br>";
+	echo "Student data here  <br>";
 
 
 
+//echo $test_string;
 
 
 
@@ -70,15 +72,19 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	 // Query whether entry is already in database
 		
 		$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
-		$rows = mysql_query($sql) or die("error-5");
-	
+		$rows = mysql_query($sql) or die("error-5 #1");
+		echo "query #1 run <br>";		
+		echo "rows found:" . mysql_num_rows($rows) . "<br>";		
+
 	 // If an entry was found update it, otherwise create a new entry
 		if (mysql_num_rows($rows) != 0) {
 			$sql = "UPDATE training_records1 SET start='$start', end='$end', duration='$duration'  WHERE student_id='$username' AND daydate='$daydate' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
-			mysql_query($sql) or die("error-5"); 
+			mysql_query($sql) or die("error-5 #2 <br>");
+			echo "query #2 run"; 
 		} else {										
-			$sql = "INSERT INTO training_records1 VALUES('$daydate', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\' \' )";
-			mysql_query($sql) or die("error-5");
+			$sql = "INSERT INTO training_records1 VALUES('$daydate', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\" \" )";
+			mysql_query($sql) or die("error-5 #3");
+			echo "query #3 run";
 		}
 	}
    // End of Trainging Records 1
