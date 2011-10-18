@@ -27,7 +27,49 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 }
 
 	function uploadXML($username) {
-		$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
+		
+    // Decode the json array
+        $json_arr=json_decode($_GET['data'],true);
+        
+    // Print the given array
+        echo json_encode($json_arr);
+        
+    // Print the student id    
+        echo "student id = ". $json_arr[student] . "<br>";
+        
+    // Print some training data
+        echo "training data = ". $json_arr[training_records1][daydate] . "<br>";
+        
+        echo "<br> end of page";
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        
+        $sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 		$result = mysql_fetch_array(mysql_query($sql));
 		$lower = strtotime($result["start"]);
 		$upper = strtotime($result["finish"]);
