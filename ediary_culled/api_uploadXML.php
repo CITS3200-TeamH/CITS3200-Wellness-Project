@@ -1,7 +1,7 @@
 <?php
 /**
 	Author: Enda McCauley/20511314
-	Version: 13/10/2011
+	Version: 18/10/2011
 */
 include "api_authFunctions.php";
 
@@ -53,7 +53,7 @@ function uploadXML($username) {
 						if ($healthItemCount == 3) { //fitness data is handled differently in the XML file
 							foreach ($dataOptions->array as $data) {
 								foreach ($data->string as $display) {
-									$healthData[$index] = $display; //each 3 elements constitute a full set of activity data
+									$healthData[$index] = $display; //each 3 (0,1,2,3) elements constitute a full set of activity data
 									$index++;
 								}
 							}
@@ -82,23 +82,14 @@ function uploadXML($username) {
 							}
 						}
 						$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
-						$rows = mysql_query($sql);
+						$rows = mysql_query($sql) or die("error-5");
 						
-						if (!$rows) {
-							echo "error-5";
-							exit();
-						}
 						$values = mysql_fetch_array($rows);
 						$class = $values["class_name"];
 						
 						if ($healthItemCount == 1 && ($healthData[0] != "Enter Data" || $healthData[1] != "Enter Data" || $healthData[2] != "Enter Data")) { //update the Wellness Data if any of its fields heart rate, sleep hours or health has changed
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' && daydate='$date'";
-							$rows = mysql_query($sql);
-							
-							if (!$rows) {
-								echo "error-5";
-								exit();
-							}
+							$rows = mysql_query($sql) or die("error-5");
 							
 							$heart = false;
 							$sleep = false;
@@ -130,12 +121,7 @@ function uploadXML($username) {
 									}
 								}
 								$sql .= " WHERE student_id='$username' AND daydate='$date'";
-								$rows = mysql_query($sql);
-								
-								if (!$rows) {
-									echo "error-5";
-									exit();
-								}
+								$rows = mysql_query($sql) or die("error-5");
 							} else { //No wellness data already exists								
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class', ";
 								//Insert the data that has been edited OR insert the default values if it has not been edited
@@ -159,12 +145,7 @@ function uploadXML($username) {
 								
 								$sql .= ", \"\")";
 								echo $sql;
-								$rows = mysql_query($sql);
-								
-								if (!$rows) {
-									echo "error-5";
-									exit();
-								}
+								$rows = mysql_query($sql) or die("error-5");
 							}						
 						} else if ($healthItemCount == 2 && $ratingChanged){ //We know that at least one rating item has changed and hence must update. 
 							$data;
@@ -183,29 +164,14 @@ function uploadXML($username) {
 								$i++;
 							}
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND daydate='$date'";
-							$rows = mysql_query($sql);
-							
-							if (!$rows) {
-								echo "error-5";
-								exit();
-							}
+							$rows = mysql_query($sql) or die("error-5");
 							
 							if (mysql_num_rows($rows) != 0) { //Wellness data already exists
 								$sql = "UPDATE training_records2 SET ratings='$data' WHERE student_id='$username' AND daydate='$date'";
-								$rows = mysql_query($sql);
-								
-								if (!$rows) {
-									echo "error-5";
-									exit();
-								}
+								$rows = mysql_query($sql) or die("error-5");
 							} else { //Wellness data does not already exist
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class',null,null,null,'$data')";
-								$rows = mysql_query($sql);
-								
-								if (!$rows) {
-									echo "error-5";
-									exit();
-								}
+								$rows = mysql_query($sql) or die("error-5");
 							}
 						} else if ($healthItemCount == 3 && $index != 0) {
 							$compcode;
@@ -240,9 +206,18 @@ function uploadXML($username) {
 										if (strtotime($start) <= strtotime($end)) {
 											$duration = (strtotime($end) - strtotime($start)) / 60;
 											$TOD = getTOD($start);
-											
-											$sql = "INSERT INTO training_records1 VALUES('$date', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\"" . htmlentities($comment,ENT_QUOTES,"UTF-8") . "\")";
-											mysql_query($sql);
+
+											$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
+											$rows = mysql_query($sql) or die("error-5");
+
+											if (mysql_num_rows($rows) != 0) {
+												$sql = "UPDATE training_records1 SET start='$start', end='$end', comments=\"" . htmlentities($comment, ENT_QUOTES, "UTF-8") . "\" WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
+												mysql_query($sql) or die("error-5"); 
+
+											} else {										
+												$sql = "INSERT INTO training_records1 VALUES('$date', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\"" . htmlentities($comment,ENT_QUOTES,"UTF-8") . "\")";
+												mysql_query($sql) or die("error-5");
+											}
 										}
 									}
 								}
