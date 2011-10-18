@@ -1100,6 +1100,7 @@ function extractedData(JSON){
 					xmlHttp.open("POST",url,false);
 					xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
+					document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 					alert(tostring(JSON));
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
