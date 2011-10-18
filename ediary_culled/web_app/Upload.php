@@ -32,8 +32,8 @@ function uploadXML($username) {
 
 // Decode the json array
         //$json_arr=json_decode($test_string, true);
-        $json_arr=json_decode($_GET['data'],true);
-        //$json_arr=json_decode($_POST['data'],true);
+        //$json_arr=json_decode($_GET['data'],true);
+        $json_arr=json_decode($_POST['data'],true);
     // Print the given array
         echo json_encode($json_arr) . "<br>";
         
@@ -70,9 +70,8 @@ function uploadXML($username) {
 		$TOD = $json_arr[training_records1][$i][time_of_day];
 		$class = $json_arr[training_records1][$i]['class'];
 
-     // Work variables to use with database
+     // Work variables to use with database	
 		$daydate = date("Y-m-d", $daydate_millisec/1000); 
-        echo "daydate = " . $daydate . "<br>";
 		$duration = (strtotime($end)-strtotime($start))/60;	 
 
 	 // Query whether entry is already in database
@@ -135,7 +134,7 @@ function uploadXML($username) {
         
     }
         
-    // Eod of Fitness Test
+    // End of Fitness Test
         
         
         
