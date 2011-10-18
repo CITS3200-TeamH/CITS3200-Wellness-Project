@@ -49,21 +49,14 @@ function uploadXML($username) {
 						$healthData = null;
 						$ratingChanged = false;
 						$index = 0;
-
-						if ($healthItemCount == 3) { //fitness data is handled differently in the XML file
-							foreach ($dataOptions->array as $data) {
-								foreach ($data->string as $display) {
-									$healthData[$index] = $display; //each 3 (0,1,2,3) elements constitute a full set of activity data
-									$index++;
-								}
-							}
-						} else {
-							foreach ($dataOptions->dict as $data) {
-								$counter = 0;
-								$name;
-								foreach ($data->string as $display) {
-									$counter++;
-								
+						
+						foreach ($dataOptions->dict as $data) {
+							$counter = 0;
+							$name;
+							foreach ($data->string as $display) {
+								$counter++;
+							
+								if ($healthItemCount != 3) {
 									if ($counter == 1) { //Record the name of the data we are capturing (e.g. Heart Rate etc...)
 										$name = (string) $display;									
 									} else if ($counter % 2 == 0) { //Store the data
@@ -78,9 +71,13 @@ function uploadXML($username) {
 											}
 										}
 									}
+								} else {
+									$healthData[$index] = $display;
+									$index++;
 								}
 							}
 						}
+						
 						$sql = "SELECT classmap.class_name FROM classmap WHERE classmap.student_id='$username'";
 						$rows = mysql_query($sql) or die("error-5");
 						
@@ -144,7 +141,6 @@ function uploadXML($username) {
 								}
 								
 								$sql .= ", \"\")";
-								echo $sql;
 								$rows = mysql_query($sql) or die("error-5");
 							}						
 						} else if ($healthItemCount == 2 && $ratingChanged){ //We know that at least one rating item has changed and hence must update. 
@@ -211,7 +207,7 @@ function uploadXML($username) {
 											$rows = mysql_query($sql) or die("error-5");
 
 											if (mysql_num_rows($rows) != 0) {
-												$sql = "UPDATE training_records1 SET start='$start', end='$end', comments=\"" . htmlentities($comment, ENT_QUOTES, "UTF-8") . "\" WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
+												$sql = "UPDATE training_records1 SET start='$start', end='$end', duration='$duration', comments=\"" . htmlentities($comment, ENT_QUOTES, "UTF-8") . "\" WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
 												mysql_query($sql) or die("error-5"); 
 
 											} else {										
