@@ -23,7 +23,7 @@ include "connect.php";
 
     function validateToken($token) {
 		
-        if($id != null){
+       // if($id != null){
             
             $time = (int) substr($token,0 ,strpos($token," "));
             
@@ -35,8 +35,8 @@ include "connect.php";
             }
                 
            
-        }else{
-            return "error-3";
-        }      
+        //}else{
+        //    return "error-3";
+        //}      
     }
 ?>
