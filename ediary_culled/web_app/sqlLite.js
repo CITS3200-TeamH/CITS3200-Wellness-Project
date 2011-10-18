@@ -38,7 +38,7 @@ function loadRatingsPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Rating Items</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -185,7 +185,7 @@ function loadFitnessCategories(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Exercise Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -351,7 +351,7 @@ function loadWellnessPage(){
 	var d = new Date();
 	d.setTime(dateValue);
 	var title = document.getElementById('topbar');
-	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav"><a href="Home.html"/><img src="images/home.png"/></a><a href="Day.html?date='+d.getTime()+'">'+d.toDateString()+'</a></div>';
+	title.innerHTML = '<div id="title">Wellness Data</div><div id="leftnav" onclick="document.location='+"'"+'Day.html?date='+d.getTime()+"'"+'"><a>'+d.toDateString()+'</a></div>';
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
 		tx.executeSql('Select id From Student Where loggedOn = ? and time>?', [true,currentTime.getTime()], function (t, r) {
@@ -614,7 +614,7 @@ function listFitnessTests(){
 						var rr = r.rows.item(i);
 						var d = new Date();
 						d.setTime(rr['daydate']);
-						list.innerHTML += "<li class='menu'><a href='OldFitness.html?test="+rr['id']+"'><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>"
+						list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"OldFitness.html?test="+rr['id']+'"'+"'><a><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>"
 					}
 				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
@@ -632,7 +632,7 @@ function loadTest(){
 	testid = testid.substring(testid.indexOf("test=")+5);
 	dataBase.transaction(function (tx) {
 		tx.executeSql('Select * From Fitness_Test Where id=?',[testid],function (t, r) {
-			var content = document.getElementById("content");
+			var content = document.getElementById("list");
 			var rr = r.rows.item(0);
 			var currentDate = new Date();
 			currentDate.setTime(rr['daydate']);
