@@ -614,7 +614,7 @@ function listFitnessTests(){
 						var rr = r.rows.item(i);
 						var d = new Date();
 						d.setTime(rr['daydate']);
-						list.innerHTML += "<li class='menu'><a href='OldFitness.html?test="+rr['id']+"'><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>"
+						list.innerHTML += "<li class='menu' onclick='document.location="+'"'+"OldFitness.html?test="+rr['id']+'"'+"'><a><span class='name'>"+d.toDateString()+"</span><span class='arrow'><a></li>"
 					}
 				},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
