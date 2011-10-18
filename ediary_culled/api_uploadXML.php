@@ -141,6 +141,7 @@ function uploadXML($username) {
 								}
 								
 								$sql .= ", \"\")";
+								echo $sql;
 								$rows = mysql_query($sql) or die("error-5");
 							}						
 						} else if ($healthItemCount == 2 && $ratingChanged){ //We know that at least one rating item has changed and hence must update. 
@@ -198,7 +199,7 @@ function uploadXML($username) {
 																
 								if (($i % 4) == 0) {
 									$count = 0;
-									if ($compcode != "COMPCODE" && $start != "Start" && $end != "End" && $comment != "Comments") {
+									if ($compcode != "" && $start != "" && $end != "" && $comment != "") {
 										if (strtotime($start) <= strtotime($end)) {
 											$duration = (strtotime($end) - strtotime($start)) / 60;
 											$TOD = getTOD($start);
