@@ -32,15 +32,48 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
         $json_arr=json_decode($_GET['data'],true);
         
     // Print the given array
-        echo json_encode($json_arr);
+        echo json_encode($json_arr) . "<br>";
         
     // Print the student id    
         echo "student id = ". $json_arr[student] . "<br>";
         
     // Print some training data
-        echo "training data = ". $json_arr[training_records1][daydate] . "<br>";
+        echo "training data = ". $json_arr[training_records1][0][daydate] . "<br>";
         
-        echo "<br> end of page";
+    // Print success story
+        echo "<br> Yay :D it worked, below we'll start to build the actual page. <br><br><br><br>";
+
+
+
+    // Student data
+	echo "age:2   <br>";
+
+
+
+
+
+
+    // Training Records 1
+	for($i=0; $i<count($json_arr[training_records1]); $i++) {
+	   // Get needed data
+		$daydate_millisec = $json_arr[training_records1][$i][daydate];
+		$compcode = $json_arr[training_records1][$i][compcode];
+		$start = $json_arr[training_records1][$i][start];
+		$end = $json_arr[training_records1][$i][end];
+		$time_of_day = $json_arr[training_records1][$i][time_of_day];
+		$class = $json_arr[training_records1][$i]['class'];
+
+	  // Work variables to use with database
+		$daydate = date("Y-m-d", $daydate_millisec/1000); 
+		echo strtotime($start). "<br>";
+		echo strtotime($end). "<br>";
+		echo "difference = ". (strtotime($end)-strtotime($start))/60;	 
+
+	 // Query whether entry is already in database
+		
+
+
+	}
         
         
         
