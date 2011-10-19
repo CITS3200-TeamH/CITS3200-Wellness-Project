@@ -1118,8 +1118,8 @@ function extractedData(JSON){
 					if(JSON!=null){
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
 					//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
-					alert(tostring(JSON));
-					var response = xmlHttp.responseText;
+					//alert(tostring(JSON));
+					var response = ""+xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
 					if(response.indexOf("success")>0){
 						downloadData();
