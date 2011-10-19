@@ -8,7 +8,6 @@ include "../api_authFunctions.php";
 include "../rating_calc.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
-	$id;
 	if (isset($_POST["token"]) && isset($_POST["data"])) { //now we check so see if we have both the token AND the xml data
 		$id = validateToken($_POST["token"]); //validate the token
 	} else if (isset($_GET["token"]) && isset($_GET["data"])) {
@@ -16,24 +15,19 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	} else {
 		echo "error-2";
 	}
-	if ($id != "error-2") {
+	if (isset($id) && $id != "error-2") {
 		uploadXML($id);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
 	}
 } else {
-	//echo "error-1";
-	uploadXML(1234567);
+	echo "error-1";
 }
 
-uploadXML(1234567);
 
 function uploadXML($username) {
 		
-    
-
 // Decode the json array
-        //$json_arr=json_decode($test_string, true);
         //$json_arr=json_decode($_GET['data'],true);
         $json_arr=json_decode($_POST['data'],true);
     // Print the given array
