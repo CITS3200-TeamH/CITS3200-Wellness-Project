@@ -1110,6 +1110,7 @@ function extractedData(JSON){
 					var url="Upload.php";
 					xmlHttp.open("POST",url,false);
 					xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+					if(JSON!=null){
 					xmlHttp.send("token="+r.rows.item(0)["token"]+"&data="+tostring(JSON));
 					//document.getElementById("content").innerHTML += tostring(JSON)+"<br>";
 					alert(tostring(JSON));
@@ -1120,6 +1121,9 @@ function extractedData(JSON){
 					} else {
 						alert("Sorry. We had trouble uploading your data. Please log in again.");
 						document.location = "Logon.html";
+					}
+					} else {
+						document.location = "Home.html";
 					}
 				}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
