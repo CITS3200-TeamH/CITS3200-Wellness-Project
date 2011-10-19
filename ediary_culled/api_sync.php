@@ -23,7 +23,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])) { //check to see that we ha
 }
 
 function sync($username) {
-	$ratingValues = array(5 => "Excellent", 4 => "Good", 3 => "Ok", 2 => "Poor", 1 => "Awful");
+	$ratingValues = array(5 => "Excellent", 4 => "Good", 3 => "OK", 2 => "Poor", 1 => "Awful");
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
 	$lower = strtotime($result["start"]);
@@ -42,9 +42,9 @@ function sync($username) {
 		$year= date("Y");
 
 		for ($i = 0; $i < $window; $i++) { //use this to iterate through all available days within the data entry window
-			$hr = "";
-			$sleepHours = "";
-			$health = "";
+			$hr = "Enter Data";
+			$sleepHours = "Enter Data";
+			$health = "Enter Data";
 			$ratings;
 
 			echo "<array>\n";
@@ -79,7 +79,7 @@ function sync($username) {
 			echo "<string>Wellness Data</string>\n";
 			echo "<key>completed</key>\n";
 		
-			if ($hr != "") { //Set the complete value in the XML file
+			if ($hr != "Enter Data") { //Set the complete value in the XML file
 				echo "<true/>\n";
 			} else {
 				echo "<false/>\n";
@@ -147,7 +147,7 @@ function sync($username) {
 					echo "<key>name</key>\n";
 					echo "<string>" . $r[0] . "</string>\n";
 					echo "<key>rating</key>\n";
-					echo "<string></string>\n"; //use the default value this time
+					echo "<string>Enter Data</string>\n"; //use the default value this time
 					echo "<key>type</key>\n";
 					echo "<integer>1</integer>\n";
 					echo "</dict>\n";

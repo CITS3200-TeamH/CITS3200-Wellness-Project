@@ -7,10 +7,12 @@ include "api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
+	$xmlChoice = "POST";
 	if (isset($_POST["token"]) && isset($_POST["xml"])) { //now we check so see if we have both the token AND the xml data
 		$id = validateToken($_POST["token"]); //validate the token
 	} else if (isset($_GET["token"]) && isset($_GET["xml"])) {
 		$id = validateToken($_GET["token"]);
+		$xmlChoice = "GET";
 	} else {
 		echo "error-3";
 		exit();
@@ -26,7 +28,7 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 }
 
 function uploadXML($username) {	
-	$ratingValues = array("Excellent" => 5, "Good" => 4, "Ok" => 3, "Poor" => 2, "Awful" => 1);
+	$ratingValues = array("Excellent" => 5, "Good" => 4, "OK" => 3, "Poor" => 2, "Awful" => 1);
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
 	$lower = strtotime($result["start"]);
@@ -35,12 +37,18 @@ function uploadXML($username) {
 	$window = (0 + $result["window"]); //ensure it is an integer
 
 	if ($today <= $upper && $today >= $lower) { //check to make sure the user should be uploading (i.e. still within the start/end times)
-		$xml = simplexml_load_string($_POST["xml"]); //load the XML string
+		$xml;
+		if ($xmlChoice = "GET") {
+			$xml = simplexml_load_string($_GET["xml"]); //load the XML string
+		} else {
+			$xml = simplexml_load_string($_POST["xml"]); //load the XML string
+		}
 		//From here to the end of the page will need to be changed to reflect the new database schema
 		foreach ($xml->array as $day) { //get each day. It is best to see the XML schema to understand what each loop is doing.
 			$date = $day->string;
 			$dateValue = strtotime($date);
-			if ($dateValue <= $today) { //&& $dateValue >= ($today - (window *  86400))) { //check to make sure that we are within the data entry window
+			
+			if ($dateValue <= $today && $dateValue >= ($today - ($window *  86400))) { //check to make sure that we are within the data entry window
 				$healthItemCount = 0;
 				foreach ($day->dict as $healthItem) { //loops for each data entry options i.e. Rating Items, Health Items and Activities
 					$healthItemCount++;
