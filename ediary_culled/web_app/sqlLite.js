@@ -1121,7 +1121,7 @@ function extractedData(JSON){
 					//alert(tostring(JSON));
 					var response = ""+xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
-					if(response.indexOf("success")=>0){
+					if(response.indexOf("success")>=0){
 						downloadData();
 					} else {
 						alert("Sorry. We had trouble uploading your data. Please log in again.");
