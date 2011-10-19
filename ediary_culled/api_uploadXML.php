@@ -7,12 +7,10 @@ include "api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
-	$xmlChoice = "POST";
 	if (isset($_POST["token"]) && isset($_POST["xml"])) { //now we check so see if we have both the token AND the xml data
 		$id = validateToken($_POST["token"]); //validate the token
 	} else if (isset($_GET["token"]) && isset($_GET["xml"])) {
 		$id = validateToken($_GET["token"]);
-		$xmlChoice = "GET";
 	} else {
 		echo "error-3";
 		exit();
@@ -30,25 +28,20 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 function uploadXML($username) {	
 	$ratingValues = array("Excellent" => 5, "Good" => 4, "OK" => 3, "Poor" => 2, "Awful" => 1);
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
-	$result = mysql_fetch_array(mysql_query($sql));
+	$result = mysql_fetch_array(mysql_query($sql)) or die("error-5");
 	$lower = strtotime($result["start"]);
 	$upper = strtotime($result["finish"]);
 	$today = strtotime(date("Y-m-d"));
-	$window = (0 + $result["window"]); //ensure it is an integer
+	$window = (0 + $result["window"]);
 
 	if ($today <= $upper && $today >= $lower) { //check to make sure the user should be uploading (i.e. still within the start/end times)
-		$xml;
-		if ($xmlChoice = "GET") {
-			$xml = simplexml_load_string($_GET["xml"]); //load the XML string
-		} else {
-			$xml = simplexml_load_string($_POST["xml"]); //load the XML string
-		}
+		$xml = simplexml_load_string($_POST["xml"]); //load the XML string
 		//From here to the end of the page will need to be changed to reflect the new database schema
 		foreach ($xml->array as $day) { //get each day. It is best to see the XML schema to understand what each loop is doing.
 			$date = $day->string;
 			$dateValue = strtotime($date);
 			
-			if ($dateValue <= $today && $dateValue >= ($today - ($window *  86400))) { //check to make sure that we are within the data entry window
+			if ($dateValue <= $today) && $dateValue >= ($today - ($window * 86400))) { //check to make sure that we are within the data entry window
 				$healthItemCount = 0;
 				foreach ($day->dict as $healthItem) { //loops for each data entry options i.e. Rating Items, Health Items and Activities
 					$healthItemCount++;
@@ -93,7 +86,7 @@ function uploadXML($username) {
 						
 						if ($healthItemCount == 1 && ($healthData[0] != "" || $healthData[1] != "" || $healthData[2] != "")) { //update the Wellness Data if any of its fields heart rate, sleep hours or health has changed
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' && daydate='$date'";
-							$rows = mysql_query($sql) or die(mysql_error());
+							$rows = mysql_query($sql) or die("error-5");
 							
 							$heart = false;
 							$sleep = false;
@@ -125,7 +118,7 @@ function uploadXML($username) {
 									}
 								}
 								$sql .= " WHERE student_id='$username' AND daydate='$date'";
-								$rows = mysql_query($sql) or die(mysql_error());
+								$rows = mysql_query($sql) or die("error-5");
 							} else { //No wellness data already exists								
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class', ";
 								//Insert the data that has been edited OR insert the default values if it has not been edited
@@ -148,7 +141,8 @@ function uploadXML($username) {
 								}
 								
 								$sql .= ", \"\")";
-								$rows = mysql_query($sql) or die(mysql_error());
+								echo $sql;
+								$rows = mysql_query($sql) or die("error-5");
 							}						
 						} else if ($healthItemCount == 2 && $ratingChanged){ //We know that at least one rating item has changed and hence must update. 
 							$data;
@@ -167,14 +161,14 @@ function uploadXML($username) {
 								$i++;
 							}
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' AND daydate='$date'";
-							$rows = mysql_query($sql) or die(mysql_error());
+							$rows = mysql_query($sql) or die("error-5");
 							
 							if (mysql_num_rows($rows) != 0) { //Wellness data already exists
 								$sql = "UPDATE training_records2 SET ratings='$data' WHERE student_id='$username' AND daydate='$date'";
-								$rows = mysql_query($sql) or die(mysql_error());
+								$rows = mysql_query($sql) or die("error-5");
 							} else { //Wellness data does not already exist
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class',null,null,null,'$data')";
-								$rows = mysql_query($sql) or die(mysql_error());
+								$rows = mysql_query($sql) or die("error-5");
 							}
 						} else if ($healthItemCount == 3 && $index != 0) {
 							$compcode;
@@ -211,15 +205,15 @@ function uploadXML($username) {
 											$TOD = getTOD($start);
 
 											$sql = "SELECT * FROM training_records1 WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
-											$rows = mysql_query($sql) or die(mysql_error());
+											$rows = mysql_query($sql) or die("error-5");
 
 											if (mysql_num_rows($rows) != 0) {
 												$sql = "UPDATE training_records1 SET start='$start', end='$end', duration='$duration', comments=\"" . htmlentities($comment, ENT_QUOTES, "UTF-8") . "\" WHERE student_id='$username' AND daydate='$date' AND compcode='$compcode' AND class='$class' AND time_of_day='$TOD'";
-												mysql_query($sql) or die(mysql_error()); 
+												mysql_query($sql) or die("error-5"); 
 
 											} else {										
 												$sql = "INSERT INTO training_records1 VALUES('$date', '$compcode', $duration, '$start', '$end', '$username', '$class', '$TOD',\"" . htmlentities($comment,ENT_QUOTES,"UTF-8") . "\")";
-												mysql_query($sql) or die(mysql_error());
+												mysql_query($sql) or die("error-5");
 											}
 										}
 									}
