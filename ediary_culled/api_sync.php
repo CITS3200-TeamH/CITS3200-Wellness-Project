@@ -170,14 +170,14 @@ function sync($username) {
 				
 				while (($activities = mysql_fetch_array($fitnessData)) != null) {
 					echo "<dict>\n";
-					echo "<key>compcode</key>\n";
-					echo "<string>" . $activities["compcode"] . "</string>\n"; //activity name
-					echo "<key>start</key>\n";
-					echo "<string>" . $activities["start"] . "</string>\n"; //activity duration
-					echo "<key>end</key>\n";
-					echo "<string>" . $activities["end"] . "</string>\n"; //activity duration
 					echo "<key>comment</key>\n";
 					echo "<string>" . $activities["comments"] . "</string>\n"; //comments
+					echo "<key>compcode</key>\n";
+					echo "<string>" . $activities["compcode"] . "</string>\n"; //activity name
+					echo "<key>end</key>\n";
+					echo "<string>" . $activities["end"] . "</string>\n"; //activity duration
+					echo "<key>start</key>\n";
+					echo "<string>" . $activities["start"] . "</string>\n"; //activity duration
 					echo "</dict>\n";
 				}	
 			} else {
@@ -185,14 +185,14 @@ function sync($username) {
 				echo "<key>data</key>\n";
 				echo "<array>\n";
 				echo "<dict>\n";
-				echo "<key>compcode</key>\n";
-				echo "<string></string>\n"; //activity name
-				echo "<key>start</key>\n";
-				echo "<string></string>\n"; //activity duration
-				echo "<key>end</key>\n";
-				echo "<string></string>\n"; //activity duration
 				echo "<key>comment</key>\n";
 				echo "<string></string>\n"; //comments
+				echo "<key>compcode</key>\n";
+				echo "<string></string>\n"; //activity name
+				echo "<key>end</key>\n";
+				echo "<string></string>\n"; //activity duration
+				echo "<key>start</key>\n";
+				echo "<string></string>\n"; //activity duration
 				echo "</dict>\n";
 			}
 

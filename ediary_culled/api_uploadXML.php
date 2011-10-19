@@ -180,11 +180,11 @@ function uploadXML($username) {
 							for ($i = 1; $i <= $index; $i++) {
 								switch ($count) {
 									case 0:
-										$compcode = $healthData[($i - 1)];
+										$commment = $healthData[($i - 1)];
 										$count++;
 										break;
 									case 1:
-										$start = $healthData[($i - 1)];
+										$compcode = $healthData[($i - 1)];
 										$count++;
 										break;
 									case 2:
@@ -192,7 +192,7 @@ function uploadXML($username) {
 										$count++;
 										break;
 									case 3:
-										$comment = $healthData[($i - 1)];
+										$start = $healthData[($i - 1)];
 										$count++;
 										break;
 								}
