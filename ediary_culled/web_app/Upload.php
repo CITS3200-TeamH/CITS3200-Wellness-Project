@@ -166,7 +166,7 @@ function uploadXML($username) {
         } else {
             $test_num = 1;
         }
-        echo "test_num" . $test_num . "<br>";
+        //echo "test_num" . $test_num . "<br>";
        $test_num++; 
         
         // Create and execute query
