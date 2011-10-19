@@ -937,7 +937,7 @@ function insertTrainingRecords1(trainingrecords1){
 		openDB();
 	}
 	dataBase.transaction(function (tx) {
-		tx.executeSql('Insert Into training_records1(daydate,compcode,duration,start,end,student_id,time_of_day) values(?,?,?,?,?,?,?)',[trainingrecords1["daydate"],trainingrecords1["compcode"],trainingrecords1["duration"],trainingrecords1["start"],trainingrecords1["end"],trainingrecords1["student_id"],trainingrecords1["time_of_day"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+		tx.executeSql('Insert Into training_records1(daydate,compcode,duration,start,end,class,student_id,time_of_day) values(?,?,?,?,?,?,?,?)',[trainingrecords1["daydate"],trainingrecords1["compcode"],trainingrecords1["duration"],trainingrecords1["start"],trainingrecords1["end"],trainingrecords1["class"],trainingrecords1["student_id"],trainingrecords1["time_of_day"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 	});	
 }
 
