@@ -1049,7 +1049,7 @@ if(dataBase==null){
 						tx.executeSql('Select * From student Where id=? And Uploaded=?',[studentid,false],function (t,r) {
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
-								JSON["student"][i] = {"active":rr["active"],"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
+								JSON["student"][i] = {"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
