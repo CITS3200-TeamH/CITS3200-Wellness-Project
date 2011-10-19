@@ -1055,6 +1055,11 @@ if(dataBase==null){
 							for(var i =0;i<r.rows.length;i++){
 								var rr = r.rows.item(i);
 								JSON["student"][i] = {"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
+								if(JSON["student"][i]["athletic"]=="true"){
+									JSON["student"][i]["athletic"]=="1";
+								} else {
+									JSON["student"][i]["athletic"]=="0";
+								}
 							}
 							extractedData(JSON);
 						},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
@@ -1116,14 +1121,14 @@ function extractedData(JSON){
 					alert(tostring(JSON));
 					var response = xmlHttp.responseText;
 					//var json = jQuery.parseJSON(xmlHttp.responseText);
-					if(response=="success"){
+					if(response.indexOf("success")>0){
 						downloadData();
 					} else {
 						alert("Sorry. We had trouble uploading your data. Please log in again.");
 						document.location = "Logon.html";
 					}
 					} else {
-						document.location = "Home.html";
+						downloadData();
 					}
 				}
 			},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
@@ -1144,7 +1149,6 @@ function isworking(){
 	var content = document.getElementById("content");
 	content.innerHTML = "Working";
 }
-
 
 function initiateDatabaseForTesting(){
 	if(dataBase==null){
