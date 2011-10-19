@@ -881,6 +881,11 @@ function insertStudent(student){
 	}
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
+		if(student["athletic"]==1){
+			student["athletic"] = true;
+		} else {
+			student["athletic"] = false;
+		}
 		tx.executeSql('Select * From Student Where id=?', [student["id"]], function (t, r) {
 			if(r.rows.length==1){
 				tx.executeSql('Update Student Set first=?,last=?,password=?,age=?,gender=?,athletic=?,sport=?,level=? Where id=?',[student["first"],student["last"],student["password"],student["age"],student["gender"],student["athlete"],student["sport"],student["level"],student["id"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
