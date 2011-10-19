@@ -881,17 +881,17 @@ function insertStudent(student){
 	}
 	dataBase.transaction(function (tx) {
 		var currentTime = new Date();
-		if(student["athletic"]==1){
-			student["athletic"] = true;
-		} else {
-			student["athletic"] = false;
-		}
 		tx.executeSql('Select * From Student Where id=?', [student["id"]], function (t, r) {
 			if(r.rows.length==1){
-				tx.executeSql('Update Student Set first=?,last=?,password=?,age=?,gender=?,athletic=?,sport=?,level=? Where id=?',[student["first"],student["last"],student["password"],student["age"],student["gender"],student["athlete"],student["sport"],student["level"],student["id"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+				tx.executeSql('Update Student Set first=?,last=?,password=?,age=?,gender=?,athletic=?,sport=?,level=? Where id=?',[student["first"],student["last"],student["password"],student["age"],student["gender"],student["athlete"],student["sport"],student["level"],student["id"]], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			} else {
-				tx.executeSql('Insert Into Student(id,first,last,password,age,gender,athletic,sport,level) values(?,?,?,?,?,?,?,?,?)',[student["id"],student["first"],student["last"],student["password"],student["age"],student["gender"],student["athlete"],student["sport"],student["level"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+				tx.executeSql('Insert Into Student(id,first,last,password,age,gender,athletic,sport,level) values(?,?,?,?,?,?,?,?,?)',[student["id"],student["first"],student["last"],student["password"],student["age"],student["gender"],student["athlete"],student["sport"],student["level"]], function (t, r) {},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 			}
+		if(student["athletic"]==1){
+			tx.executeSql('Update Student Set athletic=? Where id=?',[true,student["id"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+		} else {
+			tx.executeSql('Update Student Set athletic=? Where id=?',[false,student["id"]], function (t, r) {insertedData();},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
+		}
 		},function (t, error) {alert('Error: '+error.message+' (Code '+error.code+')');;});
 	});	
 }
