@@ -42,9 +42,9 @@ function sync($username) {
 		$year= date("Y");
 
 		for ($i = 0; $i < $window; $i++) { //use this to iterate through all available days within the data entry window
-			$hr = "Enter Data";
-			$sleepHours = "Enter Data";
-			$health = "Enter Data";
+			$hr = "";
+			$sleepHours = "";
+			$health = "";
 			$ratings;
 
 			echo "<array>\n";
@@ -79,7 +79,7 @@ function sync($username) {
 			echo "<string>Wellness Data</string>\n";
 			echo "<key>completed</key>\n";
 		
-			if ($hr != "Enter Data") { //Set the complete value in the XML file
+			if ($hr != "") { //Set the complete value in the XML file
 				echo "<true/>\n";
 			} else {
 				echo "<false/>\n";
@@ -147,7 +147,7 @@ function sync($username) {
 					echo "<key>name</key>\n";
 					echo "<string>" . $r[0] . "</string>\n";
 					echo "<key>rating</key>\n";
-					echo "<string>Enter Data</string>\n"; //use the default value this time
+					echo "<string></string>\n"; //use the default value this time
 					echo "<key>type</key>\n";
 					echo "<integer>1</integer>\n";
 					echo "</dict>\n";

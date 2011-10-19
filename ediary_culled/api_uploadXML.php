@@ -29,7 +29,6 @@ function uploadXML($username) {
 	$ratingValues = array("Excellent" => 5, "Good" => 4, "Ok" => 3, "Poor" => 2, "Awful" => 1);
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
 	$result = mysql_fetch_array(mysql_query($sql));
-	$class = $result["class"];
 	$lower = strtotime($result["start"]);
 	$upper = strtotime($result["finish"]);
 	$today = strtotime(date("Y-m-d"));
@@ -141,7 +140,6 @@ function uploadXML($username) {
 								}
 								
 								$sql .= ", \"\")";
-								echo $sql;
 								$rows = mysql_query($sql) or die(mysql_error());
 							}						
 						} else if ($healthItemCount == 2 && $ratingChanged){ //We know that at least one rating item has changed and hence must update. 
