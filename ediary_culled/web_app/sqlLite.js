@@ -1056,9 +1056,9 @@ if(dataBase==null){
 								var rr = r.rows.item(i);
 								JSON["student"][i] = {"age":rr["age"],"gender":rr["gender"],"athletic":rr["athletic"],"sport":rr["sport"]};
 								if(JSON["student"][i]["athletic"]=="true"){
-									JSON["student"][i]["athletic"]=="1";
+									JSON["student"][i]["athletic"]="1";
 								} else {
-									JSON["student"][i]["athletic"]=="0";
+									JSON["student"][i]["athletic"]="0";
 								}
 							}
 							extractedData(JSON);
