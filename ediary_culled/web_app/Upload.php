@@ -41,15 +41,16 @@ function uploadXML($username) {
     // Student
     //echo "Starting Student<br>";
         // Get needed data
+	if(count($json_arr[student])>0){
         $age = $json_arr[student][0][age];
-        $active = $json_arr[student][0][active];
         $gender = $json_arr[student][0][gender];
         $athletic = $json_arr[student][0][athletic];
         $sport = $json_arr[student][0][sport];
     
         // Update given fields
-        $sql = "UPDATE student SET age='$age', active='$active', gender='$gender', athletic='$athletic', sport='$sport' WHERE id='$username'";
+        $sql = "UPDATE student SET age='$age', gender='$gender', athletic='$athletic', sport='$sport' WHERE id='$username'";
         mysql_query($sql) or die("error-5 #1 <br>");
+}
      //   echo "query #1 run"; 
     //echo "Student done<br>";
     // End of Student
@@ -135,7 +136,6 @@ function uploadXML($username) {
     //echo "Starting fitness test<br>";
     for($i=0; $i<count($json_arr[fitness_test]); $i++) {    
         // Get needed data
-        $subject_id  = $json_arr[fitness_test][$i][subject_id];
         $group_id  = $json_arr[fitness_test][$i][group_id];
         $daydate_millisec  = $json_arr[fitness_test][$i][daydate];
         $pushup  = $json_arr[fitness_test][$i][pushup];
@@ -170,7 +170,7 @@ function uploadXML($username) {
        $test_num++; 
         
         // Create and execute query
-        $sql = "INSERT INTO fitness_test VALUES('$subject_id', '$group_id', '$daydate', '$test_num', '$pushup', '$situp', '$chinup', '$hang', '$sitreach1', '$sitreach2', '$height', '$mass', '$bmi', '$bmi_rating', '$waist', '$hip', '$ratio', '$wh_rating')";
+        $sql = "INSERT INTO fitness_test VALUES('$username', '$group_id', '$daydate', '$test_num', '$pushup', '$situp', '$chinup', '$hang', '$sitreach1', '$sitreach2', '$height', '$mass', '$bmi', '$bmi_rating', '$waist', '$hip', '$ratio', '$wh_rating')";
         mysql_query($sql) or die("error-5 #2");
         //echo "query #2 run";
 	//echo "End of fitness test<br>";	
@@ -179,7 +179,7 @@ function uploadXML($username) {
     // End of Fitness Test
 		
     
-        
+	echo "success";        
     }
 ?>        
         
