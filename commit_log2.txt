@@ -1,0 +1,2327 @@
+commit 5b45821f281db77e339c128493674d4215a17c32
+tree f01067f4687c1d87cf0d2ec55ed02989e4aa7176
+parent 363070e1c94ef98b644ed8784b6cc42a3e782ce7
+author Server <ruvan@ozemail.com.au> 1319006794 +0800
+committer Server <ruvan@ozemail.com.au> 1319006794 +0800
+
+    some more minor changes/debugging
+
+commit 363070e1c94ef98b644ed8784b6cc42a3e782ce7
+tree a380ded07294f794e5f3a02e326952cddb91a5a9
+parent 62bc8a2a35b9fc5c5798b0cd6c97d1676a8cf0dd
+author Enda <Enda@Enda-PC.(none)> 1319003780 +0800
+committer Enda <Enda@Enda-PC.(none)> 1319003780 +0800
+
+    minor modifications
+
+commit 62bc8a2a35b9fc5c5798b0cd6c97d1676a8cf0dd
+tree f9be122f39fb6d01bc49a73f612e43700881a091
+parent d95ad26b2f8ff1d1863166257259f676e1b2a590
+author Enda <Enda@Enda-PC.(none)> 1319002275 +0800
+committer Enda <Enda@Enda-PC.(none)> 1319002275 +0800
+
+    changed Ok to OK
+
+commit d95ad26b2f8ff1d1863166257259f676e1b2a590
+tree d8617e79790d594dbdcf0e2d44571f33809181c9
+parent 5d037139a5bce7148ba54d3219fd7d7134120999
+author Server <ruvan@ozemail.com.au> 1318994831 +0800
+committer Server <ruvan@ozemail.com.au> 1318994831 +0800
+
+    made some final changes
+
+commit 5d037139a5bce7148ba54d3219fd7d7134120999
+tree e4d222201ca7e903089cd725cbbd025dadc7fd97
+parent 1c4d185213777979632f5229473d5f883052dad1
+author Server <ruvan@ozemail.com.au> 1318990795 +0800
+committer Server <ruvan@ozemail.com.au> 1318990795 +0800
+
+    changed api_uploadXML.php
+
+commit 1c4d185213777979632f5229473d5f883052dad1
+tree 1cdd21329d41e21659e8f107f45e9619b9e29fda
+parent 335ce8eb303ad39eae3cd008e641827de4d0410c
+author CokaRoach <roche.liam.email+github@gmail.com> 1318988790 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318988790 +0800
+
+    testing minor change
+
+commit 335ce8eb303ad39eae3cd008e641827de4d0410c
+tree 6617d7cbae6715aaceda987afba75b2e0f839416
+parent 820395f0b5ccf2f38b6d9847f73845ae7d4fc286
+author CokaRoach <roche.liam.email+github@gmail.com> 1318988702 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318988702 +0800
+
+    testing minor change
+    
+    Signed-off-by: CokaRoach <roche.liam.email+github@gmail.com>
+
+commit 820395f0b5ccf2f38b6d9847f73845ae7d4fc286
+tree 409e6ac8957d61d7d6d3e06ad9f8a9230d46149b
+parent 3deca7889c3213eeb10fdbb9183ada82c0b7567b
+author CokaRoach <roche.liam.email+github@gmail.com> 1318988600 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318988600 +0800
+
+    testing minor change
+
+commit 3deca7889c3213eeb10fdbb9183ada82c0b7567b
+tree 245ff939d508ad0e31968cdbf3c913482d8499ec
+parent 82de19df8d683b18f27bd9588c87669a719cc2a0
+author CokaRoach <roche.liam.email+github@gmail.com> 1318987914 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318987914 +0800
+
+    testing minor changes
+
+commit 82de19df8d683b18f27bd9588c87669a719cc2a0
+tree 9c4a163844e9d48142f4f675eb9fc9ae9d7192b9
+parent 943640c8e1a8bca5c1838a957fa347a315525ce5
+author CokaRoach <roche.liam.email+github@gmail.com> 1318987167 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318987167 +0800
+
+    testing minor change
+
+commit 943640c8e1a8bca5c1838a957fa347a315525ce5
+tree 3ec779fbd3377fb6060d36e31211f693d0440f05
+parent 79aa40a9849b2c8b6f8fc523e67893d4a9036d4b
+author CokaRoach <roche.liam.email+github@gmail.com> 1318986911 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318986911 +0800
+
+    testing fix boolean uploading
+
+commit 79aa40a9849b2c8b6f8fc523e67893d4a9036d4b
+tree 98d3d68aab4bfcf422bcd489b59434451f718b17
+parent 66281e32c180d17fecb6f2db009382ab386a0923
+author CokaRoach <roche.liam.email+github@gmail.com> 1318986504 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318986504 +0800
+
+    testing minor change
+
+commit 66281e32c180d17fecb6f2db009382ab386a0923
+tree 0d28812e452cf2d36dfb407c5f1945091c695f97
+parent 5eaef7d2734c2c733b6597591bd189900f2b02f3
+author CokaRoach <roche.liam.email+github@gmail.com> 1318986313 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318986313 +0800
+
+    testing minor change
+
+commit 5eaef7d2734c2c733b6597591bd189900f2b02f3
+tree 53dda033b0c825c09bcfd2ccd133da5e99b56749
+parent db9003cb3d1d7f02fd80f51c4ea905b11c79225c
+parent 0569a4b37c6a8ce597e45e650ec5705e4a7ea41e
+author CokaRoach <roche.liam.email+github@gmail.com> 1318985937 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318985937 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit db9003cb3d1d7f02fd80f51c4ea905b11c79225c
+tree baaf920d9b93639534b8aa6d5c387ccdba9852ac
+parent cf1c1e8659123298289555ec66e175686af2c27d
+author CokaRoach <roche.liam.email+github@gmail.com> 1318985914 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318985914 +0800
+
+    testing minor change
+
+commit 0569a4b37c6a8ce597e45e650ec5705e4a7ea41e
+tree 88617a5dbb01f6ef0d911816e1acec8256e48e0c
+parent 1dc340ad6a39b7c344a77fe0f7d4dc45d2f3b866
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318985765 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318985765 +0800
+
+    Noticed one echo statement left uncommented.
+
+commit 1dc340ad6a39b7c344a77fe0f7d4dc45d2f3b866
+tree df2bd6f8a1c1d1b8cd94d232c70ff2f2128249a6
+parent cf1c1e8659123298289555ec66e175686af2c27d
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318985370 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318985378 +0800
+
+    Commented all echo statements used for testing
+
+commit cf1c1e8659123298289555ec66e175686af2c27d
+tree ea5d59edf7b8e86ddad656e2a2473e9b43240d5b
+parent beac6149bc56cdf2405086e0972e5609f4f44acf
+parent 24704c358407d457b30e794ae43a44c0fcdbb2ad
+author CokaRoach <roche.liam.email+github@gmail.com> 1318985266 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318985266 +0800
+
+    Merge branch 'rev001' of git@github.com:CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit beac6149bc56cdf2405086e0972e5609f4f44acf
+tree 4eec8190b41df8eb8c1b25c31a76388c62a12282
+parent c6d685d4587c129aa91f76ac63f5344c3803a7eb
+author CokaRoach <roche.liam.email+github@gmail.com> 1318985235 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318985235 +0800
+
+    testing minor change
+
+commit c6d685d4587c129aa91f76ac63f5344c3803a7eb
+tree c93f0fab9b65a74eee8e044f84f38eec4b401d1d
+parent 829b9a604a475ae259378e14317484cff525d9ac
+parent fb7392025a6384b31e53bd6f54476c729293a1dd
+author CokaRoach <roche.liam.email+github@gmail.com> 1318984005 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318984005 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit fb7392025a6384b31e53bd6f54476c729293a1dd
+tree 937c9687296e08f75ce9c75cadd3abbe79eab6dc
+parent 2aeb1f6fbcf234cc885085367790d7d089d7a1c6
+author Enda <Enda@Enda-PC.(none)> 1318983938 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318983938 +0800
+
+    modified for changed schema
+
+commit 829b9a604a475ae259378e14317484cff525d9ac
+tree b6a29348d7332bdff7547ebfa77afcd84b7a0a70
+parent 50a7b7a0e7bb1c851706ea6e55d060d4dfa8fe04
+author CokaRoach <roche.liam.email+github@gmail.com> 1318983928 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318983928 +0800
+
+    fixing remove unneeded null values on upload
+
+commit 2aeb1f6fbcf234cc885085367790d7d089d7a1c6
+tree 0cf7fe66afaf2ecc650d781d83c1069070e146c9
+parent 50a7b7a0e7bb1c851706ea6e55d060d4dfa8fe04
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318983539 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318983539 +0800
+
+    Finished the token verification part of the code.
+
+commit 50a7b7a0e7bb1c851706ea6e55d060d4dfa8fe04
+tree 6d5e91f6537d2ee757073814d2a105d291bd3d96
+parent eb472a642131a969e11141803abbf372ba89deaf
+author CokaRoach <roche.liam.email+github@gmail.com> 1318983014 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318983014 +0800
+
+    testing minor chagnes
+
+commit eb472a642131a969e11141803abbf372ba89deaf
+tree 9bfee7adaa0f44a2cf0d7411a4b65fc169f833ef
+parent f292787c6490b85e9c4d82a0eea1a1808305761f
+parent eef4172bc029a3e2fd25eb698f3995de575613be
+author CokaRoach <roche.liam.email+github@gmail.com> 1318981753 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318981753 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit f292787c6490b85e9c4d82a0eea1a1808305761f
+tree d0d38e246caf96c75b35c892d174d114d5f581d7
+parent 699549bfbbe857209193055d218b4b0e4633cb67
+author CokaRoach <roche.liam.email+github@gmail.com> 1318981670 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318981670 +0800
+
+    fixing overlapping toolbars
+
+commit eef4172bc029a3e2fd25eb698f3995de575613be
+tree efa6e1fc59874e9561383705db920c1885091e59
+parent 699549bfbbe857209193055d218b4b0e4633cb67
+author Server <ruvan@ozemail.com.au> 1318956018 +0800
+committer Server <ruvan@ozemail.com.au> 1318956018 +0800
+
+    have been doing testing and minor edits/fixes on upload.php
+
+commit 699549bfbbe857209193055d218b4b0e4633cb67
+tree 95fba43b52983e1b7860d1e8b60fec102cacae44
+parent 908e59364986a898a084d59c89a0cb63892f6d6b
+parent cebc7d36b395b313f9b9e1a064b9a36d80bffe24
+author CokaRoach <roche.liam.email+github@gmail.com> 1318955306 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318955306 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 908e59364986a898a084d59c89a0cb63892f6d6b
+tree b5cbcc36fcb801b77bb3853f3e53c5ef60d82820
+parent 53ee613ef3aa65c1cda927d00024d96f380a93bf
+author CokaRoach <roche.liam.email+github@gmail.com> 1318955282 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318955282 +0800
+
+    testing cache javascript
+
+commit cebc7d36b395b313f9b9e1a064b9a36d80bffe24
+tree 0389d6b0c69ecebaa3afbb3ce0bc6b4458fabaf5
+parent 53ee613ef3aa65c1cda927d00024d96f380a93bf
+author Server <ruvan@ozemail.com.au> 1318953884 +0800
+committer Server <ruvan@ozemail.com.au> 1318953884 +0800
+
+    sql query changed
+
+commit 53ee613ef3aa65c1cda927d00024d96f380a93bf
+tree ce06da4b2eae5de6b6fb6780ac89946861f6b7c9
+parent 169d6358ee1f140e0496369655c6b45de8a49383
+author CokaRoach <roche.liam.email+github@gmail.com> 1318953683 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318953683 +0800
+
+    set cache manifest
+
+commit 169d6358ee1f140e0496369655c6b45de8a49383
+tree 7daf5ec2a1455553aef291847e499d1af1acbc4b
+parent 1f1da1f86a09a7337b8c9f2e931d4377e3df4f96
+author CokaRoach <roche.liam.email+github@gmail.com> 1318953502 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318953502 +0800
+
+    testing minor change
+
+commit 1f1da1f86a09a7337b8c9f2e931d4377e3df4f96
+tree cd6c2f380fc9d553efb48a67ce6c29546510899a
+parent f545b24956e393d953ccf6259a13303578654072
+author CokaRoach <roche.liam.email+github@gmail.com> 1318953445 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318953445 +0800
+
+    testing minor change
+
+commit f545b24956e393d953ccf6259a13303578654072
+tree 03780d7525162bf19b49b20709802eb7cbb615f9
+parent 038ad0a4609827ee8d6a0fb3e328354236bfbaac
+parent 4ef3df49872f107d7ce0e13abeb89342fcf92477
+author CokaRoach <roche.liam.email+github@gmail.com> 1318953312 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318953312 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 038ad0a4609827ee8d6a0fb3e328354236bfbaac
+tree 1e4ccbac8ae6dc9099106176536c933946256c47
+parent d484f90540a2c876b0aaeba91375aabc9e57bc39
+author CokaRoach <roche.liam.email+github@gmail.com> 1318953289 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318953289 +0800
+
+    cache manifest name change
+
+commit 4ef3df49872f107d7ce0e13abeb89342fcf92477
+tree 86a8853e1eb3a7d0f5e819cd4e108455d74d7f88
+parent 2e879aaa02c2066fa56345d8a3e96e3cbb687dee
+author Server <ruvan@ozemail.com.au> 1318953089 +0800
+committer Server <ruvan@ozemail.com.au> 1318953089 +0800
+
+    syntax fixing
+
+commit 2e879aaa02c2066fa56345d8a3e96e3cbb687dee
+tree 505284bea4b2cbab13efc61c15fbf7323c6b03f6
+parent d484f90540a2c876b0aaeba91375aabc9e57bc39
+author Server <ruvan@ozemail.com.au> 1318952595 +0800
+committer Server <ruvan@ozemail.com.au> 1318952595 +0800
+
+    Bug serching in Upload.php
+
+commit d484f90540a2c876b0aaeba91375aabc9e57bc39
+tree cc0d82f0f3691a089cb08c8b6e4521f999a8364c
+parent f7db94afd1ef48dc91eb4c6b32fe4e2eb381ff35
+parent f678e7c601a236314de3e20f48d9e7c022f400a9
+author CokaRoach <roche.liam.email+github@gmail.com> 1318951791 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318951791 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit f7db94afd1ef48dc91eb4c6b32fe4e2eb381ff35
+tree 73e60bdc71f7552a01647a7433647aec9bcf9313
+parent c2f11f79449a66420f77ef3347ac7836f39581a4
+author CokaRoach <roche.liam.email+github@gmail.com> 1318951762 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318951762 +0800
+
+    testing cache
+
+commit f678e7c601a236314de3e20f48d9e7c022f400a9
+tree 48a780897242828680519abb44c6b95dcb13c343
+parent e818a4b02392dc4aa49242606dc05e5ae239634a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318951100 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318951100 +0800
+
+    sytax corrections
+
+commit e818a4b02392dc4aa49242606dc05e5ae239634a
+tree 983dcafc18bf7e115c4b6fd0d2fc4486f072a437
+parent c2f11f79449a66420f77ef3347ac7836f39581a4
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318950932 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318950950 +0800
+
+    Finished all queries, all parts of function active.
+
+commit c2f11f79449a66420f77ef3347ac7836f39581a4
+tree 9552ac6730ad03c5de7891c9d8742cbd6c1ddb9a
+parent 52b657d60b89429a816812e534a69c67a7e10d63
+author CokaRoach <roche.liam.email+github@gmail.com> 1318950452 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318950452 +0800
+
+    caching
+
+commit 52b657d60b89429a816812e534a69c67a7e10d63
+tree 98a55d4d9507c8d325442676659dbf2ef880d0a1
+parent c70ee31c45c99269418d7585e09c49ba6e0a24d8
+author CokaRoach <roche.liam.email+github@gmail.com> 1318947545 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318947545 +0800
+
+    testing minor change
+
+commit c70ee31c45c99269418d7585e09c49ba6e0a24d8
+tree 516629c7b12896011f42ba983807730f84a85417
+parent e87c326fef858739571bd05ed444305100401346
+author CokaRoach <roche.liam.email+github@gmail.com> 1318947411 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318947411 +0800
+
+    testing minor change
+    
+    Signed-off-by: CokaRoach <roche.liam.email+github@gmail.com>
+
+commit e87c326fef858739571bd05ed444305100401346
+tree 62d5a645e7bfff90ab0d0a0e6c0d0e663219dbbf
+parent 8d2bd687573dcc25d1213083bf5cc9470358195f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318947335 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318947335 +0800
+
+    testing minor change
+
+commit 8d2bd687573dcc25d1213083bf5cc9470358195f
+tree b9cbdf582c2465406695cd04048bee1555c81d1f
+parent cfa6659a4747f4b6287967e7a88eb0477b9ab1d9
+parent c8a5de28a547f7aa7f284144439091712b61736c
+author CokaRoach <roche.liam.email+github@gmail.com> 1318947175 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318947175 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit cfa6659a4747f4b6287967e7a88eb0477b9ab1d9
+tree 444a54d80e1be8736084b9efeff0dfa298766bd5
+parent 17256bd63d1f5d7c9fca80ed4e95b872281b4798
+author CokaRoach <roche.liam.email+github@gmail.com> 1318947140 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318947140 +0800
+
+    testing sync icon
+
+commit c8a5de28a547f7aa7f284144439091712b61736c
+tree e0a6cd633df7c1ea6e7e2a80fd5d414ba7d964a0
+parent 43372b9dffd24b7e9f266613c38c8f0257126ef0
+author Server <ruvan@ozemail.com.au> 1318947077 +0800
+committer Server <ruvan@ozemail.com.au> 1318947077 +0800
+
+    remove more bugs
+
+commit 43372b9dffd24b7e9f266613c38c8f0257126ef0
+tree b40efe7aa97092bc86962b17c7e1281c4601fae2
+parent 17256bd63d1f5d7c9fca80ed4e95b872281b4798
+author Server <ruvan@ozemail.com.au> 1318946674 +0800
+committer Server <ruvan@ozemail.com.au> 1318946674 +0800
+
+    remove auth bug
+
+commit 17256bd63d1f5d7c9fca80ed4e95b872281b4798
+tree 2cdabfc62cc36e2e52f0f37e1d7a77e5354abb9b
+parent 535f84a722085e52126871dd24c9f4769ddcf65a
+author CokaRoach <roche.liam.email+github@gmail.com> 1318946515 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318946515 +0800
+
+    add iphone startup screen
+
+commit 535f84a722085e52126871dd24c9f4769ddcf65a
+tree 76b65f3045d81dd2ec9b9218e644afbf33448c9e
+parent e77f9b164c8f33fda958bf6b272d7489c8f7c085
+author CokaRoach <roche.liam.email+github@gmail.com> 1318945771 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318945771 +0800
+
+    iphone images
+
+commit e77f9b164c8f33fda958bf6b272d7489c8f7c085
+tree 20fd04bbe74271292738a1f05ae36c9e8af16964
+parent e44b92fde2bff2980a5fb12ee8270e0375e3adf4
+author Server <ruvan@ozemail.com.au> 1318944822 +0800
+committer Server <ruvan@ozemail.com.au> 1318944822 +0800
+
+    deleted old sync.php
+
+commit e44b92fde2bff2980a5fb12ee8270e0375e3adf4
+tree 8ff22b2b941a72caa438d2aa47bd7426f9f68aaf
+parent 1c0b1ec0b2329a602b11368dbe830d3d54b2aeed
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318943842 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318943851 +0800
+
+    removed a null check on $id which is assumed to be causing problems.
+    
+    Oh, and it happens when we try to upload data as well so I have a
+    feeling it's something to do with the token...
+    
+    On 18/10/2011, at 8:50 PM, Sam Watson wrote:
+    
+    Hey guys,
+    
+    Jad and I are having this problem with the app where it gets a response
+    of "error-3" from the server. '"error-3" is used for when the user
+    tries to either upload data outside the window or when the trial has
+    expired' to quote Enda. It's been happening since I think yesterday
+    afternoon. We haven't changed anything on our end that would affect it
+    so I don't know what it is. We get the error when we try to download
+    the data immediately after receiving a new token from the server
+    (logging in). Can we try and sort this out tonight please.
+    
+    Sam
+
+commit 1c0b1ec0b2329a602b11368dbe830d3d54b2aeed
+tree 7456cc49f4870f8f2d4043c3af23f31c7f8e87f2
+parent d8d87c2c94923b0ef174052ccaf78d2c9ce45917
+author Enda <Enda@Enda-PC.(none)> 1318942897 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318942897 +0800
+
+    changed default values
+
+commit d8d87c2c94923b0ef174052ccaf78d2c9ce45917
+tree ead6bdd9d514114c673bf9f14c52173c3976f7db
+parent 89cf58c6e083c1118a7f8ff8612e33c0bee6dc27
+parent 8db24ec80ddf565defa42d0f7fca37afa85614bd
+author Enda <Enda@Enda-PC.(none)> 1318942815 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318942815 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 8db24ec80ddf565defa42d0f7fca37afa85614bd
+tree ead6bdd9d514114c673bf9f14c52173c3976f7db
+parent 459c65f65c7de8be4a0f4d19b56150468f8ab5cb
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318940822 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318940831 +0800
+
+    Added most of the variables to be parsed, most sql commands are now in and active so will alter the database.
+
+commit 459c65f65c7de8be4a0f4d19b56150468f8ab5cb
+tree 7aef1e78b2252c9da6b9af95d0b9937b6b797d5b
+parent 4fdfe9df238cb7051e168413a98faf02cae791c5
+author CokaRoach <roche.liam.email+github@gmail.com> 1318939735 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318939735 +0800
+
+    testing minor change
+
+commit 4fdfe9df238cb7051e168413a98faf02cae791c5
+tree dfb193b1140d35cab140b6cda4bae940f3f4fb5a
+parent c6104df3c6d58c981b6d1b8fdc4a244dddbd7808
+author CokaRoach <roche.liam.email+github@gmail.com> 1318939547 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318939547 +0800
+
+    testing minor page
+
+commit c6104df3c6d58c981b6d1b8fdc4a244dddbd7808
+tree 33826b57ba7d5778ad6fa7b4c4399dedba7e3b62
+parent 2473522493b4a59032f0d0f3a51eadeb18ef1999
+author CokaRoach <roche.liam.email+github@gmail.com> 1318938849 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318938849 +0800
+
+    fix graphics for about page
+
+commit 2473522493b4a59032f0d0f3a51eadeb18ef1999
+tree b46e1b84516a557c7185b24bf102e6077896516c
+parent 36355b2c97c638c7bba1e45301b1ec108a5108db
+parent cd21c419556d0b94ecf33be73e1fb1d3a794b764
+author CokaRoach <roche.liam.email+github@gmail.com> 1318938251 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318938251 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 36355b2c97c638c7bba1e45301b1ec108a5108db
+tree 26bbf8cf97c16343d8a63013990dd4a329e32c51
+parent 1d5f67f0f6b354925cc7258bbb9decb208397ec8
+author CokaRoach <roche.liam.email+github@gmail.com> 1318938207 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318938207 +0800
+
+    removing hrefs
+
+commit 89cf58c6e083c1118a7f8ff8612e33c0bee6dc27
+tree 7c061913f028ccfb413a07c4c532432ea7cb2e91
+parent b9a93ee5ff23c44188cbbe53c137bab701bafec5
+parent cd21c419556d0b94ecf33be73e1fb1d3a794b764
+author Enda <Enda@Enda-PC.(none)> 1318937859 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318937859 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit cd21c419556d0b94ecf33be73e1fb1d3a794b764
+tree 7c061913f028ccfb413a07c4c532432ea7cb2e91
+parent f27a03c0ba929ab5c13805d9606b930e87eaa06c
+author Renda <renda110@hotmail.com> 1318937630 +0800
+committer Renda <renda110@hotmail.com> 1318937630 +0800
+
+    changed to reflect new xml
+
+commit f27a03c0ba929ab5c13805d9606b930e87eaa06c
+tree 266a78dd8326b8eb9d7bf12db52ac4e3f1fa8090
+parent 1d5f67f0f6b354925cc7258bbb9decb208397ec8
+author Renda <renda110@hotmail.com> 1318937581 +0800
+committer Renda <renda110@hotmail.com> 1318937581 +0800
+
+    Changed to reflect new schema
+
+commit b9a93ee5ff23c44188cbbe53c137bab701bafec5
+tree b30c8bf8d01c6188e297c0e754c436747db198fc
+parent bd04792c83585087abf89a557682c3eb25efd4a7
+author Enda <Enda@Enda-PC.(none)> 1318937258 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318937258 +0800
+
+    change pages to reflect new xml schema
+
+commit 1d5f67f0f6b354925cc7258bbb9decb208397ec8
+tree e13569d95ed27397242525641c25fc5934a26cbc
+parent 6f7355a21fb8f585fa9d3112792a6a1972af7aab
+author CokaRoach <roche.liam.email+github@gmail.com> 1318937146 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318937146 +0800
+
+    removal of all hrefs
+
+commit 6f7355a21fb8f585fa9d3112792a6a1972af7aab
+tree 245b1228a5934f2b8a804e327024286368b5047c
+parent 1107de46d4e02589cd67ce629402725dcaab8b44
+parent 8ab6fb3c1121e68f8f90b9060524f9d85d1305f4
+author CokaRoach <roche.liam.email+github@gmail.com> 1318936665 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318936665 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1107de46d4e02589cd67ce629402725dcaab8b44
+tree f9dc22fca81c583741db6403c003d862551d44c8
+parent 412fe5a0920ddbd1edc5076ac54c5f63200916f2
+author CokaRoach <roche.liam.email+github@gmail.com> 1318936591 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318936591 +0800
+
+    testing minor change
+
+commit 8ab6fb3c1121e68f8f90b9060524f9d85d1305f4
+tree 4d80d41f9ec48dde702bb8b7da2ded0cb48b4efb
+parent 412fe5a0920ddbd1edc5076ac54c5f63200916f2
+author Server <ruvan@ozemail.com.au> 1318936463 +0800
+committer Server <ruvan@ozemail.com.au> 1318936463 +0800
+
+    It's semi-working!!! great news, have confirmed POST parsing and MYSQL writing, now all that's left is to add parse code for the rest of the data.
+
+commit 412fe5a0920ddbd1edc5076ac54c5f63200916f2
+tree 05f3e451bb0edbbd5f2b6ff2ed3dcf1c06eb6096
+parent ffe154bc3958b204b329d382029db7cdd25ba88b
+author CokaRoach <roche.liam.email+github@gmail.com> 1318936351 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318936351 +0800
+
+    testing minor changes
+
+commit ffe154bc3958b204b329d382029db7cdd25ba88b
+tree 56859004feb6542d11acc93f998af9a1920aa99d
+parent bd04792c83585087abf89a557682c3eb25efd4a7
+author CokaRoach <roche.liam.email+github@gmail.com> 1318935987 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318935987 +0800
+
+    testing minor change
+
+commit bd04792c83585087abf89a557682c3eb25efd4a7
+tree cf60cc0747520797a119f1f10926e1a06123adc9
+parent 9e802c7e018bde7074d4e030a5f7814305644d0d
+author CokaRoach <roche.liam.email+github@gmail.com> 1318935712 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318935712 +0800
+
+    enhance test display graphics
+
+commit 9e802c7e018bde7074d4e030a5f7814305644d0d
+tree 20a19e33ae729a525f694058fe16d85746e9c5cb
+parent a976828bceaaae7cc39b2b4ea44ac10bfe0f17ca
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934847 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934847 +0800
+
+    fix image location on homepage
+
+commit a976828bceaaae7cc39b2b4ea44ac10bfe0f17ca
+tree e99f3867ac904021d228f3c568168f6fbc0b7c02
+parent eb680cc2a81cded592144a4c46dd7272f96eb07f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934750 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934750 +0800
+
+    testing: minor change
+
+commit eb680cc2a81cded592144a4c46dd7272f96eb07f
+tree a94386be9466d11fc8886b11c6732b6c7cf7c6b4
+parent 8871fb72a02a30e2d7cea582747b3161ddbb55ce
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934674 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934674 +0800
+
+    testing: minor change
+
+commit 8871fb72a02a30e2d7cea582747b3161ddbb55ce
+tree 784f25a9b235a8db52bd31a6a078bd026cc6ab6e
+parent 3c935f8ec156c41f30811d3927e48dabff15491d
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934566 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934566 +0800
+
+    testing: minor change
+
+commit 3c935f8ec156c41f30811d3927e48dabff15491d
+tree 32a16d2ce873ea36c77ea4b8fd7097ce7c4f958a
+parent f191b6e72833d74e685cfb00f75f2b5e8c89c65f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934252 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934252 +0800
+
+    testing minor change
+
+commit f191b6e72833d74e685cfb00f75f2b5e8c89c65f
+tree daa053d56d4c83d07b2e6d84517878e05488b4ef
+parent c5ae7b24f83442bc39fdcca504ac71b72865cdfb
+parent 74236196d250eb7f96059d5f1cff42a324dd9c7d
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934049 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934049 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 74236196d250eb7f96059d5f1cff42a324dd9c7d
+tree 72ce9ce03885598f226af1304a75fe323db9fa87
+parent 371c3aaba5e2643ebbdcbb118bdfeba3e888a7fe
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318934017 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318934030 +0800
+
+    Have added code to create and populate vars for all given json data entries
+
+commit c5ae7b24f83442bc39fdcca504ac71b72865cdfb
+tree fae6cd72777e971f6e7dfbc8fd3edef2228c7d9d
+parent 371c3aaba5e2643ebbdcbb118bdfeba3e888a7fe
+author CokaRoach <roche.liam.email+github@gmail.com> 1318934013 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318934013 +0800
+
+    testing: minor change
+
+commit 371c3aaba5e2643ebbdcbb118bdfeba3e888a7fe
+tree 50e68256afbe8d938ff964e1d564699f42b14d37
+parent 9938f337cc3d6c17f0032e87bae276444888171b
+author CokaRoach <roche.liam.email+github@gmail.com> 1318933529 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318933529 +0800
+
+    change to make home page not force safari opening
+
+commit 9938f337cc3d6c17f0032e87bae276444888171b
+tree 3d24cd88d3ee9b8231acb2dfd7c1b876588974a1
+parent e224732a01df0d9ed84b070f78a76da206ab4a9f
+author Server <ruvan@ozemail.com.au> 1318932479 +0800
+committer Server <ruvan@ozemail.com.au> 1318932479 +0800
+
+    Working on POST'ing to Upload.php
+
+commit e224732a01df0d9ed84b070f78a76da206ab4a9f
+tree 4b377316fb1ea62761ba996e9476107bcad0f9a8
+parent 988c8019387ff45506c4dc84f8d522e5e38a410a
+author Server <ruvan@ozemail.com.au> 1318927151 +0800
+committer Server <ruvan@ozemail.com.au> 1318927151 +0800
+
+    Finished working on training records 1
+
+commit 988c8019387ff45506c4dc84f8d522e5e38a410a
+tree 0c276c088a98fd626931dcbab8b4ff1b9d313a39
+parent a216025c39c6cb2f152adee2afc04f82fbaf2f18
+parent 19a2bfb299392006ca37643190911cab130d5733
+author Server <ruvan@ozemail.com.au> 1318926306 +0800
+committer Server <ruvan@ozemail.com.au> 1318926306 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a216025c39c6cb2f152adee2afc04f82fbaf2f18
+tree d98d84de57da932b935866cec88385c2844a39f8
+parent 465c9c3c02f7f15458e0aeb6e40f729a849d5fe1
+author Server <ruvan@ozemail.com.au> 1318926273 +0800
+committer Server <ruvan@ozemail.com.au> 1318926273 +0800
+
+    minor changes
+
+commit 19a2bfb299392006ca37643190911cab130d5733
+tree 131d1b643dbb07a16838a912be1e63e09dbcde02
+parent 465c9c3c02f7f15458e0aeb6e40f729a849d5fe1
+author CokaRoach <roche.liam.email+github@gmail.com> 1318925986 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318925986 +0800
+
+    testing print json
+
+commit 465c9c3c02f7f15458e0aeb6e40f729a849d5fe1
+tree 8e87e952045f9858448c91752bb7ac57910b183b
+parent ac2e03d5b5516d6445a73a3be3b0ab62e517bef5
+parent 25bcf6f7136822062e742d5bf644270e98ccb0be
+author Server <ruvan@ozemail.com.au> 1318925545 +0800
+committer Server <ruvan@ozemail.com.au> 1318925545 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit ac2e03d5b5516d6445a73a3be3b0ab62e517bef5
+tree fd3fb4e851c52f0d175f619ab313e49bb1fae977
+parent c25b08aa1d1a1f7c3435516925df9cfd69a09d90
+author Server <ruvan@ozemail.com.au> 1318925497 +0800
+committer Server <ruvan@ozemail.com.au> 1318925497 +0800
+
+    working on upload.php
+
+commit 25bcf6f7136822062e742d5bf644270e98ccb0be
+tree 643caf21a84624fcf1a7a8b5ab18d49e84f0023b
+parent fd9713f8b7223c7e31e39c7b4e25889932bb7ac8
+author CokaRoach <roche.liam.email+github@gmail.com> 1318925284 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318925284 +0800
+
+    testing: minor change
+
+commit fd9713f8b7223c7e31e39c7b4e25889932bb7ac8
+tree 751b93cac2c1bbc72cfcba6b6f8628ee5c9bdfec
+parent 3ce6748eba33bff1cce639ae22ddef0cb9422ff9
+author CokaRoach <roche.liam.email+github@gmail.com> 1318925198 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318925198 +0800
+
+    testing: minor change
+
+commit 3ce6748eba33bff1cce639ae22ddef0cb9422ff9
+tree 643caf21a84624fcf1a7a8b5ab18d49e84f0023b
+parent 5d3dd0dcc1bf161db9bf8945e10ecda8ff50cf4f
+parent c25b08aa1d1a1f7c3435516925df9cfd69a09d90
+author CokaRoach <roche.liam.email+github@gmail.com> 1318925096 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318925096 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 5d3dd0dcc1bf161db9bf8945e10ecda8ff50cf4f
+tree 81e6f0cb63fea3440c2e9e6b224ce95455f4f07d
+parent 88acca162bd8e50447afd8fb14189a4a2c87bb7f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318924820 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318924820 +0800
+
+    printing json to screen
+
+commit 88acca162bd8e50447afd8fb14189a4a2c87bb7f
+tree e8658624b545ea0b3f19b6a6f4f2598c32a2287c
+parent e1cfb61a2750528d2645e96eba07bbc8dc3e2f8f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318924466 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318924466 +0800
+
+    testing: minor change
+
+commit c25b08aa1d1a1f7c3435516925df9cfd69a09d90
+tree 815886c1f4a2e6fd0361666fbd5d043f48be2556
+parent 7e935182fa55c336f374b40afd76e23f9e15d909
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318918716 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318918716 +0800
+
+    stripped Upload.php trying to work out how to parse nested json.
+
+commit 7e935182fa55c336f374b40afd76e23f9e15d909
+tree 0b5cdb5e187ae5ecace61d79ee1b350f1cf4b184
+parent 51057f1cc1537826ad204db514c68962930dce29
+author Server <ruvan@ozemail.com.au> 1318917677 +0800
+committer Server <ruvan@ozemail.com.au> 1318917677 +0800
+
+    wokring on depth json strings
+
+commit 51057f1cc1537826ad204db514c68962930dce29
+tree 35178f5b6c21a1997ed06e8c3122c56efafcad45
+parent 5e517b4aecce1f421b5e7add9a2664bde80f481c
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318913301 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318913301 +0800
+
+    minor changes
+
+commit 5e517b4aecce1f421b5e7add9a2664bde80f481c
+tree 613a9d3f39d6fbbd99c2b37439252e2aa406ece3
+parent e9895a62cb73efdc6712db9148b416ea39ddc65c
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318912874 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318912874 +0800
+
+    restructured parse string
+
+commit e9895a62cb73efdc6712db9148b416ea39ddc65c
+tree 6758017088e0ab1a1ff9bcfc9cca3851d5d423e5
+parent 3c811ec2283532eadad9d8970a0902aaf0d27ce3
+author Server <ruvan@ozemail.com.au> 1318906712 +0800
+committer Server <ruvan@ozemail.com.au> 1318906712 +0800
+
+    Working on the json data parsing - Ruvan
+
+commit 3c811ec2283532eadad9d8970a0902aaf0d27ce3
+tree 46537c8d1d5432397c8ad6a27555ca5a503b8c74
+parent 8d3c44969b5426878e4fd0d48d4af7b51fb11db6
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318902960 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318902960 +0800
+
+    Enda's api_uploadXML.php work
+
+commit 8d3c44969b5426878e4fd0d48d4af7b51fb11db6
+tree 882fb46563c61517c454b20c976362e6d19bcd09
+parent ff38085461adfb469eccab1ce7525177a8a584cd
+author Server <ruvan@ozemail.com.au> 1318862785 +0800
+committer Server <ruvan@ozemail.com.au> 1318862785 +0800
+
+    Have been working on the json parsing of the upload.php page.
+
+commit ff38085461adfb469eccab1ce7525177a8a584cd
+tree b016ecb2766f6064df8573875a8de0fd069009f6
+parent 3e327d33a21c62ce6f08a5101e1ee31700aca990
+parent e7c887ccfab2e0a5d03e421f335885e0d2089ae9
+author Server <ruvan@ozemail.com.au> 1318859048 +0800
+committer Server <ruvan@ozemail.com.au> 1318859048 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e7c887ccfab2e0a5d03e421f335885e0d2089ae9
+tree b016ecb2766f6064df8573875a8de0fd069009f6
+parent 8a1582aff99092bede02e71b4bc83d1574a9ed9f
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318859013 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318859013 +0800
+
+    initial development of Upload.php
+
+commit 3e327d33a21c62ce6f08a5101e1ee31700aca990
+tree fc485a6060fc824ae68b4e318b0b7fe6ef3703de
+parent 196971bd0eeb45d4b383556c77d95050d120d3ba
+parent 8a1582aff99092bede02e71b4bc83d1574a9ed9f
+author Server <ruvan@ozemail.com.au> 1318852199 +0800
+committer Server <ruvan@ozemail.com.au> 1318852199 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 8a1582aff99092bede02e71b4bc83d1574a9ed9f
+tree fc485a6060fc824ae68b4e318b0b7fe6ef3703de
+parent 07a4ebc7679c070454a42f72d081097492b554d3
+author Enda <Enda@Enda-PC.(none)> 1318852060 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318852060 +0800
+
+    modifed api_sync and api_uploadXML to reflect new XML schema
+
+commit 07a4ebc7679c070454a42f72d081097492b554d3
+tree f96e36af6860028e4ac1561385a3f3abd669327b
+parent 459427a84c7500b612097f9afc260fd81dbc39ab
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318828430 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318828430 +0800
+
+    Have been correcting error codes
+    
+    Also tidied up authFunctions page.
+
+commit 459427a84c7500b612097f9afc260fd81dbc39ab
+tree 72c8108908722910406437084d1483e4d0f46767
+parent e1cfb61a2750528d2645e96eba07bbc8dc3e2f8f
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318807402 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318807402 +0800
+
+    Added an extra error, all errors still need changing to the agreed error scheme.
+
+commit 196971bd0eeb45d4b383556c77d95050d120d3ba
+tree d92aacdbe1d17fb6b61e236732d571220e6d96d0
+parent 01da127d32b3da49304f1f15b7e0466f2395946b
+parent e1cfb61a2750528d2645e96eba07bbc8dc3e2f8f
+author Server <ruvan@ozemail.com.au> 1318765974 +0800
+committer Server <ruvan@ozemail.com.au> 1318765974 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e1cfb61a2750528d2645e96eba07bbc8dc3e2f8f
+tree d92aacdbe1d17fb6b61e236732d571220e6d96d0
+parent a3f00ad3aa990ab167fd90753282e06205b11b1a
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765907 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765907 +0800
+
+    testing minor change
+
+commit 01da127d32b3da49304f1f15b7e0466f2395946b
+tree 051e1a3e1dc1ebbf0342fcb2f61563df7cac1846
+parent e57e55fedfe64d9272dda781862f82b0ba82766f
+parent a3f00ad3aa990ab167fd90753282e06205b11b1a
+author Server <ruvan@ozemail.com.au> 1318765867 +0800
+committer Server <ruvan@ozemail.com.au> 1318765867 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a3f00ad3aa990ab167fd90753282e06205b11b1a
+tree 051e1a3e1dc1ebbf0342fcb2f61563df7cac1846
+parent f2241c1019b6f438274e7a9e7fcef64acea8030c
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765829 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765829 +0800
+
+    testing minor change
+
+commit e57e55fedfe64d9272dda781862f82b0ba82766f
+tree ed61b6c41385f5e1c87eee8b8bee3243d77a3f69
+parent 170d8295297b2f85236513229120886835c73831
+parent f2241c1019b6f438274e7a9e7fcef64acea8030c
+author Server <ruvan@ozemail.com.au> 1318765796 +0800
+committer Server <ruvan@ozemail.com.au> 1318765796 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f2241c1019b6f438274e7a9e7fcef64acea8030c
+tree ed61b6c41385f5e1c87eee8b8bee3243d77a3f69
+parent b11f843b95cf34829f41afa684c467ce4aac3c43
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765763 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765763 +0800
+
+    testing minor change
+
+commit 170d8295297b2f85236513229120886835c73831
+tree 051e1a3e1dc1ebbf0342fcb2f61563df7cac1846
+parent 04f555cb3b418fe8cb6d24f9821e90c82e5e5525
+parent b11f843b95cf34829f41afa684c467ce4aac3c43
+author Server <ruvan@ozemail.com.au> 1318765710 +0800
+committer Server <ruvan@ozemail.com.au> 1318765710 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b11f843b95cf34829f41afa684c467ce4aac3c43
+tree 051e1a3e1dc1ebbf0342fcb2f61563df7cac1846
+parent be8544f67a6ab4216bfa88ad5847e87ebe5bd77c
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765676 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765676 +0800
+
+    testing minor change
+
+commit 04f555cb3b418fe8cb6d24f9821e90c82e5e5525
+tree b0261aa4670e1a312017157dcbd1f5158ffd7aa4
+parent c3f4196e6c440c75423aae9a556b626f394e1d28
+parent be8544f67a6ab4216bfa88ad5847e87ebe5bd77c
+author Server <ruvan@ozemail.com.au> 1318765626 +0800
+committer Server <ruvan@ozemail.com.au> 1318765626 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit be8544f67a6ab4216bfa88ad5847e87ebe5bd77c
+tree b0261aa4670e1a312017157dcbd1f5158ffd7aa4
+parent 717e5315912666acfa1d4b78740a26f43c1f8af1
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765589 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765589 +0800
+
+    testing minor change
+
+commit c3f4196e6c440c75423aae9a556b626f394e1d28
+tree 2f42d87e0da2d4884cb71c314881ece112b6abae
+parent f2e448144da84b0043fc1a271356843581db93d8
+parent 717e5315912666acfa1d4b78740a26f43c1f8af1
+author Server <ruvan@ozemail.com.au> 1318765533 +0800
+committer Server <ruvan@ozemail.com.au> 1318765533 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 717e5315912666acfa1d4b78740a26f43c1f8af1
+tree 2f42d87e0da2d4884cb71c314881ece112b6abae
+parent b238891b46f6055eb8be82650e19eaf0c65da234
+author CokaRoach <roche.liam.email+github@gmail.com> 1318765495 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318765495 +0800
+
+    testing redirect page
+
+commit f2e448144da84b0043fc1a271356843581db93d8
+tree c37c1aa9ccbe8458a636bc14d5aa00fab779c486
+parent 8b6c721ec4179e4e3846e5f5198840e33ed5ea7b
+parent b238891b46f6055eb8be82650e19eaf0c65da234
+author Server <ruvan@ozemail.com.au> 1318764832 +0800
+committer Server <ruvan@ozemail.com.au> 1318764832 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b238891b46f6055eb8be82650e19eaf0c65da234
+tree c37c1aa9ccbe8458a636bc14d5aa00fab779c486
+parent 86a1954f44d6f6780839f511bbbd86461e22df7a
+author CokaRoach <roche.liam.email+github@gmail.com> 1318764780 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318764780 +0800
+
+    testing minor change
+
+commit 8b6c721ec4179e4e3846e5f5198840e33ed5ea7b
+tree 7ed4be5217b46323a4dac8dc9d17a253a70d91ff
+parent 9aed783b445cf8a4b5e7a02bf16a1c1682e603d5
+parent 86a1954f44d6f6780839f511bbbd86461e22df7a
+author Server <ruvan@ozemail.com.au> 1318764525 +0800
+committer Server <ruvan@ozemail.com.au> 1318764525 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 86a1954f44d6f6780839f511bbbd86461e22df7a
+tree 7ed4be5217b46323a4dac8dc9d17a253a70d91ff
+parent 1d6ecb132f165b3ec2c8509c1d02505f3d731120
+author CokaRoach <roche.liam.email+github@gmail.com> 1318764490 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318764490 +0800
+
+    testing minor change
+
+commit 9aed783b445cf8a4b5e7a02bf16a1c1682e603d5
+tree 6bd007e8f3fec7d7f0b398b3ec05c5a8053dceea
+parent 8084a82ba0d1feecd2536045dd81e72e3632d231
+parent 1d6ecb132f165b3ec2c8509c1d02505f3d731120
+author Server <ruvan@ozemail.com.au> 1318764453 +0800
+committer Server <ruvan@ozemail.com.au> 1318764453 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1d6ecb132f165b3ec2c8509c1d02505f3d731120
+tree 6bd007e8f3fec7d7f0b398b3ec05c5a8053dceea
+parent d1668bac2b649277e0a2e0e367c39dd9a5d5de37
+author CokaRoach <roche.liam.email+github@gmail.com> 1318764411 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318764411 +0800
+
+    filled out upload.php with psuedocode for someone else to complete
+
+commit 8084a82ba0d1feecd2536045dd81e72e3632d231
+tree affa71c90367168d8960da938fe45c48bca1df17
+parent 813c0d649514b79033d0b3668507f4a67da2704d
+parent d1668bac2b649277e0a2e0e367c39dd9a5d5de37
+author Server <ruvan@ozemail.com.au> 1318763561 +0800
+committer Server <ruvan@ozemail.com.au> 1318763561 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d1668bac2b649277e0a2e0e367c39dd9a5d5de37
+tree affa71c90367168d8960da938fe45c48bca1df17
+parent 257d58f671e5088506ae85a4ac7883fa0c4d3587
+author CokaRoach <roche.liam.email+github@gmail.com> 1318763519 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318763519 +0800
+
+    testing minor change
+
+commit 813c0d649514b79033d0b3668507f4a67da2704d
+tree 87b36d053970d0e78a6f74017571e46c39562b25
+parent 11fdb0e11f94ce1888d711f7027fe607242fb720
+parent 257d58f671e5088506ae85a4ac7883fa0c4d3587
+author Server <ruvan@ozemail.com.au> 1318763453 +0800
+committer Server <ruvan@ozemail.com.au> 1318763453 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 257d58f671e5088506ae85a4ac7883fa0c4d3587
+tree 87b36d053970d0e78a6f74017571e46c39562b25
+parent f5453574c0cc2ab48b3d6ec1daa1214f22cbdbee
+author CokaRoach <roche.liam.email+github@gmail.com> 1318763419 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318763419 +0800
+
+    testing minor change
+
+commit 11fdb0e11f94ce1888d711f7027fe607242fb720
+tree 949c1dda4cf7cb6bf951dc83858297d985aa63e3
+parent a1db2b03bb972858bf508ecdc3fc2715ba5b4c4e
+parent f5453574c0cc2ab48b3d6ec1daa1214f22cbdbee
+author Server <ruvan@ozemail.com.au> 1318763207 +0800
+committer Server <ruvan@ozemail.com.au> 1318763207 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f5453574c0cc2ab48b3d6ec1daa1214f22cbdbee
+tree 949c1dda4cf7cb6bf951dc83858297d985aa63e3
+parent b903a43a46992ccbbb9feb75767a623e81f8d120
+author CokaRoach <roche.liam.email+github@gmail.com> 1318763157 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318763157 +0800
+
+    changed a backslash to a forward slash
+
+commit a1db2b03bb972858bf508ecdc3fc2715ba5b4c4e
+tree 2e3e937af329582ee78903ab6152846353abb59b
+parent 175b68fea5e79f234578fd0a2f92f4cec2ac4e3e
+parent b903a43a46992ccbbb9feb75767a623e81f8d120
+author Server <ruvan@ozemail.com.au> 1318763078 +0800
+committer Server <ruvan@ozemail.com.au> 1318763078 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b903a43a46992ccbbb9feb75767a623e81f8d120
+tree 2e3e937af329582ee78903ab6152846353abb59b
+parent a36bd9dc142bad3cc684007f17935ebe06d7ab09
+author CokaRoach <roche.liam.email+github@gmail.com> 1318763040 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318763040 +0800
+
+    testing cant work out what the fuck is going on
+
+commit 175b68fea5e79f234578fd0a2f92f4cec2ac4e3e
+tree 8c05c35bcb548b878b5203322a97f72801400adc
+parent 4b14d30c802ee5a99207bee8bccc816ac1254ed4
+parent a36bd9dc142bad3cc684007f17935ebe06d7ab09
+author Server <ruvan@ozemail.com.au> 1318762951 +0800
+committer Server <ruvan@ozemail.com.au> 1318762951 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a36bd9dc142bad3cc684007f17935ebe06d7ab09
+tree 8c05c35bcb548b878b5203322a97f72801400adc
+parent 1012054595efcad66daf4178568c28f084113eaf
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762899 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762899 +0800
+
+    testing minor change
+
+commit 4b14d30c802ee5a99207bee8bccc816ac1254ed4
+tree a516d856ccdf8aca88f0a37ced0c725022792dc8
+parent 89ddf30133dd920acbb5c56612c2f1c9a403dd2c
+parent 1012054595efcad66daf4178568c28f084113eaf
+author Server <ruvan@ozemail.com.au> 1318762869 +0800
+committer Server <ruvan@ozemail.com.au> 1318762869 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1012054595efcad66daf4178568c28f084113eaf
+tree a516d856ccdf8aca88f0a37ced0c725022792dc8
+parent d0950068fe755f0d6b267047b2ff7ca829cadedc
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762835 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762835 +0800
+
+    testing minor change
+
+commit 89ddf30133dd920acbb5c56612c2f1c9a403dd2c
+tree 4601a0cefda286483cdf05c1a5053488502d70cd
+parent 5f0885dd181782f8bdb2c6ee396988a6454729ad
+parent d0950068fe755f0d6b267047b2ff7ca829cadedc
+author Server <ruvan@ozemail.com.au> 1318762809 +0800
+committer Server <ruvan@ozemail.com.au> 1318762809 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d0950068fe755f0d6b267047b2ff7ca829cadedc
+tree 4601a0cefda286483cdf05c1a5053488502d70cd
+parent 7bf66a70f79a976db020d1ee4f13664acb758754
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762770 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762770 +0800
+
+    testing minor change
+
+commit 5f0885dd181782f8bdb2c6ee396988a6454729ad
+tree efbf3eaf3daf1aed2998f630799744f290a435fb
+parent 7a4661425f9e50843034d97d36e3d74031d9422a
+parent 7bf66a70f79a976db020d1ee4f13664acb758754
+author Server <ruvan@ozemail.com.au> 1318762724 +0800
+committer Server <ruvan@ozemail.com.au> 1318762724 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 7bf66a70f79a976db020d1ee4f13664acb758754
+tree efbf3eaf3daf1aed2998f630799744f290a435fb
+parent d85b1d09d7cae59dd8a714786b510cc6fa6293fd
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762690 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762690 +0800
+
+    testing minor changes
+
+commit 7a4661425f9e50843034d97d36e3d74031d9422a
+tree d21415bc01a40ebe2667a1e8bf0ef8e6eafcbfc1
+parent 56feca3720a160b64a698ee45c1de8102f39e63c
+parent d85b1d09d7cae59dd8a714786b510cc6fa6293fd
+author Server <ruvan@ozemail.com.au> 1318762626 +0800
+committer Server <ruvan@ozemail.com.au> 1318762626 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d85b1d09d7cae59dd8a714786b510cc6fa6293fd
+tree d21415bc01a40ebe2667a1e8bf0ef8e6eafcbfc1
+parent 1c10c43fc1d34cf2cb28e7e9fbc0c0dbe1b0e267
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762583 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762583 +0800
+
+    testing: minor change
+
+commit 56feca3720a160b64a698ee45c1de8102f39e63c
+tree 296c97340ff2c2b0a557bff1c4177227c50b264c
+parent 5c298b98ca4f0f5ce6240f39e83b7aa2122c7005
+parent 1c10c43fc1d34cf2cb28e7e9fbc0c0dbe1b0e267
+author Server <ruvan@ozemail.com.au> 1318762483 +0800
+committer Server <ruvan@ozemail.com.au> 1318762483 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1c10c43fc1d34cf2cb28e7e9fbc0c0dbe1b0e267
+tree 296c97340ff2c2b0a557bff1c4177227c50b264c
+parent 123675776874e6da6b96af18d63a7a2908114da1
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762449 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762449 +0800
+
+    testing: minor change
+
+commit 5c298b98ca4f0f5ce6240f39e83b7aa2122c7005
+tree 3cddd25cf2643668f2a39c0b0a3fa942b59fd3a9
+parent 3953ce7ec41db1381d2bd93d387f38e16b64f451
+parent 123675776874e6da6b96af18d63a7a2908114da1
+author Server <ruvan@ozemail.com.au> 1318762416 +0800
+committer Server <ruvan@ozemail.com.au> 1318762416 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 123675776874e6da6b96af18d63a7a2908114da1
+tree 3cddd25cf2643668f2a39c0b0a3fa942b59fd3a9
+parent bced4b42823b5aacf7babfbe01ed15a3d886a882
+author CokaRoach <roche.liam.email+github@gmail.com> 1318762366 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318762366 +0800
+
+    testing
+    creating upload.php
+
+commit 3953ce7ec41db1381d2bd93d387f38e16b64f451
+tree 73e338867cbcca5d02851d60e7cb45dd42854fa0
+parent 4f71b4b922ca408cc81119ff9d808b3ab75629ff
+parent bced4b42823b5aacf7babfbe01ed15a3d886a882
+author Server <ruvan@ozemail.com.au> 1318761808 +0800
+committer Server <ruvan@ozemail.com.au> 1318761808 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bced4b42823b5aacf7babfbe01ed15a3d886a882
+tree 73e338867cbcca5d02851d60e7cb45dd42854fa0
+parent 729e2d7879d6731ad2b0818db347b00e68710220
+author CokaRoach <roche.liam.email+github@gmail.com> 1318761756 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318761756 +0800
+
+    testing: minor change
+
+commit 4f71b4b922ca408cc81119ff9d808b3ab75629ff
+tree 0f9cbe22972d0e676315a678e08a7f717a1ceb21
+parent 703872ea48683b07ffd9af1a6779b2f0af022080
+parent 729e2d7879d6731ad2b0818db347b00e68710220
+author Server <ruvan@ozemail.com.au> 1318761524 +0800
+committer Server <ruvan@ozemail.com.au> 1318761524 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 729e2d7879d6731ad2b0818db347b00e68710220
+tree 0f9cbe22972d0e676315a678e08a7f717a1ceb21
+parent 69ac031e29add812d770bbdbee8f6ef3ff2c7ca9
+author CokaRoach <roche.liam.email+github@gmail.com> 1318761487 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318761487 +0800
+
+    testing: minor change
+
+commit 703872ea48683b07ffd9af1a6779b2f0af022080
+tree 187b34d12886fbe79382a7589a339b7766cda891
+parent 578428f17be0da673180191318de224f2961b0ed
+parent 69ac031e29add812d770bbdbee8f6ef3ff2c7ca9
+author Server <ruvan@ozemail.com.au> 1318761415 +0800
+committer Server <ruvan@ozemail.com.au> 1318761415 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 69ac031e29add812d770bbdbee8f6ef3ff2c7ca9
+tree 187b34d12886fbe79382a7589a339b7766cda891
+parent 36369d34b36f6facdc6b133e0438ec43f0f378ba
+author CokaRoach <roche.liam.email+github@gmail.com> 1318761377 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318761377 +0800
+
+    testing: minor change
+
+commit 578428f17be0da673180191318de224f2961b0ed
+tree c3496fc784709768fc42d29d9969455cacd708f1
+parent d334bc66a4ba3ad309b1b9923658bd2a99bdb112
+parent 36369d34b36f6facdc6b133e0438ec43f0f378ba
+author Server <ruvan@ozemail.com.au> 1318761344 +0800
+committer Server <ruvan@ozemail.com.au> 1318761344 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 36369d34b36f6facdc6b133e0438ec43f0f378ba
+tree c3496fc784709768fc42d29d9969455cacd708f1
+parent 1bc4d8c31921b7b57b27f55e20aa53095e4e191b
+author CokaRoach <roche.liam.email+github@gmail.com> 1318761285 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318761285 +0800
+
+    testing: minor change
+
+commit d334bc66a4ba3ad309b1b9923658bd2a99bdb112
+tree baad3eea3e02a06b0ec86cf4fbc1d392d19b6eb8
+parent be22898eb15b69cc4f5c669fdec0d88d9d0d4a25
+parent 1bc4d8c31921b7b57b27f55e20aa53095e4e191b
+author Server <ruvan@ozemail.com.au> 1318761240 +0800
+committer Server <ruvan@ozemail.com.au> 1318761240 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1bc4d8c31921b7b57b27f55e20aa53095e4e191b
+tree baad3eea3e02a06b0ec86cf4fbc1d392d19b6eb8
+parent 810b2afd40266fced2e0883b0cdee8683851ce33
+author CokaRoach <roche.liam.email+github@gmail.com> 1318761194 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318761194 +0800
+
+    testing: minor change
+
+commit be22898eb15b69cc4f5c669fdec0d88d9d0d4a25
+tree 678add1febf745cf4c206f657731944e16e16489
+parent ddb74b025562a749bdeacd5a597ff006eabcf78d
+parent 810b2afd40266fced2e0883b0cdee8683851ce33
+author Server <ruvan@ozemail.com.au> 1318760564 +0800
+committer Server <ruvan@ozemail.com.au> 1318760564 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 810b2afd40266fced2e0883b0cdee8683851ce33
+tree 678add1febf745cf4c206f657731944e16e16489
+parent b94118f4d491f22c117b0563c61a7858159b453e
+author CokaRoach <roche.liam.email+github@gmail.com> 1318760496 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318760496 +0800
+
+    testing: minor change
+
+commit ddb74b025562a749bdeacd5a597ff006eabcf78d
+tree 366d1ace7da170bc6beb072f881c2447ff7703a0
+parent f7bffb25c1703b1268a8845729d674bee0a48be6
+parent b94118f4d491f22c117b0563c61a7858159b453e
+author Server <ruvan@ozemail.com.au> 1318760405 +0800
+committer Server <ruvan@ozemail.com.au> 1318760405 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b94118f4d491f22c117b0563c61a7858159b453e
+tree 366d1ace7da170bc6beb072f881c2447ff7703a0
+parent 7c6e8cd528198103982fe14adf273e747f806384
+author CokaRoach <roche.liam.email+github@gmail.com> 1318760367 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318760367 +0800
+
+    testing: minor change
+
+commit f7bffb25c1703b1268a8845729d674bee0a48be6
+tree ddc7df5c10db9fb6afeac0c1c5df3e230c50c45e
+parent b58b9f7cba5a2b513537c2199740a9509f5208cf
+parent 7c6e8cd528198103982fe14adf273e747f806384
+author Server <ruvan@ozemail.com.au> 1318760299 +0800
+committer Server <ruvan@ozemail.com.au> 1318760299 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 7c6e8cd528198103982fe14adf273e747f806384
+tree ddc7df5c10db9fb6afeac0c1c5df3e230c50c45e
+parent 6caa4c0e69f22c0f034d09bb0185cf8e6fb8434a
+author CokaRoach <roche.liam.email+github@gmail.com> 1318760261 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318760261 +0800
+
+    testing: minor change
+
+commit b58b9f7cba5a2b513537c2199740a9509f5208cf
+tree e0fe21cb59dafd27590ff2fb336da50ac5b6fba9
+parent 45d771dd8eb8929a51052c9830133aebdd2e89f1
+parent 6caa4c0e69f22c0f034d09bb0185cf8e6fb8434a
+author Server <ruvan@ozemail.com.au> 1318760174 +0800
+committer Server <ruvan@ozemail.com.au> 1318760174 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6caa4c0e69f22c0f034d09bb0185cf8e6fb8434a
+tree e0fe21cb59dafd27590ff2fb336da50ac5b6fba9
+parent 398ab659e277d7576a0388aa46570bddd498cf7c
+author CokaRoach <roche.liam.email+github@gmail.com> 1318760129 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318760129 +0800
+
+    turn on server login
+
+commit 45d771dd8eb8929a51052c9830133aebdd2e89f1
+tree 74626a175d33fe3fe1e5bb574e1b75542ca551d6
+parent c3ca214f71056d1870b149c1cb02eac81056363f
+parent 398ab659e277d7576a0388aa46570bddd498cf7c
+author Server <ruvan@ozemail.com.au> 1318759189 +0800
+committer Server <ruvan@ozemail.com.au> 1318759189 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 398ab659e277d7576a0388aa46570bddd498cf7c
+tree 74626a175d33fe3fe1e5bb574e1b75542ca551d6
+parent f10626bdff60d400c614c1221b97479516b96f59
+author CokaRoach <roche.liam.email+github@gmail.com> 1318759147 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318759147 +0800
+
+    testing: minor change
+
+commit c3ca214f71056d1870b149c1cb02eac81056363f
+tree fc098b6006076e2b34a3d8bcd2f5799fe84ce723
+parent 9c762a7da2515848703970423fd07f630c3cc0ca
+parent f10626bdff60d400c614c1221b97479516b96f59
+author Server <ruvan@ozemail.com.au> 1318759077 +0800
+committer Server <ruvan@ozemail.com.au> 1318759077 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f10626bdff60d400c614c1221b97479516b96f59
+tree fc098b6006076e2b34a3d8bcd2f5799fe84ce723
+parent 4c9cf7a48421d2b938a47b2d5947471f85c38cee
+author CokaRoach <roche.liam.email+github@gmail.com> 1318759034 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318759034 +0800
+
+    testing: minor change
+
+commit 9c762a7da2515848703970423fd07f630c3cc0ca
+tree b3faa42fa09497242d828cbba8caa016ece8a9b5
+parent 57fbdcb27e6237bc0beff1bfe129409c1631a34d
+parent 4c9cf7a48421d2b938a47b2d5947471f85c38cee
+author Server <ruvan@ozemail.com.au> 1318758884 +0800
+committer Server <ruvan@ozemail.com.au> 1318758884 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 4c9cf7a48421d2b938a47b2d5947471f85c38cee
+tree b3faa42fa09497242d828cbba8caa016ece8a9b5
+parent fe589114040c00097f9ed1c829ddd2d8de357f53
+author CokaRoach <roche.liam.email+github@gmail.com> 1318758836 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318758836 +0800
+
+    put else command in wrong spot
+
+commit 57fbdcb27e6237bc0beff1bfe129409c1631a34d
+tree 22d8512b1020b935fb4a94dfcc75944fdcd70107
+parent 44f9a2bf1b35cce9e0648575f1669fad5c2a0a41
+parent fe589114040c00097f9ed1c829ddd2d8de357f53
+author Server <ruvan@ozemail.com.au> 1318758799 +0800
+committer Server <ruvan@ozemail.com.au> 1318758799 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit fe589114040c00097f9ed1c829ddd2d8de357f53
+tree 22d8512b1020b935fb4a94dfcc75944fdcd70107
+parent 64f2e6bf8a472769d4c5e422fbe95c45c3ed46d1
+author CokaRoach <roche.liam.email+github@gmail.com> 1318758751 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318758751 +0800
+
+    renamed variable from reserved word
+
+commit 44f9a2bf1b35cce9e0648575f1669fad5c2a0a41
+tree b1c41c1b9445dff0a26b1c1134ad5ba4f7ff9e03
+parent a049b6c7e2f876aeab5c5eba0b969195ffd06fdd
+parent 64f2e6bf8a472769d4c5e422fbe95c45c3ed46d1
+author Server <ruvan@ozemail.com.au> 1318758648 +0800
+committer Server <ruvan@ozemail.com.au> 1318758648 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 64f2e6bf8a472769d4c5e422fbe95c45c3ed46d1
+tree b1c41c1b9445dff0a26b1c1134ad5ba4f7ff9e03
+parent 6cc27296e53481c49fe2396671baee512db15c4f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318758595 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318758595 +0800
+
+    save class data in fitness test
+
+commit a049b6c7e2f876aeab5c5eba0b969195ffd06fdd
+tree ddda649391b53c748664fd2c19a5d879cbae2b63
+parent baf4fec0664f6fda49c2cda0efa9024a2c0c956e
+parent 6cc27296e53481c49fe2396671baee512db15c4f
+author Server <ruvan@ozemail.com.au> 1318758236 +0800
+committer Server <ruvan@ozemail.com.au> 1318758236 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6cc27296e53481c49fe2396671baee512db15c4f
+tree ddda649391b53c748664fd2c19a5d879cbae2b63
+parent e502b4780b4c9b22b8eaf43c14e11aef6d486a22
+author CokaRoach <roche.liam.email+github@gmail.com> 1318756924 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318756924 +0800
+
+    remove unused code
+    correct fieldname
+
+commit baf4fec0664f6fda49c2cda0efa9024a2c0c956e
+tree c784940c8e45e62d732de9704b0fd6fb3a429ea7
+parent e47f91bec9f57cc9d8c3a965fa362cad69fe4e09
+parent e502b4780b4c9b22b8eaf43c14e11aef6d486a22
+author Server <ruvan@ozemail.com.au> 1318756782 +0800
+committer Server <ruvan@ozemail.com.au> 1318756782 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e502b4780b4c9b22b8eaf43c14e11aef6d486a22
+tree c784940c8e45e62d732de9704b0fd6fb3a429ea7
+parent bd3618813069b164994ff766575253c22c780488
+author CokaRoach <roche.liam.email+github@gmail.com> 1318756733 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318756733 +0800
+
+    fix link and extract all uploadable data
+
+commit e47f91bec9f57cc9d8c3a965fa362cad69fe4e09
+tree 6891a09dd1a587dc0ea32ef19736e0728f80eba5
+parent 9caeb380e5d7222f49c97f4df29c9f008fe0e257
+parent bd3618813069b164994ff766575253c22c780488
+author Server <ruvan@ozemail.com.au> 1318755913 +0800
+committer Server <ruvan@ozemail.com.au> 1318755913 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bd3618813069b164994ff766575253c22c780488
+tree 6891a09dd1a587dc0ea32ef19736e0728f80eba5
+parent 1915c4aad0a80971820912cba3af7c8083f481fe
+author CokaRoach <roche.liam.email+github@gmail.com> 1318755861 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318755861 +0800
+
+    testing:minor change
+
+commit 9caeb380e5d7222f49c97f4df29c9f008fe0e257
+tree 99267a4be89e35a166b26a082ee31b38c1abdbb6
+parent ad289ef00b13744dc551f986a1cfd1e29fc05f75
+parent 1915c4aad0a80971820912cba3af7c8083f481fe
+author Server <ruvan@ozemail.com.au> 1318755645 +0800
+committer Server <ruvan@ozemail.com.au> 1318755645 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1915c4aad0a80971820912cba3af7c8083f481fe
+tree 99267a4be89e35a166b26a082ee31b38c1abdbb6
+parent f5a3e6ce299dce9dba5b6d79511a47097e6ff5ee
+author CokaRoach <roche.liam.email+github@gmail.com> 1318755589 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318755589 +0800
+
+    testing:minor change
+
+commit ad289ef00b13744dc551f986a1cfd1e29fc05f75
+tree f6eaa11354acf2a380f0c51c49cfc63148e42ce7
+parent eba0e26711d21e7c68dc77bc97b2cdebf760d248
+parent f5a3e6ce299dce9dba5b6d79511a47097e6ff5ee
+author Server <ruvan@ozemail.com.au> 1318755377 +0800
+committer Server <ruvan@ozemail.com.au> 1318755377 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f5a3e6ce299dce9dba5b6d79511a47097e6ff5ee
+tree f6eaa11354acf2a380f0c51c49cfc63148e42ce7
+parent 6c68e53acf184deb23414019eb398acad4a2e5bc
+author CokaRoach <roche.liam.email+github@gmail.com> 1318755325 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318755325 +0800
+
+    testing:minor change
+
+commit eba0e26711d21e7c68dc77bc97b2cdebf760d248
+tree 7a2d286a13aff693a8110cc5642505ff5560d21a
+parent e0b711d5de22549be62d7c9edd6c554522234111
+parent 6c68e53acf184deb23414019eb398acad4a2e5bc
+author Server <ruvan@ozemail.com.au> 1318755098 +0800
+committer Server <ruvan@ozemail.com.au> 1318755098 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6c68e53acf184deb23414019eb398acad4a2e5bc
+tree 7a2d286a13aff693a8110cc5642505ff5560d21a
+parent 3e0a5d8403bc3dcae61991e7de3550ac24ea966f
+author CokaRoach <roche.liam.email+github@gmail.com> 1318755040 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318755040 +0800
+
+    testing:minor change
+
+commit e0b711d5de22549be62d7c9edd6c554522234111
+tree 30d9878188d45ac497aaf870a105d45913ca7c4e
+parent 2643203c3d72e607fe1ceafb970bee19f763ad1c
+parent 3e0a5d8403bc3dcae61991e7de3550ac24ea966f
+author Server <ruvan@ozemail.com.au> 1318754375 +0800
+committer Server <ruvan@ozemail.com.au> 1318754375 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 3e0a5d8403bc3dcae61991e7de3550ac24ea966f
+tree 30d9878188d45ac497aaf870a105d45913ca7c4e
+parent b3e39ae4b251e85d547b6775ad9ed29a82a11531
+parent 369c2c77ebd3795e0f96149d856365f18859c193
+author CokaRoach <roche.liam.email+github@gmail.com> 1318754317 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318754317 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit b3e39ae4b251e85d547b6775ad9ed29a82a11531
+tree 8c1bae248dc47094313d745f2ceaf2411cdf042f
+parent bf5d6f6f91562fd7e851622f765edd083febeace
+author CokaRoach <roche.liam.email+github@gmail.com> 1318754261 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318754261 +0800
+
+    print json
+
+commit 369c2c77ebd3795e0f96149d856365f18859c193
+tree 5780a23beb8663a307fd31a3ad58a1cc02b1c385
+parent bf5d6f6f91562fd7e851622f765edd083febeace
+author Enda <Enda@Enda-PC.(none)> 1318753673 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318753673 +0800
+
+    changed the error messages around and added a success message
+
+commit 2643203c3d72e607fe1ceafb970bee19f763ad1c
+tree 1c5fc931b5b53aa4e23cf83fe17aec667bf627db
+parent 8fb2622f24f3484b2b2a6f666483e58d4b1505a7
+parent bf5d6f6f91562fd7e851622f765edd083febeace
+author Server <ruvan@ozemail.com.au> 1318750633 +0800
+committer Server <ruvan@ozemail.com.au> 1318750633 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bf5d6f6f91562fd7e851622f765edd083febeace
+tree 1c5fc931b5b53aa4e23cf83fe17aec667bf627db
+parent 71766e525a5c8b9aedfcf59958f1dd7f036e56b4
+author CokaRoach <roche.liam.email+github@gmail.com> 1318750588 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318750588 +0800
+
+    testing:minor change
+
+commit 8fb2622f24f3484b2b2a6f666483e58d4b1505a7
+tree b9cbf745d9412a10157d36ba92b337dcd8fb3624
+parent bcdde69bb3e1a4875014fac36511dc16239baa41
+parent 71766e525a5c8b9aedfcf59958f1dd7f036e56b4
+author Server <ruvan@ozemail.com.au> 1318750573 +0800
+committer Server <ruvan@ozemail.com.au> 1318750573 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 71766e525a5c8b9aedfcf59958f1dd7f036e56b4
+tree b9cbf745d9412a10157d36ba92b337dcd8fb3624
+parent de9fb649e02467441d12061b30944301be442bcf
+author CokaRoach <roche.liam.email+github@gmail.com> 1318750523 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318750523 +0800
+
+    testing: minor change
+
+commit bcdde69bb3e1a4875014fac36511dc16239baa41
+tree 8443c4bb4b74493436bb8584202c92e22ec04edc
+parent db95765d7116442c42119ab09cb3f167e54e62ef
+parent de9fb649e02467441d12061b30944301be442bcf
+author Server <ruvan@ozemail.com.au> 1318750344 +0800
+committer Server <ruvan@ozemail.com.au> 1318750344 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit de9fb649e02467441d12061b30944301be442bcf
+tree 8443c4bb4b74493436bb8584202c92e22ec04edc
+parent 9d020780979d27f5b7d614d45c838278429db81d
+author CokaRoach <roche.liam.email+github@gmail.com> 1318750301 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318750301 +0800
+
+    minor change
+
+commit db95765d7116442c42119ab09cb3f167e54e62ef
+tree 88e9e3abbbe8cecd96f308d8509599483d7008ee
+parent 6f9104531b5abe2ba214ad5de9841dfd673451f5
+parent 9d020780979d27f5b7d614d45c838278429db81d
+author Server <ruvan@ozemail.com.au> 1318750251 +0800
+committer Server <ruvan@ozemail.com.au> 1318750251 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 9d020780979d27f5b7d614d45c838278429db81d
+tree 88e9e3abbbe8cecd96f308d8509599483d7008ee
+parent 6a89bbf94f41c867f7e1fc2249ed515a1e03c400
+author CokaRoach <roche.liam.email+github@gmail.com> 1318750198 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318750198 +0800
+
+    minor change
+
+commit 6f9104531b5abe2ba214ad5de9841dfd673451f5
+tree 493b60fe4c0e266d9416cb92e834e240bc75a68e
+parent 24e58a4fa07498a24914d7226026e4bb57a9b9f6
+parent 6a89bbf94f41c867f7e1fc2249ed515a1e03c400
+author Server <ruvan@ozemail.com.au> 1318750125 +0800
+committer Server <ruvan@ozemail.com.au> 1318750125 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6a89bbf94f41c867f7e1fc2249ed515a1e03c400
+tree 493b60fe4c0e266d9416cb92e834e240bc75a68e
+parent 2fc079593f56d1d3bf2a00c58eba687cd051b259
+author CokaRoach <roche.liam.email+github@gmail.com> 1318750078 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318750078 +0800
+
+    sqlfix
+
+commit 24e58a4fa07498a24914d7226026e4bb57a9b9f6
+tree d41d3b44a6ecb9da7a0d6582b409b5e14f00d0d4
+parent f90c57ae76328a00dd6217b9745c4a5fa6febf3c
+parent 2fc079593f56d1d3bf2a00c58eba687cd051b259
+author Server <ruvan@ozemail.com.au> 1318750040 +0800
+committer Server <ruvan@ozemail.com.au> 1318750040 +0800
+
+    liam messing with server
+
+commit f90c57ae76328a00dd6217b9745c4a5fa6febf3c
+tree a8c6b61c0a71f10ce82cd0d0cee870b606b9b048
+parent 887cb9661d43051afbb6c580c2294b6aff514dd2
+author Server <ruvan@ozemail.com.au> 1318749949 +0800
+committer Server <ruvan@ozemail.com.au> 1318749949 +0800
+
+    liam messing with server
+
+commit 2fc079593f56d1d3bf2a00c58eba687cd051b259
+tree d41d3b44a6ecb9da7a0d6582b409b5e14f00d0d4
+parent 887cb9661d43051afbb6c580c2294b6aff514dd2
+author CokaRoach <roche.liam.email+github@gmail.com> 1318748465 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318748465 +0800
+
+    insert uploaded field into training records2
+
+commit 887cb9661d43051afbb6c580c2294b6aff514dd2
+tree 0d8a1b33bceec4399e9ac215c85980b9960c5fdb
+parent a32cc320621182613ccd858823d7dca9a7d0eea0
+author CokaRoach <roche.liam.email+github@gmail.com> 1318746872 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318746872 +0800
+
+    minor change
+
+commit a32cc320621182613ccd858823d7dca9a7d0eea0
+tree 5d968188f3ea2b057e4e94432ef24b30972caaa4
+parent d7aac57aba20513fa18b37c5f68990faf8d54451
+author CokaRoach <roche.liam.email+github@gmail.com> 1318746779 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318746779 +0800
+
+    spelling fix
+
+commit d7aac57aba20513fa18b37c5f68990faf8d54451
+tree 9e99418c7639d416c38d27128c21f61e4c824af1
+parent e6d67c06ef7b24ebf4bfbab5347a2ae4b1ae120e
+author CokaRoach <roche.liam.email+github@gmail.com> 1318746674 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318746674 +0800
+
+    spelling fix
+
+commit e6d67c06ef7b24ebf4bfbab5347a2ae4b1ae120e
+tree dd65aaacfa16426cc3e53e966c5d450be7766002
+parent 4b802bf399df3e5e346133cd507a9563801f2624
+author CokaRoach <roche.liam.email+github@gmail.com> 1318746558 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318746558 +0800
+
+    print extracted data from upload to screen
+
+commit 4b802bf399df3e5e346133cd507a9563801f2624
+tree f77a98a74845ed1c28c8f15b312ea823948e742b
+parent eff2f7a25934b68fe9f75d0f7ce2bdb977cb0db9
+author CokaRoach <roche.liam.email+github@gmail.com> 1318745779 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318745779 +0800
+
+    change download.html to attempt to download from the server
+
+commit eff2f7a25934b68fe9f75d0f7ce2bdb977cb0db9
+tree 8ef2f2cba557f5c3e704788b135aa46914712800
+parent b00cbe29ca7cb3553550b28bfc127e2d0ddef637
+author CokaRoach <roche.liam.email+github@gmail.com> 1318745076 +0800
+committer CokaRoach <roche.liam.email+github@gmail.com> 1318745076 +0800
+
+    Send webbapp files to server
+
+commit b00cbe29ca7cb3553550b28bfc127e2d0ddef637
+tree 038a67a8272d1374b154ab6f9a41881d3794d3d6
+parent 49642ffa45fdc1892e89935a5235a55a1fcaa444
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318744804 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318744804 +0800
+
+    Further commenting and tiding up. Added check for student.active
+    
+    the page was missing "?>" ??? how does this happen?? anyway that was
+    added too.
+    Checks that the student.active value is set to 1.
+
+commit 49642ffa45fdc1892e89935a5235a55a1fcaa444
+tree 4fa0b9689af6014cde6420b481f4368546f91051
+parent 2d97805e4790e347f49d62a52b275c387f592174
+parent 9288e6aa7942b8e414a1f5e3dd9cf15c973e378a
+author Server <ruvan@ozemail.com.au> 1318726378 +0800
+committer Server <ruvan@ozemail.com.au> 1318726378 +0800
+
+    Merge branch 'master' of github.com:CITS3200-TeamH/CITS3200-Wellness-Project
+
+commit 2d97805e4790e347f49d62a52b275c387f592174
+tree ca20c399301389d2b4ec987d7d0e645df5453751
+parent b4e9f5cae37c6984568c5cd68ae902c80671f88d
+author Server <ruvan@ozemail.com.au> 1318726202 +0800
+committer Server <ruvan@ozemail.com.au> 1318726202 +0800
+
+    sqlLite.js - minor modifications
+
+commit 9288e6aa7942b8e414a1f5e3dd9cf15c973e378a
+tree a92ccffc0688a5e20ee37be5fc3647fc1966b8a9
+parent 13ba6acf799755e6ec51620274930bb71fccf4a8
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318725990 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318725990 +0800
+
+    Added text to line 509's alert()
+    
+    Firebug, used as a javascript debugger pulled this up as not having
+    enough arguments. May fix the fact that an alert should be showing but
+    it is not.
+
+commit 13ba6acf799755e6ec51620274930bb71fccf4a8
+tree 45268c41dd147c71ad86fcd9993a1176cfdf4302
+parent acda66f24b405a233ad1b6b22d5513239851393c
+author Enda <Enda@Enda-PC.(none)> 1318645645 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318645645 +0800
+
+    added some more comments
+
+commit acda66f24b405a233ad1b6b22d5513239851393c
+tree 8f17acd2a049633927a07a4a612fddb9874df41e
+parent b4e9f5cae37c6984568c5cd68ae902c80671f88d
+author Enda <Enda@Enda-PC.(none)> 1318492507 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318492507 +0800
+
+    added code to prevent data being added for dates outside of the start/end dates or the window
+
+commit b4e9f5cae37c6984568c5cd68ae902c80671f88d
+tree cb48500c6fd7cedc2f5b7f6a62e7ea7841b31f00
+parent 41c28a920d16813a1866cf8b25580fd7911adc71
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318487886 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318487886 +0800
+
+    Made directory web_app, moved logon.html and sqllite.js into it.
+
+commit 41c28a920d16813a1866cf8b25580fd7911adc71
+tree eea28bc1fc7214a47d5231fc2bb1ad63a2566f1d
+parent 898ded79a5e1c54ff07688737df54f3a6cbfafa0
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318487290 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318487290 +0800
+
+    Added logon.html and sqllite.js -- Liam's part
+
+commit 898ded79a5e1c54ff07688737df54f3a6cbfafa0
+tree 871db7651f8cfae9cbe871e953f89adcd7ab765b
+parent c5dc066df47a1c22af8e14b53125a58bb0f2a5a5
+author Enda <Enda@Enda-PC.(none)> 1318480096 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318480096 +0800
+
+    tested/completed api_uploadXML.php and made one change to api_authFunctios.php
+
+commit c5dc066df47a1c22af8e14b53125a58bb0f2a5a5
+tree 312529cbf7dd3e58fd5c53021bdbd6991a022dcd
+parent 1764f0fd1467f59eaef95f707c73b191071502d6
+author Enda <Enda@Enda-PC.(none)> 1318458940 +0800
+committer Enda <Enda@Enda-PC.(none)> 1318458940 +0800
+
+    finished and tested sync.php Also modified api_auth by splitting it into two files
+
+commit 1764f0fd1467f59eaef95f707c73b191071502d6
+tree ba484f9a37e18dc20768ebea8816afefe55a042d
+parent e5db2a93b80c8c691dfa39b50b4070759a5eec4b
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401604 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401604 +0800
+
+    was missing a bracket -- found bug #0001
+
+commit e5db2a93b80c8c691dfa39b50b4070759a5eec4b
+tree 45182eec813379b6073df3fcd7139baee2b1cdca
+parent c77c4058b961a8413e519dbf03a141b137f265df
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401335 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401335 +0800
+
+    annoying
+
+commit c77c4058b961a8413e519dbf03a141b137f265df
+tree dea1897865a5b4a54891d90668a10455c60c7508
+parent 82347d25d1fb1440e623801ddeca8176a3132816
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401213 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318401213 +0800
+
+    allowed auth to use POST or GET for credential sending
+
+commit 82347d25d1fb1440e623801ddeca8176a3132816
+tree bab44a67db60573db556cd466aeebb53709f21fe
+parent 60ebb53e6af562881c366527437a856e55441d04
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318400686 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318400686 +0800
+
+    changed auth to POST
+
+commit 60ebb53e6af562881c366527437a856e55441d04
+tree 65bf10234c584b096d7119878dca9cd1fbf641e2
+parent d700e12cb15c46b92dafc8f703c04f75bae02191
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318400584 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1318400584 +0800
+
+    Enda Laughs
+
+commit d700e12cb15c46b92dafc8f703c04f75bae02191
+tree 9990638b43062523c674ed483662a15c9602bdfb
+parent d38287bce22011fb0b41e3e1d11d07337c22ef15
+author Renda <renda110@hotmail.com> 1318312376 +0800
+committer Renda <renda110@hotmail.com> 1318312376 +0800
+
+    removed extra " symbols
+
+commit d38287bce22011fb0b41e3e1d11d07337c22ef15
+tree 550f04d63ff12930245eb5a97939dbf2d04e8a2b
+parent 4bd300fb708d3a57b74f8048a01a70be035c92fa
+author Renda <renda110@hotmail.com> 1318312261 +0800
+committer Renda <renda110@hotmail.com> 1318312261 +0800
+
+    modified uploadXML.php
+
+commit 4bd300fb708d3a57b74f8048a01a70be035c92fa
+tree c34fdbbbf81a8c20f69c416a021fd4157280491b
+parent 250088a5d5cb26b4e10fb11d23309b9dbf7bc9ee
+author Enda <Enda@Enda-PC.(none)> 1317956468 +0800
+committer Enda <Enda@Enda-PC.(none)> 1317956468 +0800
+
+    changed uploadXML to work via POST
+
+commit 250088a5d5cb26b4e10fb11d23309b9dbf7bc9ee
+tree 75d750ca340ac06fdd8303b4ab5720b8a6795e00
+parent d2a917c02531c3de55833ff34f793801ea290fb5
+author Enda <Enda@Enda-PC.(none)> 1317102579 +0800
+committer Enda <Enda@Enda-PC.(none)> 1317102579 +0800
+
+    included api_auth where applicable
+
+commit d2a917c02531c3de55833ff34f793801ea290fb5
+tree 7caa67150774b1f1f7daa87de6e638329db2c41f
+parent d35547b3991ae21c2b4b2a4e02170837b96db5f3
+author Enda <Enda@Enda-PC.(none)> 1316999355 +0800
+committer Enda <Enda@Enda-PC.(none)> 1316999355 +0800
+
+    deleted some files
+
+commit d35547b3991ae21c2b4b2a4e02170837b96db5f3
+tree 3dbf7503faa66955f06af32eff43114a91813387
+parent badf6e5f444a1ad5086575cfa66bd5d61f2088e5
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945901 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945901 +0800
+
+    cleaning up page
+
+commit badf6e5f444a1ad5086575cfa66bd5d61f2088e5
+tree f2f19c3df6000aab445599ace25853b79aa8ed37
+parent 921f3cddad065088cbd34465917a176d62c06e26
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945725 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945725 +0800
+
+    testing validateToken()
+
+commit 921f3cddad065088cbd34465917a176d62c06e26
+tree a493fd62e7a3baf300af307b9a7a08d4308b9fbc
+parent efa7cba45813bbc7eaac1db6d6311f8db88ba6b9
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945055 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316945055 +0800
+
+    xml statement
+
+commit efa7cba45813bbc7eaac1db6d6311f8db88ba6b9
+tree 71b2ab82c192a16e0e3bb5b0138e72ded89cc976
+parent 3c53d1e0ccbcbd66f9bc8976d9916d5184a77420
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316944836 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316944836 +0800
+
+    xml return changed
+
+commit 3c53d1e0ccbcbd66f9bc8976d9916d5184a77420
+tree 02bbfaa247280784db5940790545c245a8b4f6a1
+parent 831be4e940e62a6ce704110e821d5c48cc172204
+author Enda <Enda@Enda-PC.(none)> 1316749012 +0800
+committer Enda <Enda@Enda-PC.(none)> 1316749012 +0800
+
+    moved and renamed some files
+
+commit 831be4e940e62a6ce704110e821d5c48cc172204
+tree 0542d670ba46711e71a28962daaa582707ccf38f
+parent 8c6386dd2493f09817d33ffe6e0f950ae512bb58
+author Enda <Enda@Enda-PC.(none)> 1316646584 +0800
+committer Enda <Enda@Enda-PC.(none)> 1316646584 +0800
+
+    modified sync.php and moved it
+
+commit 8c6386dd2493f09817d33ffe6e0f950ae512bb58
+tree 07454bb6a5625d69e3d35045a7bc965ae187adac
+parent bec01967e9b29d93ef96bcc280d52d038c99e84b
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316516024 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316516024 +0800
+
+    xml stuff
+
+commit bec01967e9b29d93ef96bcc280d52d038c99e84b
+tree 1ad80a174127cd3743d397693f1db573d8999d76
+parent 046a47be7cf48ba93f3ee39fe8050d6f91d7b6d7
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316515746 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316515746 +0800
+
+    xml work
+
+commit 046a47be7cf48ba93f3ee39fe8050d6f91d7b6d7
+tree 520a36aa100ee02b63f04d4b239f3d035ff1c993
+parent bc172062f367a8096518819b83a7c11aa55d158e
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316513171 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316513171 +0800
+
+    xml modifications
+
+commit bc172062f367a8096518819b83a7c11aa55d158e
+tree bc10e8f3bba003449032b760ba703f7a901445d8
+parent 9a512681ebf74af63e902ac36847b75514081d76
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316512866 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316512866 +0800
+
+    modifying xml return structure
+
+commit 9a512681ebf74af63e902ac36847b75514081d76
+tree ced6c0903b3de366f5ed5d4d67b73a36e5e98ee5
+parent 17bad32c674da50ae52cbe097acf5536cb786dbe
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316512417 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316512417 +0800
+
+    took our random debugging echo statements
+
+commit 17bad32c674da50ae52cbe097acf5536cb786dbe
+tree a41c41b4fc59323eef2aa1741e632e7fc012e0d9
+parent 091ee60805728bc10521711480a817e292a0ca68
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316511299 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316511299 +0800
+
+    query work
+
+commit 091ee60805728bc10521711480a817e292a0ca68
+tree 9a9ea15cf9ea139b18acd54543d406d2dbd750a4
+parent 544d275edce0d672d88f4e7c8bd0f4feea076039
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316511217 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316511217 +0800
+
+    query working
+
+commit 544d275edce0d672d88f4e7c8bd0f4feea076039
+tree c9181b4c28cf6469fa571a740df0f98127fa95eb
+parent 21622d30c4c8946a2fefeac1b6dbca8ff45fa67b
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316510067 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316510067 +0800
+
+    query work
+
+commit 21622d30c4c8946a2fefeac1b6dbca8ff45fa67b
+tree fc0d97fc2c7c688a9cd713c6f9274558866cf4c2
+parent 5886fc0cc802b5a03f2d680a42748cfe812823ed
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500981 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500981 +0800
+
+    query work
+
+commit 5886fc0cc802b5a03f2d680a42748cfe812823ed
+tree d272ef23aa1b6c296116335c6392ab9a96fe9f4b
+parent 50d95faafda72fb287b384865e3451722a450d29
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500881 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500881 +0800
+
+    query work
+
+commit 50d95faafda72fb287b384865e3451722a450d29
+tree a52a0eaa56221ba5b52626b43db145d31f475722
+parent aa8e03f325007bad581ffb3afc1b25fb54912520
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500768 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500768 +0800
+
+    still working on query
+
+commit aa8e03f325007bad581ffb3afc1b25fb54912520
+tree c3171ac6a1b4f209b32dc266b06a596aae404ea4
+parent c50d7759c016914dc3059f026241dd798e10daaa
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500658 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500658 +0800
+
+    uncommented some code, edited sql query
+
+commit c50d7759c016914dc3059f026241dd798e10daaa
+tree 395850940f34048a6d50bbd64968d45e1f7c302f
+parent d78a92b4204527773d2bc47bcfcc0bff4ef27b99
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500420 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316500420 +0800
+
+    playing with encoding token
+
+commit d78a92b4204527773d2bc47bcfcc0bff4ef27b99
+tree 8095d102e83719e53912e1baf43f8b6e96f9018c
+parent 0cf5617ab1b9d5c7e534e74b45ffd1f844e9fb7a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495928 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495928 +0800
+
+    still working on query
+
+commit 0cf5617ab1b9d5c7e534e74b45ffd1f844e9fb7a
+tree ccf7e4edeb90d91f0650566bbb382a544ada4b78
+parent e039ab82559cf58a74be161d2d708e36b7a3ce60
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495640 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495640 +0800
+
+    changed sql query
+
+commit e039ab82559cf58a74be161d2d708e36b7a3ce60
+tree aab12bc12a74add8a6258d2f47f15f8d2c445d27
+parent b9a13b168418c0b2d0d09a971c91e382ccc2a3d7
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495192 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316495192 +0800
+
+    more minor changes
+
+commit b9a13b168418c0b2d0d09a971c91e382ccc2a3d7
+tree 175696d2e26308fd67cd2ee091c0414fc038fbe1
+parent 48601e1426168d8565a4f562b1c9bab4982ee033
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494850 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494850 +0800
+
+    moved api_auth into ediary folder
+
+commit 48601e1426168d8565a4f562b1c9bab4982ee033
+tree a6957e59f22dfa9f5430a56fa83a24944b5ddef9
+parent 86359d2010ce65f4f86d9047b08bd54305c4361f
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494678 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494678 +0800
+
+    this is getting annoying now
+
+commit 86359d2010ce65f4f86d9047b08bd54305c4361f
+tree 92cd5ad8f51ce7fa843f440c6421ce83173f75a6
+parent f6cb93e20d9409f5d921dabdd93614975cd5c8a7
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494325 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316494325 +0800
+
+    minor changes
+
+commit f6cb93e20d9409f5d921dabdd93614975cd5c8a7
+tree 221ed00cdb4c7d16d162bb6994a95b86aaa36512
+parent f923e86992cc0980ffbcf276b38f414d1f813ff6
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316493427 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316493427 +0800
+
+    more minor changes
+    
+    changed to get rather than post for variable submission, of rthe
+    purpose of testing
+
+commit f923e86992cc0980ffbcf276b38f414d1f813ff6
+tree 3afe01aa33cb6c6a8fcf6760db214ee5a09cdf3e
+parent 3445d8f9b2ce530a9e975f51d2addee7aa250b50
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316493209 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316493209 +0800
+
+    minor changes
+
+commit 3445d8f9b2ce530a9e975f51d2addee7aa250b50
+tree 306825c565dab1902f7ac62b525f907eb149efa8
+parent c161309b9d05741b63e14708761965d4f71927e5
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316489184 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316489190 +0800
+
+    more work done to api_auth.php
+
+commit c161309b9d05741b63e14708761965d4f71927e5
+tree 39c31f2bb35b18fbdc9a88aaac3322f9cd12b553
+parent 8ae35f219bfb114a6e4e0ac5b6e604f7ec0ba2ef
+author Renda <renda110@hotmail.com> 1316486877 +0800
+committer Renda <renda110@hotmail.com> 1316486877 +0800
+
+    finished sync.php
+
+commit 8ae35f219bfb114a6e4e0ac5b6e604f7ec0ba2ef
+tree fa532927f096a19a0375e8d5529ce8fd8cf6128f
+parent 0105ee6d827db0f05e0eeca73729c62ba759f0d2
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316485217 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1316485217 +0800
+
+    added api_auth
+    
+    api_auth.php will receive a username and password pair which if valid
+    it returns a corresponding token for.
+    It also has the function validateToken($token) which will return the
+    userid if the token is valid and an error message otherwise.
+
+commit 0105ee6d827db0f05e0eeca73729c62ba759f0d2
+tree 23f0bbe76c3ee965b9468b48b7c9c200279b1a09
+parent 138ac35ba907f38775b9d30b19e0819cf4000c41
+author Renda <renda110@hotmail.com> 1316400423 +0800
+committer Renda <renda110@hotmail.com> 1316400423 +0800
+
+    modified snyc.xml. Only needs activity data now
+
+commit 138ac35ba907f38775b9d30b19e0819cf4000c41
+tree 36bc5cca0b3f4b2613b8147504d01b1fcc0eaa61
+parent e09fb150cf0b6a6a92b260e82c468da71aeae50a
+author Renda <renda110@hotmail.com> 1316400360 +0800
+committer Renda <renda110@hotmail.com> 1316400360 +0800
+
+    modified uploadXML.php
+
+commit e09fb150cf0b6a6a92b260e82c468da71aeae50a
+tree 5ed0eb4c225735e6e4b431b9f68ad9bc0ceede48
+parent 872b302888ff3e73243d753bab9caca8a7654d7d
+author Enda <Enda@Enda-PC.(none)> 1316141051 +0800
+committer Enda <Enda@Enda-PC.(none)> 1316141051 +0800
+
+    added sync.php
+
+commit 872b302888ff3e73243d753bab9caca8a7654d7d
+tree ed35e550eb8349fc398244579b800856d0632c73
+parent a25809de42ee05283c941b8db961680e1ec2ae78
+author Enda <Enda@Enda-PC.(none)> 1316057664 +0800
+committer Enda <Enda@Enda-PC.(none)> 1316057664 +0800
+
+    modifed uploadXML.php
+
+commit a25809de42ee05283c941b8db961680e1ec2ae78
+tree f390794a98683bdece26311a526d5900a23215ba
+parent 10dc8d91b0e4e4285442ed0a92e4a4589986b9a4
+author Enda <Enda@Enda-PC.(none)> 1315991256 +0800
+committer Enda <Enda@Enda-PC.(none)> 1315991256 +0800
+
+    added xml upload files
+
+commit 10dc8d91b0e4e4285442ed0a92e4a4589986b9a4
+tree 5f8afed48d20a49b245b69f7c6af8112912ffe60
+parent 0a30e982c8883e8b45ba525283f692ee19a5b93a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1315979372 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1315979372 +0800
+
+    uploaded xml_schema
+
+commit 0a30e982c8883e8b45ba525283f692ee19a5b93a
+tree 95f75fae74fa2052f254602956b626debbf73431
+parent 2ffdb5fb31a91217c7b67e08291ab222e109f9c8
+author Server <ruvan@ozemail.com.au> 1314583237 +0800
+committer Server <ruvan@ozemail.com.au> 1314583237 +0800
+
+    made changes to parse.php
+
+commit 2ffdb5fb31a91217c7b67e08291ab222e109f9c8
+tree 17d0d7fb6fce097c43fb04c675c8d45d813a728b
+parent 3a5d93bf0aab387b836364040fa11a6322851528
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314578971 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314578971 +0800
+
+    added parse.php to test JSON to PHP parsing
+
+commit 3a5d93bf0aab387b836364040fa11a6322851528
+tree 29912dc02ae113b3ab829aced5e60da240b22f49
+parent 6a747c585fa54f831516dcc3c7618a8459837b0f
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314414794 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314414794 +0800
+
+    testing server merging
+
+commit 6a747c585fa54f831516dcc3c7618a8459837b0f
+tree 9f97ee193ab3f2c6ac6028abc6b8aac5f19e1b4d
+parent fc78be20996c153705e9015b133ad5fc07394d5f
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314414117 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314414117 +0800
+
+    testing server merging
+
+commit fc78be20996c153705e9015b133ad5fc07394d5f
+tree 20599c96d277cfc12038f7b9b5d3890f6a372e33
+parent 603f9b71d1a8dad90622ff002d105a3c3e340a6e
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314413823 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314413823 +0800
+
+    testing server merging
+
+commit 603f9b71d1a8dad90622ff002d105a3c3e340a6e
+tree 29912dc02ae113b3ab829aced5e60da240b22f49
+parent b04b3d3f2e4fcff0effb74568b8ac22354a0f40e
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314412048 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314412048 +0800
+
+    Changed db info to reflect test server setup
+
+commit b04b3d3f2e4fcff0effb74568b8ac22354a0f40e
+tree 31cee7c236f06f50eba376854e6c5994406c5c72
+parent af890cfa1daf7a85013684053ec20a2928db6a21
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314411599 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1314411599 +0800
+
+    Added ediary_culled
+    
+    Ediary_culled is the folder containing the existing site.
+
+commit af890cfa1daf7a85013684053ec20a2928db6a21
+tree 9b5aee1d63f66be40b8a796f61e8a688a7217352
+parent d90b6740385e876fa346c35f71a56139300abb8a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312624172 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312624172 +0800
+
+    Added Booked hours spreadsheet
+    
+    Spreadsheet is modified to hold all team member hours
+
+commit 24704c358407d457b30e794ae43a44c0fcdbb2ad
+tree eaaea7ec8766460f4bcfdb6fcce87ba1fb058589
+parent fc9e77b2c111d7f1b809ccf0ffe2ee7da4e7b09a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312555367 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312555367 +0800
+
+    added rev001
+
+commit d90b6740385e876fa346c35f71a56139300abb8a
+tree f491ddb6e5d37e60ea2ece006756b67a52ea32cd
+parent fc9e77b2c111d7f1b809ccf0ffe2ee7da4e7b09a
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312554746 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312554746 +0800
+
+    Added protection image
+
+commit fc9e77b2c111d7f1b809ccf0ffe2ee7da4e7b09a
+tree 2c82a59e327fecb144f4e5662671be279bedbe1d
+parent 81bf02319fba1e6659d5d50a6d8a7b4bd4d9fae6
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312533549 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312533549 +0800
+
+    added to README
+
+commit 81bf02319fba1e6659d5d50a6d8a7b4bd4d9fae6
+tree de19d3108cf0fa7f06696ecb5154549f819f4f1b
+author Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312528971 +0800
+committer Ruvan Muthu-Krishna <ruvan@ozemail.com.au> 1312528971 +0800
+
+    first commit

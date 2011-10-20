@@ -1,0 +1,2714 @@
+commit 5b45821f281db77e339c128493674d4215a17c32
+Author: Server <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 14:46:34 2011 +0800
+
+    some more minor changes/debugging
+
+ ediary_culled/api_sync.php      |   14 +++++++-------
+ ediary_culled/api_uploadXML.php |   17 +++++++++++++----
+ 2 files changed, 20 insertions(+), 11 deletions(-)
+
+commit 363070e1c94ef98b644ed8784b6cc42a3e782ce7
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Wed Oct 19 13:56:20 2011 +0800
+
+    minor modifications
+
+ ediary_culled/api_uploadXML.php |   34 ++++++++++++++--------------------
+ 1 files changed, 14 insertions(+), 20 deletions(-)
+
+commit 62bc8a2a35b9fc5c5798b0cd6c97d1676a8cf0dd
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Wed Oct 19 13:31:15 2011 +0800
+
+    changed Ok to OK
+
+ ediary_culled/api_sync.php      |   12 ++++++------
+ ediary_culled/api_uploadXML.php |   14 +++++++++++---
+ 2 files changed, 17 insertions(+), 9 deletions(-)
+
+commit d95ad26b2f8ff1d1863166257259f676e1b2a590
+Author: Server <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 11:27:11 2011 +0800
+
+    made some final changes
+
+ ediary_culled/api_sync.php      |   10 +++++-----
+ ediary_culled/api_uploadXML.php |    2 --
+ 2 files changed, 5 insertions(+), 7 deletions(-)
+
+commit 5d037139a5bce7148ba54d3219fd7d7134120999
+Author: Server <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 10:19:55 2011 +0800
+
+    changed api_uploadXML.php
+
+ ediary_culled/api_uploadXML.php |   44 +++++++++++++++++++-------------------
+ 1 files changed, 22 insertions(+), 22 deletions(-)
+
+commit 1c4d185213777979632f5229473d5f883052dad1
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:46:30 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 335ce8eb303ad39eae3cd008e641827de4d0410c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:45:02 2011 +0800
+
+    testing minor change
+    
+    Signed-off-by: CokaRoach <roche.liam.email+github@gmail.com>
+
+ ediary_culled/web_app/sqlLite.js |    4 +---
+ 1 files changed, 1 insertions(+), 3 deletions(-)
+
+commit 820395f0b5ccf2f38b6d9847f73845ae7d4fc286
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:43:20 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 3deca7889c3213eeb10fdbb9183ada82c0b7567b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:31:54 2011 +0800
+
+    testing minor changes
+
+ ediary_culled/web_app/Home.html  |    5 +++++
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+commit 82de19df8d683b18f27bd9588c87669a719cc2a0
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:19:27 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 943640c8e1a8bca5c1838a957fa347a315525ce5
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:15:11 2011 +0800
+
+    testing fix boolean uploading
+
+ ediary_culled/web_app/sqlLite.js |   10 +++++++---
+ 1 files changed, 7 insertions(+), 3 deletions(-)
+
+commit 79aa40a9849b2c8b6f8fc523e67893d4a9036d4b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:08:24 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 66281e32c180d17fecb6f2db009382ab386a0923
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 09:05:13 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |   14 +++++++-------
+ 1 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 5eaef7d2734c2c733b6597591bd189900f2b02f3
+Merge: db9003c 0569a4b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:58:57 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit db9003cb3d1d7f02fd80f51c4ea905b11c79225c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:58:34 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+commit 0569a4b37c6a8ce597e45e650ec5705e4a7ea41e
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 08:56:05 2011 +0800
+
+    Noticed one echo statement left uncommented.
+
+ ediary_culled/web_app/Upload.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 1dc340ad6a39b7c344a77fe0f7d4dc45d2f3b866
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 08:49:30 2011 +0800
+
+    Commented all echo statements used for testing
+
+ ediary_culled/web_app/Upload.php |   61 +++++++++++++++++---------------------
+ 1 files changed, 27 insertions(+), 34 deletions(-)
+
+commit cf1c1e8659123298289555ec66e175686af2c27d
+Merge: beac614 24704c3
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:47:46 2011 +0800
+
+    Merge branch 'rev001' of git@github.com:CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit beac6149bc56cdf2405086e0972e5609f4f44acf
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:47:15 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c6d685d4587c129aa91f76ac63f5344c3803a7eb
+Merge: 829b9a6 fb73920
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:26:45 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit fb7392025a6384b31e53bd6f54476c729293a1dd
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Wed Oct 19 08:25:38 2011 +0800
+
+    modified for changed schema
+
+ ediary_culled/api_sync.php      |   16 ++++++++--------
+ ediary_culled/api_uploadXML.php |    6 +++---
+ 2 files changed, 11 insertions(+), 11 deletions(-)
+
+commit 829b9a604a475ae259378e14317484cff525d9ac
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:25:28 2011 +0800
+
+    fixing remove unneeded null values on upload
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 2aeb1f6fbcf234cc885085367790d7d089d7a1c6
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 08:18:59 2011 +0800
+
+    Finished the token verification part of the code.
+
+ ediary_culled/web_app/Upload.php |   10 ++--------
+ 1 files changed, 2 insertions(+), 8 deletions(-)
+
+commit 50a7b7a0e7bb1c851706ea6e55d060d4dfa8fe04
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 08:10:14 2011 +0800
+
+    testing minor chagnes
+
+ ediary_culled/web_app/example.manifest   |   43 +++++++++++++++++++++++++++++-
+ ediary_culled/web_app/images/cyclist.jpg |  Bin 361844 -> 160795 bytes
+ ediary_culled/web_app/sqlLite.js         |    2 +-
+ 3 files changed, 43 insertions(+), 2 deletions(-)
+
+commit eb472a642131a969e11141803abbf372ba89deaf
+Merge: f292787 eef4172
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 07:49:13 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit f292787c6490b85e9c4d82a0eea1a1808305761f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 07:47:50 2011 +0800
+
+    fixing overlapping toolbars
+
+ ediary_culled/web_app/example.manifest |   24 +++++++++++++++++++++++-
+ ediary_culled/web_app/sqlLite.js       |   20 ++++++++++----------
+ 2 files changed, 33 insertions(+), 11 deletions(-)
+
+commit eef4172bc029a3e2fd25eb698f3995de575613be
+Author: Server <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 00:40:18 2011 +0800
+
+    have been doing testing and minor edits/fixes on upload.php
+
+ ediary_culled/web_app/Upload.php |   14 ++++++++------
+ 1 files changed, 8 insertions(+), 6 deletions(-)
+
+commit 699549bfbbe857209193055d218b4b0e4633cb67
+Merge: 908e593 cebc7d3
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 00:28:26 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 908e59364986a898a084d59c89a0cb63892f6d6b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 00:28:02 2011 +0800
+
+    testing cache javascript
+
+ ediary_culled/web_app/example.manifest |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit cebc7d36b395b313f9b9e1a064b9a36d80bffe24
+Author: Server <ruvan@ozemail.com.au>
+Date:   Wed Oct 19 00:04:44 2011 +0800
+
+    sql query changed
+
+ ediary_culled/web_app/Upload.php |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 53ee613ef3aa65c1cda927d00024d96f380a93bf
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Wed Oct 19 00:01:23 2011 +0800
+
+    set cache manifest
+
+ ediary_culled/web_app/About.html         |    2 +-
+ ediary_culled/web_app/Calendar.html      |    2 +-
+ ediary_culled/web_app/Day.html           |    2 +-
+ ediary_culled/web_app/Download.html      |    2 +-
+ ediary_culled/web_app/Exercise.html      |    2 +-
+ ediary_culled/web_app/Fitness.html       |    2 +-
+ ediary_culled/web_app/Home.html          |    2 +-
+ ediary_culled/web_app/InvalidLogon.html  |    2 +-
+ ediary_culled/web_app/LoginTimedOut.html |    2 +-
+ ediary_culled/web_app/NewFitness.html    |    2 +-
+ ediary_culled/web_app/NoLogons.html      |    2 +-
+ ediary_culled/web_app/OldFitness.html    |    2 +-
+ ediary_culled/web_app/Ratings.html       |    2 +-
+ ediary_culled/web_app/Upload.html        |    2 +-
+ ediary_culled/web_app/User.html          |    2 +-
+ ediary_culled/web_app/Wellness.html      |    2 +-
+ 16 files changed, 16 insertions(+), 16 deletions(-)
+
+commit 169d6358ee1f140e0496369655c6b45de8a49383
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:58:22 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/example.manifest |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 1f1da1f86a09a7337b8c9f2e931d4377e3df4f96
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:57:25 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/example.manifest |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f545b24956e393d953ccf6259a13303578654072
+Merge: 038ad0a 4ef3df4
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:55:12 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 038ad0a4609827ee8d6a0fb3e328354236bfbaac
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:54:49 2011 +0800
+
+    cache manifest name change
+
+ ediary_culled/web_app/Logon.html       |    2 +-
+ ediary_culled/web_app/example.appcache |   54 --------------------------------
+ ediary_culled/web_app/example.manifest |   54 ++++++++++++++++++++++++++++++++
+ 3 files changed, 55 insertions(+), 55 deletions(-)
+
+commit 4ef3df49872f107d7ce0e13abeb89342fcf92477
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 23:51:29 2011 +0800
+
+    syntax fixing
+
+ ediary_culled/web_app/Upload.php |   20 ++++++++++----------
+ 1 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 2e879aaa02c2066fa56345d8a3e96e3cbb687dee
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 23:43:15 2011 +0800
+
+    Bug serching in Upload.php
+
+ ediary_culled/web_app/Upload.php |   28 +++++++++++++++-------------
+ 1 files changed, 15 insertions(+), 13 deletions(-)
+
+commit d484f90540a2c876b0aaeba91375aabc9e57bc39
+Merge: f7db94a f678e7c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:29:51 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit f7db94afd1ef48dc91eb4c6b32fe4e2eb381ff35
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:29:22 2011 +0800
+
+    testing cache
+
+ ediary_culled/web_app/Logon.html |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit f678e7c601a236314de3e20f48d9e7c022f400a9
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 23:18:20 2011 +0800
+
+    sytax corrections
+
+ ediary_culled/web_app/Upload.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e818a4b02392dc4aa49242606dc05e5ae239634a
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 23:15:32 2011 +0800
+
+    Finished all queries, all parts of function active.
+
+ ediary_culled/web_app/Upload.php |   50 ++++++++++++++++++++++---------------
+ 1 files changed, 30 insertions(+), 20 deletions(-)
+
+commit c2f11f79449a66420f77ef3347ac7836f39581a4
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 23:07:32 2011 +0800
+
+    caching
+
+ ediary_culled/web_app/Calendar.html     |    2 +-
+ ediary_culled/web_app/Fitness.html      |    3 +-
+ ediary_culled/web_app/InvalidLogon.html |   33 +++++++++++++++++++
+ ediary_culled/web_app/Logon.html        |    3 +-
+ ediary_culled/web_app/Menu.html         |    7 ----
+ ediary_culled/web_app/NoLogons.html     |   33 +++++++++++++++++++
+ ediary_culled/web_app/NoSignIn.html     |    8 ----
+ ediary_culled/web_app/example.appcache  |   54 +++++++++++++++++++++++++++++++
+ ediary_culled/web_app/sqlLite.js        |    8 ++--
+ 9 files changed, 129 insertions(+), 22 deletions(-)
+
+commit 52b657d60b89429a816812e534a69c67a7e10d63
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:19:05 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit c70ee31c45c99269418d7585e09c49ba6e0a24d8
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:16:51 2011 +0800
+
+    testing minor change
+    
+    Signed-off-by: CokaRoach <roche.liam.email+github@gmail.com>
+
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e87c326fef858739571bd05ed444305100401346
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:15:35 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.html |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8d2bd687573dcc25d1213083bf5cc9470358195f
+Merge: cfa6659 c8a5de2
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:12:55 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit cfa6659a4747f4b6287967e7a88eb0477b9ab1d9
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:12:20 2011 +0800
+
+    testing sync icon
+
+ ediary_culled/web_app/Upload.html     |    4 +---
+ ediary_culled/web_app/images/sync.png |  Bin 0 -> 276480 bytes
+ 2 files changed, 1 insertions(+), 3 deletions(-)
+
+commit c8a5de28a547f7aa7f284144439091712b61736c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 22:11:17 2011 +0800
+
+    remove more bugs
+
+ ediary_culled/api_authFunctions.php |    6 ++----
+ ediary_culled/api_uploadXML.php     |    2 +-
+ 2 files changed, 3 insertions(+), 5 deletions(-)
+
+commit 43372b9dffd24b7e9f266613c38c8f0257126ef0
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 22:04:34 2011 +0800
+
+    remove auth bug
+
+ ediary_culled/api_sync.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 17256bd63d1f5d7c9fca80ed4e95b872281b4798
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 22:01:55 2011 +0800
+
+    add iphone startup screen
+
+ ediary_culled/web_app/Logon.html |    5 ++---
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+commit 535f84a722085e52126871dd24c9f4769ddcf65a
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 21:49:31 2011 +0800
+
+    iphone images
+
+ ediary_culled/web_app/images/cyclist.jpg     |  Bin 0 -> 361844 bytes
+ ediary_culled/web_app/images/homescreen.png  |  Bin 0 -> 35866 bytes
+ ediary_culled/web_app/images/sports_logo.gif |  Bin 0 -> 9126 bytes
+ ediary_culled/web_app/images/startup.jpg     |  Bin 0 -> 28140 bytes
+ ediary_culled/web_app/images/startup.png     |  Bin 0 -> 1421629 bytes
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e77f9b164c8f33fda958bf6b272d7489c8f7c085
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 21:33:42 2011 +0800
+
+    deleted old sync.php
+
+ ediary_culled/sync.php |  226 ------------------------------------------------
+ 1 files changed, 0 insertions(+), 226 deletions(-)
+
+commit e44b92fde2bff2980a5fb12ee8270e0375e3adf4
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 21:17:22 2011 +0800
+
+    removed a null check on $id which is assumed to be causing problems.
+    
+    Oh, and it happens when we try to upload data as well so I have a
+    feeling it's something to do with the token...
+    
+    On 18/10/2011, at 8:50 PM, Sam Watson wrote:
+    
+    Hey guys,
+    
+    Jad and I are having this problem with the app where it gets a response
+    of "error-3" from the server. '"error-3" is used for when the user
+    tries to either upload data outside the window or when the trial has
+    expired' to quote Enda. It's been happening since I think yesterday
+    afternoon. We haven't changed anything on our end that would affect it
+    so I don't know what it is. We get the error when we try to download
+    the data immediately after receiving a new token from the server
+    (logging in). Can we try and sort this out tonight please.
+    
+    Sam
+
+ ediary_culled/api_authFunctions.php |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 1c0b1ec0b2329a602b11368dbe830d3d54b2aeed
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Tue Oct 18 21:01:37 2011 +0800
+
+    changed default values
+
+ ediary_culled/api_uploadXML.php |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit d8d87c2c94923b0ef174052ccaf78d2c9ce45917
+Merge: 89cf58c 8db24ec
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Tue Oct 18 21:00:15 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 8db24ec80ddf565defa42d0f7fca37afa85614bd
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 20:27:02 2011 +0800
+
+    Added most of the variables to be parsed, most sql commands are now in and active so will alter the database.
+
+ ediary_culled/web_app/Upload.php |  189 +++++++++++---------------------------
+ 1 files changed, 54 insertions(+), 135 deletions(-)
+
+commit 459c65f65c7de8be4a0f4d19b56150468f8ab5cb
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 20:08:55 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit 4fdfe9df238cb7051e168413a98faf02cae791c5
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 20:05:47 2011 +0800
+
+    testing minor page
+
+ ediary_culled/web_app/About.html |    2 +-
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit c6104df3c6d58c981b6d1b8fdc4a244dddbd7808
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:54:09 2011 +0800
+
+    fix graphics for about page
+
+ ediary_culled/web_app/About.html   |   24 ++++++++++++++----------
+ ediary_culled/web_app/Fitness.html |    2 +-
+ ediary_culled/web_app/User.html    |    2 +-
+ 3 files changed, 16 insertions(+), 12 deletions(-)
+
+commit 2473522493b4a59032f0d0f3a51eadeb18ef1999
+Merge: 36355b2 cd21c41
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:44:11 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 36355b2c97c638c7bba1e45301b1ec108a5108db
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:43:27 2011 +0800
+
+    removing hrefs
+
+ ediary_culled/web_app/sqlLite.js |   18 +++++++++---------
+ 1 files changed, 9 insertions(+), 9 deletions(-)
+
+commit 89cf58c6e083c1118a7f8ff8612e33c0bee6dc27
+Merge: b9a93ee cd21c41
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Tue Oct 18 19:37:39 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit cd21c419556d0b94ecf33be73e1fb1d3a794b764
+Author: Renda <renda110@hotmail.com>
+Date:   Tue Oct 18 19:33:50 2011 +0800
+
+    changed to reflect new xml
+
+ ediary_culled/api_sync.php |   26 ++++++++++++++++++--------
+ 1 files changed, 18 insertions(+), 8 deletions(-)
+
+commit f27a03c0ba929ab5c13805d9606b930e87eaa06c
+Author: Renda <renda110@hotmail.com>
+Date:   Tue Oct 18 19:33:01 2011 +0800
+
+    Changed to reflect new schema
+
+ ediary_culled/api_uploadXML.php |   30 +++++++++++++-----------------
+ 1 files changed, 13 insertions(+), 17 deletions(-)
+
+commit b9a93ee5ff23c44188cbbe53c137bab701bafec5
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Tue Oct 18 19:27:38 2011 +0800
+
+    change pages to reflect new xml schema
+
+ ediary_culled/api_sync.php      |   26 ++++++++++++++++++--------
+ ediary_culled/api_uploadXML.php |   30 +++++++++++++-----------------
+ 2 files changed, 31 insertions(+), 25 deletions(-)
+
+commit 1d5f67f0f6b354925cc7258bbb9decb208397ec8
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:25:46 2011 +0800
+
+    removal of all hrefs
+
+ ediary_culled/web_app/Day.html        |    4 ++--
+ ediary_culled/web_app/NewFitness.html |    2 +-
+ ediary_culled/web_app/OldFitness.html |    2 +-
+ ediary_culled/web_app/sqlLite.js      |    6 +++---
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 6f7355a21fb8f585fa9d3112792a6a1972af7aab
+Merge: 1107de4 8ab6fb3
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:17:45 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1107de46d4e02589cd67ce629402725dcaab8b44
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:16:31 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/OldFitness.html |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8ab6fb3c1121e68f8f90b9060524f9d85d1305f4
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 19:14:23 2011 +0800
+
+    It's semi-working!!! great news, have confirmed POST parsing and MYSQL writing, now all that's left is to add parse code for the rest of the data.
+
+ ediary_culled/web_app/Upload.php |    9 ++++-----
+ 1 files changed, 4 insertions(+), 5 deletions(-)
+
+commit 412fe5a0920ddbd1edc5076ac54c5f63200916f2
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:12:31 2011 +0800
+
+    testing minor changes
+
+ ediary_culled/web_app/Fitness.html |    4 ++--
+ ediary_culled/web_app/sqlLite.js   |    2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit ffe154bc3958b204b329d382029db7cdd25ba88b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:06:27 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/OldFitness.html |   10 +++++++---
+ ediary_culled/web_app/sqlLite.js      |    2 +-
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+commit bd04792c83585087abf89a557682c3eb25efd4a7
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 19:01:52 2011 +0800
+
+    enhance test display graphics
+
+ ediary_culled/web_app/sqlLite.js |   22 +++++++++++-----------
+ 1 files changed, 11 insertions(+), 11 deletions(-)
+
+commit 9e802c7e018bde7074d4e030a5f7814305644d0d
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:47:27 2011 +0800
+
+    fix image location on homepage
+
+ ediary_culled/web_app/Home.html |   12 +++++++++---
+ 1 files changed, 9 insertions(+), 3 deletions(-)
+
+commit a976828bceaaae7cc39b2b4ea44ac10bfe0f17ca
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:45:50 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Home.html |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit eb680cc2a81cded592144a4c46dd7272f96eb07f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:44:34 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Home.html |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 8871fb72a02a30e2d7cea582747b3161ddbb55ce
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:42:46 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Home.html |   20 +++++++-------------
+ 1 files changed, 7 insertions(+), 13 deletions(-)
+
+commit 3c935f8ec156c41f30811d3927e48dabff15491d
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:37:32 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Home.html |    4 +---
+ 1 files changed, 1 insertions(+), 3 deletions(-)
+
+commit f191b6e72833d74e685cfb00f75f2b5e8c89c65f
+Merge: c5ae7b2 7423619
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:34:09 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit 74236196d250eb7f96059d5f1cff42a324dd9c7d
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 18:33:37 2011 +0800
+
+    Have added code to create and populate vars for all given json data entries
+
+ ediary_culled/web_app/Upload.php |   61 +++++++++++++++++++++++++++++++-------
+ 1 files changed, 50 insertions(+), 11 deletions(-)
+
+commit c5ae7b24f83442bc39fdcca504ac71b72865cdfb
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:33:33 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Home.html |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 371c3aaba5e2643ebbdcbb118bdfeba3e888a7fe
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 18:25:29 2011 +0800
+
+    change to make home page not force safari opening
+
+ ediary_culled/web_app/Home.html |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 9938f337cc3d6c17f0032e87bae276444888171b
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 18:07:59 2011 +0800
+
+    Working on POST'ing to Upload.php
+
+ ediary_culled/web_app/Upload.php |   28 +++++++++++++++++-----------
+ 1 files changed, 17 insertions(+), 11 deletions(-)
+
+commit e224732a01df0d9ed84b070f78a76da206ab4a9f
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 16:39:11 2011 +0800
+
+    Finished working on training records 1
+
+ ediary_culled/web_app/Upload.php |   36 +++++++++++++++++++++++++-----------
+ 1 files changed, 25 insertions(+), 11 deletions(-)
+
+commit 988c8019387ff45506c4dc84f8d522e5e38a410a
+Merge: a216025 19a2bfb
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 16:25:06 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a216025c39c6cb2f152adee2afc04f82fbaf2f18
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 16:24:33 2011 +0800
+
+    minor changes
+
+ ediary_culled/web_app/Upload.php |    7 +++----
+ 1 files changed, 3 insertions(+), 4 deletions(-)
+
+commit 19a2bfb299392006ca37643190911cab130d5733
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 16:19:46 2011 +0800
+
+    testing print json
+
+ ediary_culled/web_app/sqlLite.js |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 465c9c3c02f7f15458e0aeb6e40f729a849d5fe1
+Merge: ac2e03d 25bcf6f
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 16:12:25 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit ac2e03d5b5516d6445a73a3be3b0ab62e517bef5
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 16:11:37 2011 +0800
+
+    working on upload.php
+
+ ediary_culled/web_app/Upload.php |   39 +++++++++++++++++++++++++++++++++++--
+ 1 files changed, 36 insertions(+), 3 deletions(-)
+
+commit 25bcf6f7136822062e742d5bf644270e98ccb0be
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 16:08:04 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit fd9713f8b7223c7e31e39c7b4e25889932bb7ac8
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 16:06:38 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 3ce6748eba33bff1cce639ae22ddef0cb9422ff9
+Merge: 5d3dd0d c25b08a
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 16:04:56 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 5d3dd0dcc1bf161db9bf8945e10ecda8ff50cf4f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 16:00:20 2011 +0800
+
+    printing json to screen
+
+ ediary_culled/web_app/sqlLite.js |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 88acca162bd8e50447afd8fb14189a4a2c87bb7f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Tue Oct 18 15:54:26 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |   17 ++++++++---------
+ 1 files changed, 8 insertions(+), 9 deletions(-)
+
+commit c25b08aa1d1a1f7c3435516925df9cfd69a09d90
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 14:18:36 2011 +0800
+
+    stripped Upload.php trying to work out how to parse nested json.
+
+ ediary_culled/web_app/Upload.php |   44 +++++++++++++++++++++++++++++++++++++-
+ 1 files changed, 43 insertions(+), 1 deletions(-)
+
+commit 7e935182fa55c336f374b40afd76e23f9e15d909
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 14:01:17 2011 +0800
+
+    wokring on depth json strings
+
+ ediary_culled/web_app/Upload.php |   26 +++++++++++++++-----------
+ 1 files changed, 15 insertions(+), 11 deletions(-)
+
+commit 51057f1cc1537826ad204db514c68962930dce29
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 12:48:21 2011 +0800
+
+    minor changes
+
+ ediary_culled/web_app/Upload.php |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 5e517b4aecce1f421b5e7add9a2664bde80f481c
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 12:41:14 2011 +0800
+
+    restructured parse string
+
+ ediary_culled/web_app/Upload.php |   37 ++++++++++++++++++++++++++++++-------
+ 1 files changed, 30 insertions(+), 7 deletions(-)
+
+commit e9895a62cb73efdc6712db9148b416ea39ddc65c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 10:58:32 2011 +0800
+
+    Working on the json data parsing - Ruvan
+
+ ediary_culled/web_app/Upload.php |   20 +++++++++++++-------
+ 1 files changed, 13 insertions(+), 7 deletions(-)
+
+commit 3c811ec2283532eadad9d8970a0902aaf0d27ce3
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Oct 18 09:56:00 2011 +0800
+
+    Enda's api_uploadXML.php work
+
+ ediary_culled/api_uploadXML.php |  547 +++++++++++++++++++--------------------
+ 1 files changed, 261 insertions(+), 286 deletions(-)
+
+commit 8d3c44969b5426878e4fd0d48d4af7b51fb11db6
+Author: Server <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 22:46:25 2011 +0800
+
+    Have been working on the json parsing of the upload.php page.
+
+ ediary_culled/web_app/Upload.php |   37 +++++++++++++++++++++++++------------
+ 1 files changed, 25 insertions(+), 12 deletions(-)
+
+commit ff38085461adfb469eccab1ce7525177a8a584cd
+Merge: 3e327d3 e7c887c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 21:44:08 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e7c887ccfab2e0a5d03e421f335885e0d2089ae9
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 21:43:33 2011 +0800
+
+    initial development of Upload.php
+
+ ediary_culled/web_app/Upload.php |   13 ++++++++-----
+ 1 files changed, 8 insertions(+), 5 deletions(-)
+
+commit 3e327d33a21c62ce6f08a5101e1ee31700aca990
+Merge: 196971b 8a1582a
+Author: Server <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 19:49:59 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 8a1582aff99092bede02e71b4bc83d1574a9ed9f
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Mon Oct 17 19:47:40 2011 +0800
+
+    modifed api_sync and api_uploadXML to reflect new XML schema
+
+ ediary_culled/api_sync.php      |   96 ++++++++------------
+ ediary_culled/api_uploadXML.php |  196 ++++++++++++++++++++++++---------------
+ 2 files changed, 159 insertions(+), 133 deletions(-)
+
+commit 07a4ebc7679c070454a42f72d081097492b554d3
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 13:13:50 2011 +0800
+
+    Have been correcting error codes
+    
+    Also tidied up authFunctions page.
+
+ ediary_culled/api_auth.php          |    8 ++++----
+ ediary_culled/api_authFunctions.php |   27 +++++++++++++++++----------
+ 2 files changed, 21 insertions(+), 14 deletions(-)
+
+commit 459427a84c7500b612097f9afc260fd81dbc39ab
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Mon Oct 17 07:23:22 2011 +0800
+
+    Added an extra error, all errors still need changing to the agreed error scheme.
+
+ ediary_culled/api_auth.php |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 196971bd0eeb45d4b383556c77d95050d120d3ba
+Merge: 01da127 e1cfb61
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:52:54 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e1cfb61a2750528d2645e96eba07bbc8dc3e2f8f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:51:47 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 01da127d32b3da49304f1f15b7e0466f2395946b
+Merge: e57e55f a3f00ad
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:51:07 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a3f00ad3aa990ab167fd90753282e06205b11b1a
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:50:29 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e57e55fedfe64d9272dda781862f82b0ba82766f
+Merge: 170d829 f2241c1
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:49:56 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f2241c1019b6f438274e7a9e7fcef64acea8030c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:49:23 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 170d8295297b2f85236513229120886835c73831
+Merge: 04f555c b11f843
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:48:30 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b11f843b95cf34829f41afa684c467ce4aac3c43
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:47:56 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.html |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 04f555cb3b418fe8cb6d24f9821e90c82e5e5525
+Merge: c3f4196 be8544f
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:47:06 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit be8544f67a6ab4216bfa88ad5847e87ebe5bd77c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:46:29 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit c3f4196e6c440c75423aae9a556b626f394e1d28
+Merge: f2e4481 717e531
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:45:33 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 717e5315912666acfa1d4b78740a26f43c1f8af1
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:44:55 2011 +0800
+
+    testing redirect page
+
+ ediary_culled/web_app/sqlLite.js |   14 +++++++++++++-
+ 1 files changed, 13 insertions(+), 1 deletions(-)
+
+commit f2e448144da84b0043fc1a271356843581db93d8
+Merge: 8b6c721 b238891
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:33:52 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b238891b46f6055eb8be82650e19eaf0c65da234
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:33:00 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/sqlLite.js |   10 +++++-----
+ 1 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 8b6c721ec4179e4e3846e5f5198840e33ed5ea7b
+Merge: 9aed783 86a1954
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:28:45 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 86a1954f44d6f6780839f511bbbd86461e22df7a
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:28:10 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 9aed783b445cf8a4b5e7a02bf16a1c1682e603d5
+Merge: 8084a82 1d6ecb1
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:27:33 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1d6ecb132f165b3ec2c8509c1d02505f3d731120
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:26:51 2011 +0800
+
+    filled out upload.php with psuedocode for someone else to complete
+
+ ediary_culled/web_app/Upload.php |   73 +++++++++++++++++++++++++++++++++----
+ 1 files changed, 65 insertions(+), 8 deletions(-)
+
+commit 8084a82ba0d1feecd2536045dd81e72e3632d231
+Merge: 813c0d6 d1668ba
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:12:41 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d1668bac2b649277e0a2e0e367c39dd9a5d5de37
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:11:59 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |   15 ++++-----------
+ 1 files changed, 4 insertions(+), 11 deletions(-)
+
+commit 813c0d649514b79033d0b3668507f4a67da2704d
+Merge: 11fdb0e 257d58f
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:10:53 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 257d58f671e5088506ae85a4ac7883fa0c4d3587
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:10:19 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 11fdb0e11f94ce1888d711f7027fe607242fb720
+Merge: a1db2b0 f545357
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:06:47 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f5453574c0cc2ab48b3d6ec1daa1214f22cbdbee
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:05:57 2011 +0800
+
+    changed a backslash to a forward slash
+
+ ediary_culled/web_app/Upload.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit a1db2b03bb972858bf508ecdc3fc2715ba5b4c4e
+Merge: 175b68f b903a43
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:04:38 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b903a43a46992ccbbb9feb75767a623e81f8d120
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:04:00 2011 +0800
+
+    testing cant work out what the fuck is going on
+
+ ediary_culled/web_app/Upload.php |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+commit 175b68fea5e79f234578fd0a2f92f4cec2ac4e3e
+Merge: 4b14d30 a36bd9d
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:02:31 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit a36bd9dc142bad3cc684007f17935ebe06d7ab09
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:01:39 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 4b14d30c802ee5a99207bee8bccc816ac1254ed4
+Merge: 89ddf30 1012054
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:01:09 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1012054595efcad66daf4178568c28f084113eaf
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 19:00:35 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 89ddf30133dd920acbb5c56612c2f1c9a403dd2c
+Merge: 5f0885d d095006
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 19:00:09 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d0950068fe755f0d6b267047b2ff7ca829cadedc
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:59:30 2011 +0800
+
+    testing minor change
+
+ ediary_culled/web_app/Upload.php |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 5f0885dd181782f8bdb2c6ee396988a6454729ad
+Merge: 7a46614 7bf66a7
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:58:44 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 7bf66a70f79a976db020d1ee4f13664acb758754
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:58:10 2011 +0800
+
+    testing minor changes
+
+ ediary_culled/web_app/Upload.php |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 7a4661425f9e50843034d97d36e3d74031d9422a
+Merge: 56feca3 d85b1d0
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:57:06 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit d85b1d09d7cae59dd8a714786b510cc6fa6293fd
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:56:23 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Upload.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 56feca3720a160b64a698ee45c1de8102f39e63c
+Merge: 5c298b9 1c10c43
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:54:43 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1c10c43fc1d34cf2cb28e7e9fbc0c0dbe1b0e267
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:54:09 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Upload.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 5c298b98ca4f0f5ce6240f39e83b7aa2122c7005
+Merge: 3953ce7 1236757
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:53:36 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 123675776874e6da6b96af18d63a7a2908114da1
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:52:46 2011 +0800
+
+    testing
+    creating upload.php
+
+ ediary_culled/web_app/Upload.php |   42 +++++++++++++++++++++++++++++++++++++-
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 2 files changed, 42 insertions(+), 2 deletions(-)
+
+commit 3953ce7ec41db1381d2bd93d387f38e16b64f451
+Merge: 4f71b4b bced4b4
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:43:28 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bced4b42823b5aacf7babfbe01ed15a3d886a882
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:42:36 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Upload.php |    1 +
+ ediary_culled/web_app/sqlLite.js |   22 ++++++++++------------
+ 2 files changed, 11 insertions(+), 12 deletions(-)
+
+commit 4f71b4b922ca408cc81119ff9d808b3ab75629ff
+Merge: 703872e 729e2d7
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:38:44 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 729e2d7879d6731ad2b0818db347b00e68710220
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:38:07 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 703872ea48683b07ffd9af1a6779b2f0af022080
+Merge: 578428f 69ac031
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:36:55 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 69ac031e29add812d770bbdbee8f6ef3ff2c7ca9
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:36:17 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 578428f17be0da673180191318de224f2961b0ed
+Merge: d334bc6 36369d3
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:35:44 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 36369d34b36f6facdc6b133e0438ec43f0f378ba
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:34:45 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |   43 +++++++++++++++++++------------------
+ 1 files changed, 22 insertions(+), 21 deletions(-)
+
+commit d334bc66a4ba3ad309b1b9923658bd2a99bdb112
+Merge: be22898 1bc4d8c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:34:00 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1bc4d8c31921b7b57b27f55e20aa53095e4e191b
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:33:14 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/Download.html |    2 +-
+ ediary_culled/web_app/Upload.html   |    2 +-
+ ediary_culled/web_app/sqlLite.js    |   38 +++++++++++++++++++++++++++-------
+ 3 files changed, 32 insertions(+), 10 deletions(-)
+
+commit be22898eb15b69cc4f5c669fdec0d88d9d0d4a25
+Merge: ddb74b0 810b2af
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:22:44 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 810b2afd40266fced2e0883b0cdee8683851ce33
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:21:36 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit ddb74b025562a749bdeacd5a597ff006eabcf78d
+Merge: f7bffb2 b94118f
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:20:05 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit b94118f4d491f22c117b0563c61a7858159b453e
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:19:27 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit f7bffb25c1703b1268a8845729d674bee0a48be6
+Merge: b58b9f7 7c6e8cd
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:18:19 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 7c6e8cd528198103982fe14adf273e747f806384
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:17:41 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit b58b9f7cba5a2b513537c2199740a9509f5208cf
+Merge: 45d771d 6caa4c0
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 18:16:14 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6caa4c0e69f22c0f034d09bb0185cf8e6fb8434a
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 18:15:29 2011 +0800
+
+    turn on server login
+
+ ediary_culled/web_app/sqlLite.js |  191 ++++++++++++++++++++------------------
+ 1 files changed, 102 insertions(+), 89 deletions(-)
+
+commit 45d771dd8eb8929a51052c9830133aebdd2e89f1
+Merge: c3ca214 398ab65
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:59:49 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 398ab659e277d7576a0388aa46570bddd498cf7c
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:59:07 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |   32 ++++++++++++++++----------------
+ 1 files changed, 16 insertions(+), 16 deletions(-)
+
+commit c3ca214f71056d1870b149c1cb02eac81056363f
+Merge: 9c762a7 f10626b
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:57:57 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f10626bdff60d400c614c1221b97479516b96f59
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:57:14 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 9c762a7da2515848703970423fd07f630c3cc0ca
+Merge: 57fbdcb 4c9cf7a
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:54:44 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 4c9cf7a48421d2b938a47b2d5947471f85c38cee
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:53:56 2011 +0800
+
+    put else command in wrong spot
+
+ ediary_culled/web_app/sqlLite.js |    7 ++++---
+ 1 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 57fbdcb27e6237bc0beff1bfe129409c1631a34d
+Merge: 44f9a2b fe58911
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:53:19 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit fe589114040c00097f9ed1c829ddd2d8de357f53
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:52:31 2011 +0800
+
+    renamed variable from reserved word
+
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 44f9a2bf1b35cce9e0648575f1669fad5c2a0a41
+Merge: a049b6c 64f2e6b
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:50:48 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 64f2e6bf8a472769d4c5e422fbe95c45c3ed46d1
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:49:55 2011 +0800
+
+    save class data in fitness test
+
+ ediary_culled/web_app/OldFitness.html |   22 ++++++++++++++++++++++
+ ediary_culled/web_app/sqlLite.js      |   21 ++++++++++++++-------
+ 2 files changed, 36 insertions(+), 7 deletions(-)
+
+commit a049b6c7e2f876aeab5c5eba0b969195ffd06fdd
+Merge: baf4fec 6cc2729
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:43:56 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6cc27296e53481c49fe2396671baee512db15c4f
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:22:04 2011 +0800
+
+    remove unused code
+    correct fieldname
+
+ ediary_culled/web_app/Upload.html |    1 -
+ ediary_culled/web_app/sqlLite.js  |    6 +++---
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+commit baf4fec0664f6fda49c2cda0efa9024a2c0c956e
+Merge: e47f91b e502b47
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:19:42 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit e502b4780b4c9b22b8eaf43c14e11aef6d486a22
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:18:53 2011 +0800
+
+    fix link and extract all uploadable data
+
+ ediary_culled/web_app/Fitness.html |    2 +-
+ ediary_culled/web_app/json2.js     |  480 ------------------------------------
+ ediary_culled/web_app/sqlLite.js   |   40 ++-
+ 3 files changed, 27 insertions(+), 495 deletions(-)
+
+commit e47f91bec9f57cc9d8c3a965fa362cad69fe4e09
+Merge: 9caeb38 bd36188
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:05:13 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bd3618813069b164994ff766575253c22c780488
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 17:04:21 2011 +0800
+
+    testing:minor change
+
+ ediary_culled/web_app/sqlLite.js |   23 ++++++++++++++++++++++-
+ 1 files changed, 22 insertions(+), 1 deletions(-)
+
+commit 9caeb380e5d7222f49c97f4df29c9f008fe0e257
+Merge: ad289ef 1915c4a
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 17:00:45 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 1915c4aad0a80971820912cba3af7c8083f481fe
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 16:59:49 2011 +0800
+
+    testing:minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit ad289ef00b13744dc551f986a1cfd1e29fc05f75
+Merge: eba0e26 f5a3e6c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 16:56:17 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit f5a3e6ce299dce9dba5b6d79511a47097e6ff5ee
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 16:55:25 2011 +0800
+
+    testing:minor change
+
+ ediary_culled/web_app/Upload.html |    1 +
+ ediary_culled/web_app/json2.js    |  480 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 481 insertions(+), 0 deletions(-)
+
+commit eba0e26711d21e7c68dc77bc97b2cdebf760d248
+Merge: e0b711d 6c68e53
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 16:51:38 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6c68e53acf184deb23414019eb398acad4a2e5bc
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 16:50:40 2011 +0800
+
+    testing:minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e0b711d5de22549be62d7c9edd6c554522234111
+Merge: 2643203 3e0a5d8
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 16:39:35 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 3e0a5d8403bc3dcae61991e7de3550ac24ea966f
+Merge: b3e39ae 369c2c7
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 16:38:37 2011 +0800
+
+    Merge branch 'master' of git://github.com/CITS3200-TeamH/CITS3200-Wellness-Project.git
+
+commit b3e39ae4b251e85d547b6775ad9ed29a82a11531
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 16:37:41 2011 +0800
+
+    print json
+
+ ediary_culled/web_app/sqlLite.js |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+commit 369c2c77ebd3795e0f96149d856365f18859c193
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Sun Oct 16 16:27:53 2011 +0800
+
+    changed the error messages around and added a success message
+
+ ediary_culled/api_sync.php      |    2 +-
+ ediary_culled/api_uploadXML.php |   63 ++++++++++++++++++++++++++++++++------
+ 2 files changed, 54 insertions(+), 11 deletions(-)
+
+commit 2643203c3d72e607fe1ceafb970bee19f763ad1c
+Merge: 8fb2622 bf5d6f6
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:37:13 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit bf5d6f6f91562fd7e851622f765edd083febeace
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:36:28 2011 +0800
+
+    testing:minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8fb2622f24f3484b2b2a6f666483e58d4b1505a7
+Merge: bcdde69 71766e5
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:36:13 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 71766e525a5c8b9aedfcf59958f1dd7f036e56b4
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:35:23 2011 +0800
+
+    testing: minor change
+
+ ediary_culled/web_app/sqlLite.js |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+commit bcdde69bb3e1a4875014fac36511dc16239baa41
+Merge: db95765 de9fb64
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:32:24 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit de9fb649e02467441d12061b30944301be442bcf
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:31:41 2011 +0800
+
+    minor change
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit db95765d7116442c42119ab09cb3f167e54e62ef
+Merge: 6f91045 9d02078
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:30:51 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 9d020780979d27f5b7d614d45c838278429db81d
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:29:58 2011 +0800
+
+    minor change
+
+ ediary_culled/web_app/sqlLite.js |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 6f9104531b5abe2ba214ad5de9841dfd673451f5
+Merge: 24e58a4 6a89bbf
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:28:45 2011 +0800
+
+    Merge remote-tracking branch 'upstream/master'
+
+commit 6a89bbf94f41c867f7e1fc2249ed515a1e03c400
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:27:58 2011 +0800
+
+    sqlfix
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 24e58a4fa07498a24914d7226026e4bb57a9b9f6
+Merge: f90c57a 2fc0795
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:27:20 2011 +0800
+
+    liam messing with server
+
+commit f90c57ae76328a00dd6217b9745c4a5fa6febf3c
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 15:25:49 2011 +0800
+
+    liam messing with server
+
+ ediary_culled/web_app/sqlLite.js | 1117 --------------------------------------
+ 1 files changed, 0 insertions(+), 1117 deletions(-)
+
+commit 2fc079593f56d1d3bf2a00c58eba687cd051b259
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 15:01:05 2011 +0800
+
+    insert uploaded field into training records2
+
+ ediary_culled/web_app/sqlLite.js |    9 +++++----
+ 1 files changed, 5 insertions(+), 4 deletions(-)
+
+commit 887cb9661d43051afbb6c580c2294b6aff514dd2
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:34:32 2011 +0800
+
+    minor change
+
+ ediary_culled/web_app/sqlLite.js |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit a32cc320621182613ccd858823d7dca9a7d0eea0
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:32:59 2011 +0800
+
+    spelling fix
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit d7aac57aba20513fa18b37c5f68990faf8d54451
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:31:14 2011 +0800
+
+    spelling fix
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e6d67c06ef7b24ebf4bfbab5347a2ae4b1ae120e
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:29:18 2011 +0800
+
+    print extracted data from upload to screen
+
+ ediary_culled/web_app/sqlLite.js |   15 ++++++++++++++-
+ 1 files changed, 14 insertions(+), 1 deletions(-)
+
+commit 4b802bf399df3e5e346133cd507a9563801f2624
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:16:19 2011 +0800
+
+    change download.html to attempt to download from the server
+
+ ediary_culled/web_app/sqlLite.js |    7 ++++---
+ 1 files changed, 4 insertions(+), 3 deletions(-)
+
+commit eff2f7a25934b68fe9f75d0f7ce2bdb977cb0db9
+Author: CokaRoach <roche.liam.email+github@gmail.com>
+Date:   Sun Oct 16 14:04:36 2011 +0800
+
+    Send webbapp files to server
+
+ ediary_culled/web_app/About.html                   |   28 +
+ ediary_culled/web_app/Calendar.html                |   23 +
+ ediary_culled/web_app/Day.html                     |   23 +
+ ediary_culled/web_app/Download.html                |   19 +
+ ediary_culled/web_app/Exercise.html                |  166 +++
+ ediary_culled/web_app/Fitness.html                 |   33 +
+ ediary_culled/web_app/Home.html                    |   56 +
+ ediary_culled/web_app/LoginTimedOut.html           |   27 +
+ ediary_culled/web_app/Menu.html                    |    7 +
+ ediary_culled/web_app/NewFitness.html              |   72 ++
+ ediary_culled/web_app/NoSignIn.html                |    8 +
+ ediary_culled/web_app/Ratings.html                 |   21 +
+ ediary_culled/web_app/Upload.html                  |   19 +
+ ediary_culled/web_app/User.html                    |   68 ++
+ ediary_culled/web_app/Wellness.html                |   21 +
+ ediary_culled/web_app/css/.DS_Store                |  Bin 0 -> 6148 bytes
+ ediary_culled/web_app/css/developer-style.css      | 1160 ++++++++++++++++++++
+ ediary_culled/web_app/css/style.css                |    1 +
+ ediary_culled/web_app/images/.DS_Store             |  Bin 0 -> 12292 bytes
+ ediary_culled/web_app/images/About.png             |  Bin 0 -> 2328 bytes
+ ediary_culled/web_app/images/Calendar.png          |  Bin 0 -> 1380 bytes
+ ediary_culled/web_app/images/ClassLists.png        |  Bin 0 -> 1690 bytes
+ ediary_culled/web_app/images/ExerciseCompleted.jpg |  Bin 0 -> 1968 bytes
+ .../web_app/images/ExerciseNotCompleted.jpg        |  Bin 0 -> 1979 bytes
+ ediary_culled/web_app/images/Fitness.png           |  Bin 0 -> 5097 bytes
+ ediary_culled/web_app/images/Group.png             |  Bin 0 -> 5018 bytes
+ ediary_culled/web_app/images/Password.png          |  Bin 0 -> 1959 bytes
+ ediary_culled/web_app/images/RatingCompleted.png   |  Bin 0 -> 243 bytes
+ .../web_app/images/RatingNotCompleted.png          |  Bin 0 -> 243 bytes
+ ediary_culled/web_app/images/Report.png            |  Bin 0 -> 2390 bytes
+ ediary_culled/web_app/images/Reports.png           |  Bin 0 -> 1162 bytes
+ ediary_culled/web_app/images/Staff.png             |  Bin 0 -> 1566 bytes
+ ediary_culled/web_app/images/Student.png           |  Bin 0 -> 1282 bytes
+ ediary_culled/web_app/images/Tool.png              |  Bin 0 -> 1932 bytes
+ ediary_culled/web_app/images/User.png              |  Bin 0 -> 2441 bytes
+ ediary_culled/web_app/images/WellnessCompleted.jpg |  Bin 0 -> 2065 bytes
+ .../web_app/images/WellnessNotCompleted.jpg        |  Bin 0 -> 2068 bytes
+ ediary_culled/web_app/images/arrow.png             |  Bin 0 -> 361 bytes
+ ediary_culled/web_app/images/background.png        |  Bin 0 -> 155 bytes
+ ediary_culled/web_app/images/checkbox.png          |  Bin 0 -> 3300 bytes
+ ediary_culled/web_app/images/home.png              |  Bin 0 -> 361 bytes
+ ediary_culled/web_app/images/navbutton.png         |  Bin 0 -> 571 bytes
+ ediary_culled/web_app/images/navbuttonblack.png    |  Bin 0 -> 493 bytes
+ ediary_culled/web_app/images/navbuttonblue.png     |  Bin 0 -> 664 bytes
+ ediary_culled/web_app/images/navleft.png           |  Bin 0 -> 826 bytes
+ ediary_culled/web_app/images/navlinkleft.png       |  Bin 0 -> 786 bytes
+ ediary_culled/web_app/images/navlinkright.png      |  Bin 0 -> 804 bytes
+ ediary_culled/web_app/images/navright.png          |  Bin 0 -> 845 bytes
+ ediary_culled/web_app/images/play.gif              |  Bin 0 -> 103 bytes
+ ediary_culled/web_app/images/radiobutton.png       |  Bin 0 -> 373 bytes
+ ediary_culled/web_app/images/searchfield.png       |  Bin 0 -> 1548 bytes
+ ediary_culled/web_app/images/tributton.png         |  Bin 0 -> 476 bytes
+ ediary_culled/web_app/images/uwacrest.gif          |  Bin 0 -> 4822 bytes
+ ediary_culled/web_app/jQuery.js                    |    4 +
+ ediary_culled/web_app/javascript/.DS_Store         |  Bin 0 -> 6148 bytes
+ .../web_app/javascript/developer-functions.js      |   24 +
+ ediary_culled/web_app/javascript/functions.js      |    1 +
+ ediary_culled/web_app/old/Logon.html               |   36 +
+ ediary_culled/web_app/old/sqlLite.js               |  681 ++++++++++++
+ ediary_culled/web_app/sqlLite.js                   |  548 ++++++++--
+ 60 files changed, 2983 insertions(+), 63 deletions(-)
+
+commit b00cbe29ca7cb3553550b28bfc127e2d0ddef637
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 14:00:04 2011 +0800
+
+    Further commenting and tiding up. Added check for student.active
+    
+    the page was missing "?>" ??? how does this happen?? anyway that was
+    added too.
+    Checks that the student.active value is set to 1.
+
+ ediary_culled/api_auth.php |   13 +++++++++----
+ 1 files changed, 9 insertions(+), 4 deletions(-)
+
+commit 49642ffa45fdc1892e89935a5235a55a1fcaa444
+Merge: 2d97805 9288e6a
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 08:52:58 2011 +0800
+
+    Merge branch 'master' of github.com:CITS3200-TeamH/CITS3200-Wellness-Project
+
+commit 2d97805e4790e347f49d62a52b275c387f592174
+Author: Server <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 08:50:02 2011 +0800
+
+    sqlLite.js - minor modifications
+
+ ediary_culled/web_app/sqlLite.js |    6 ++++--
+ 1 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 9288e6aa7942b8e414a1f5e3dd9cf15c973e378a
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Oct 16 08:46:30 2011 +0800
+
+    Added text to line 509's alert()
+    
+    Firebug, used as a javascript debugger pulled this up as not having
+    enough arguments. May fix the fact that an alert should be showing but
+    it is not.
+
+ ediary_culled/web_app/sqlLite.js |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 13ba6acf799755e6ec51620274930bb71fccf4a8
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Sat Oct 15 10:27:25 2011 +0800
+
+    added some more comments
+
+ ediary_culled/api_sync.php      |   32 ++++++++++++++++++--------------
+ ediary_culled/api_uploadXML.php |   36 ++++++++++++++++++------------------
+ 2 files changed, 36 insertions(+), 32 deletions(-)
+
+commit acda66f24b405a233ad1b6b22d5513239851393c
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Thu Oct 13 15:55:07 2011 +0800
+
+    added code to prevent data being added for dates outside of the start/end dates or the window
+
+ ediary_culled/api_uploadXML.php |  252 ++++++++++++++++++++-------------------
+ 1 files changed, 129 insertions(+), 123 deletions(-)
+
+commit b4e9f5cae37c6984568c5cd68ae902c80671f88d
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Thu Oct 13 14:38:06 2011 +0800
+
+    Made directory web_app, moved logon.html and sqllite.js into it.
+
+ ediary_culled/Logon.html         |   36 --
+ ediary_culled/sqlLite.js         |  679 --------------------------------------
+ ediary_culled/web_app/Logon.html |   36 ++
+ ediary_culled/web_app/sqlLite.js |  679 ++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 715 insertions(+), 715 deletions(-)
+
+commit 41c28a920d16813a1866cf8b25580fd7911adc71
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Thu Oct 13 14:28:10 2011 +0800
+
+    Added logon.html and sqllite.js -- Liam's part
+
+ .DS_Store                |  Bin 6148 -> 6148 bytes
+ ediary_culled/Logon.html |   36 +++
+ ediary_culled/sqlLite.js |  679 ++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 715 insertions(+), 0 deletions(-)
+
+commit 898ded79a5e1c54ff07688737df54f3a6cbfafa0
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Thu Oct 13 12:28:16 2011 +0800
+
+    tested/completed api_uploadXML.php and made one change to api_authFunctios.php
+
+ ediary_culled/api_authFunctions.php |    2 +-
+ ediary_culled/api_sync.php          |   10 +-
+ ediary_culled/api_uploadXML.php     |  261 +++++++++++++++++++++--------------
+ 3 files changed, 163 insertions(+), 110 deletions(-)
+
+commit c5dc066df47a1c22af8e14b53125a58bb0f2a5a5
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Thu Oct 13 06:35:40 2011 +0800
+
+    finished and tested sync.php Also modified api_auth by splitting it into two files
+
+ ediary_culled/api_auth.php          |   49 ++--------------------------------
+ ediary_culled/api_authFunctions.php |   35 +++++++++++++++++++++++++
+ ediary_culled/api_sync.php          |   19 +++++++------
+ 3 files changed, 48 insertions(+), 55 deletions(-)
+
+commit 1764f0fd1467f59eaef95f707c73b191071502d6
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 12 14:40:04 2011 +0800
+
+    was missing a bracket -- found bug #0001
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e5db2a93b80c8c691dfa39b50b4070759a5eec4b
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 12 14:35:35 2011 +0800
+
+    annoying
+
+ ediary_culled/api_auth.php |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit c77c4058b961a8413e519dbf03a141b137f265df
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 12 14:33:33 2011 +0800
+
+    allowed auth to use POST or GET for credential sending
+
+ ediary_culled/api_auth.php |   13 ++++++++++---
+ 1 files changed, 10 insertions(+), 3 deletions(-)
+
+commit 82347d25d1fb1440e623801ddeca8176a3132816
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 12 14:24:46 2011 +0800
+
+    changed auth to POST
+
+ ediary_culled/api_auth.php |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 60ebb53e6af562881c366527437a856e55441d04
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Oct 12 14:23:04 2011 +0800
+
+    Enda Laughs
+
+ ediary_culled/api_auth.php |   36 ++++++++++++++++++++++--------------
+ ediary_culled/api_sync.php |   10 +++++-----
+ 2 files changed, 27 insertions(+), 19 deletions(-)
+
+commit d700e12cb15c46b92dafc8f703c04f75bae02191
+Author: Renda <renda110@hotmail.com>
+Date:   Tue Oct 11 13:52:56 2011 +0800
+
+    removed extra " symbols
+
+ ediary_culled/api_uploadXML.php |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit d38287bce22011fb0b41e3e1d11d07337c22ef15
+Author: Renda <renda110@hotmail.com>
+Date:   Tue Oct 11 13:51:01 2011 +0800
+
+    modified uploadXML.php
+
+ ediary_culled/api_uploadXML.php |   52 +++++++++++++++++++++++++++-----------
+ 1 files changed, 37 insertions(+), 15 deletions(-)
+
+commit 4bd300fb708d3a57b74f8048a01a70be035c92fa
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Fri Oct 7 11:01:08 2011 +0800
+
+    changed uploadXML to work via POST
+
+ ediary_culled/api_uploadXML.php |   22 +++++++++++++++++++---
+ 1 files changed, 19 insertions(+), 3 deletions(-)
+
+commit 250088a5d5cb26b4e10fb11d23309b9dbf7bc9ee
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Tue Sep 27 13:49:39 2011 +0800
+
+    included api_auth where applicable
+
+ ediary_culled/api_sync.php      |   29 ++++++++++-------------------
+ ediary_culled/api_uploadXML.php |   24 +++++++++++++++++++-----
+ 2 files changed, 29 insertions(+), 24 deletions(-)
+
+commit d2a917c02531c3de55833ff34f793801ea290fb5
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Mon Sep 26 09:09:15 2011 +0800
+
+    deleted some files
+
+ fileUploadPage.htm |   24 ------
+ sync.php           |  225 ----------------------------------------------------
+ uploadXML.php      |   51 ------------
+ 3 files changed, 0 insertions(+), 300 deletions(-)
+
+commit d35547b3991ae21c2b4b2a4e02170837b96db5f3
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Sep 25 18:18:21 2011 +0800
+
+    cleaning up page
+
+ ediary_culled/api_auth.php |   15 ++++-----------
+ 1 files changed, 4 insertions(+), 11 deletions(-)
+
+commit badf6e5f444a1ad5086575cfa66bd5d61f2088e5
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Sep 25 18:15:25 2011 +0800
+
+    testing validateToken()
+
+ ediary_culled/api_auth.php |    7 ++++++-
+ 1 files changed, 6 insertions(+), 1 deletions(-)
+
+commit 921f3cddad065088cbd34465917a176d62c06e26
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Sep 25 18:04:15 2011 +0800
+
+    xml statement
+
+ ediary_culled/api_auth.php |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit efa7cba45813bbc7eaac1db6d6311f8db88ba6b9
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sun Sep 25 18:00:36 2011 +0800
+
+    xml return changed
+
+ ediary_culled/api_auth.php |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 3c53d1e0ccbcbd66f9bc8976d9916d5184a77420
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Fri Sep 23 11:36:52 2011 +0800
+
+    moved and renamed some files
+
+ ediary_culled/api_fileUploadPage.htm |   24 ++++
+ ediary_culled/api_sync.php           |  226 ++++++++++++++++++++++++++++++++++
+ ediary_culled/api_uploadXML.php      |   84 +++++++++++++
+ 3 files changed, 334 insertions(+), 0 deletions(-)
+
+commit 831be4e940e62a6ce704110e821d5c48cc172204
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Thu Sep 22 07:09:44 2011 +0800
+
+    modified sync.php and moved it
+
+ ediary_culled/sync.php |  226 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 226 insertions(+), 0 deletions(-)
+
+commit 8c6386dd2493f09817d33ffe6e0f950ae512bb58
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 18:53:44 2011 +0800
+
+    xml stuff
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit bec01967e9b29d93ef96bcc280d52d038c99e84b
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 18:49:06 2011 +0800
+
+    xml work
+
+ ediary_culled/api_auth.php |   10 +---------
+ 1 files changed, 1 insertions(+), 9 deletions(-)
+
+commit 046a47be7cf48ba93f3ee39fe8050d6f91d7b6d7
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 18:06:11 2011 +0800
+
+    xml modifications
+
+ ediary_culled/api_auth.php |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit bc172062f367a8096518819b83a7c11aa55d158e
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 18:01:06 2011 +0800
+
+    modifying xml return structure
+
+ ediary_culled/api_auth.php |   20 +++++++++++++++++++-
+ 1 files changed, 19 insertions(+), 1 deletions(-)
+
+commit 9a512681ebf74af63e902ac36847b75514081d76
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 17:53:37 2011 +0800
+
+    took our random debugging echo statements
+
+ ediary_culled/api_auth.php |   13 ++-----------
+ 1 files changed, 2 insertions(+), 11 deletions(-)
+
+commit 17bad32c674da50ae52cbe097acf5536cb786dbe
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 17:34:59 2011 +0800
+
+    query work
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 091ee60805728bc10521711480a817e292a0ca68
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 17:33:37 2011 +0800
+
+    query working
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 544d275edce0d672d88f4e7c8bd0f4feea076039
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 17:14:27 2011 +0800
+
+    query work
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 21622d30c4c8946a2fefeac1b6dbca8ff45fa67b
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 14:43:01 2011 +0800
+
+    query work
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 5886fc0cc802b5a03f2d680a42748cfe812823ed
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 14:41:21 2011 +0800
+
+    query work
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 50d95faafda72fb287b384865e3451722a450d29
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 14:39:28 2011 +0800
+
+    still working on query
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit aa8e03f325007bad581ffb3afc1b25fb54912520
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 14:37:38 2011 +0800
+
+    uncommented some code, edited sql query
+
+ ediary_culled/api_auth.php |   14 +++++++-------
+ 1 files changed, 7 insertions(+), 7 deletions(-)
+
+commit c50d7759c016914dc3059f026241dd798e10daaa
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 14:33:40 2011 +0800
+
+    playing with encoding token
+
+ ediary_culled/api_auth.php |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit d78a92b4204527773d2bc47bcfcc0bff4ef27b99
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 13:18:48 2011 +0800
+
+    still working on query
+
+ ediary_culled/api_auth.php |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 0cf5617ab1b9d5c7e534e74b45ffd1f844e9fb7a
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 13:14:00 2011 +0800
+
+    changed sql query
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit e039ab82559cf58a74be161d2d708e36b7a3ce60
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 13:06:32 2011 +0800
+
+    more minor changes
+
+ ediary_culled/api_auth.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit b9a13b168418c0b2d0d09a971c91e382ccc2a3d7
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 13:00:50 2011 +0800
+
+    moved api_auth into ediary folder
+
+ .DS_Store                  |  Bin 6148 -> 6148 bytes
+ api_auth.php               |   67 --------------------------------------------
+ ediary_culled/api_auth.php |   67 ++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 67 insertions(+), 67 deletions(-)
+
+commit 48601e1426168d8565a4f562b1c9bab4982ee033
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 12:57:58 2011 +0800
+
+    this is getting annoying now
+
+ api_auth.php |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 86359d2010ce65f4f86d9047b08bd54305c4361f
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 12:52:05 2011 +0800
+
+    minor changes
+
+ api_auth.php |   17 +++++++++--------
+ 1 files changed, 9 insertions(+), 8 deletions(-)
+
+commit f6cb93e20d9409f5d921dabdd93614975cd5c8a7
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 12:37:07 2011 +0800
+
+    more minor changes
+    
+    changed to get rather than post for variable submission, of rthe
+    purpose of testing
+
+ api_auth.php |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+commit f923e86992cc0980ffbcf276b38f414d1f813ff6
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 12:33:29 2011 +0800
+
+    minor changes
+
+ api_auth.php |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 3445d8f9b2ce530a9e975f51d2addee7aa250b50
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 11:26:24 2011 +0800
+
+    more work done to api_auth.php
+
+ api_auth.php   |   29 ++--
+ xml_schema     |  506 --------------------------------------------------------
+ xml_schema.xml |  506 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 524 insertions(+), 517 deletions(-)
+
+commit c161309b9d05741b63e14708761965d4f71927e5
+Author: Renda <renda110@hotmail.com>
+Date:   Tue Sep 20 10:47:57 2011 +0800
+
+    finished sync.php
+
+ sync.php |   88 +++++++++++++++++++++++++++++++++++++++++++++++++------------
+ 1 files changed, 70 insertions(+), 18 deletions(-)
+
+commit 8ae35f219bfb114a6e4e0ac5b6e604f7ec0ba2ef
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Tue Sep 20 10:20:17 2011 +0800
+
+    added api_auth
+    
+    api_auth.php will receive a username and password pair which if valid
+    it returns a corresponding token for.
+    It also has the function validateToken($token) which will return the
+    userid if the token is valid and an error message otherwise.
+
+ api_auth.php |   55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 55 insertions(+), 0 deletions(-)
+
+commit 0105ee6d827db0f05e0eeca73729c62ba759f0d2
+Author: Renda <renda110@hotmail.com>
+Date:   Mon Sep 19 10:47:03 2011 +0800
+
+    modified snyc.xml. Only needs activity data now
+
+ sync.php |  198 +++++++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 files changed, 158 insertions(+), 40 deletions(-)
+
+commit 138ac35ba907f38775b9d30b19e0819cf4000c41
+Author: Renda <renda110@hotmail.com>
+Date:   Mon Sep 19 10:46:00 2011 +0800
+
+    modified uploadXML.php
+
+ uploadXML.php |   12 ++++++++++--
+ 1 files changed, 10 insertions(+), 2 deletions(-)
+
+commit e09fb150cf0b6a6a92b260e82c468da71aeae50a
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Fri Sep 16 10:44:11 2011 +0800
+
+    added sync.php
+
+ sync.php |   55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 55 insertions(+), 0 deletions(-)
+
+commit 872b302888ff3e73243d753bab9caca8a7654d7d
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Thu Sep 15 11:34:24 2011 +0800
+
+    modifed uploadXML.php
+
+ uploadXML.php |   42 ++++++++++++++++++++++++++++++++++--------
+ 1 files changed, 34 insertions(+), 8 deletions(-)
+
+commit a25809de42ee05283c941b8db961680e1ec2ae78
+Author: Enda <Enda@Enda-PC.(none)>
+Date:   Wed Sep 14 17:07:36 2011 +0800
+
+    added xml upload files
+
+ fileUploadPage.htm |   24 +++
+ testXML.xml        |  506 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ uploadXML.php      |   17 ++
+ 3 files changed, 547 insertions(+), 0 deletions(-)
+
+commit 10dc8d91b0e4e4285442ed0a92e4a4589986b9a4
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Wed Sep 14 13:49:32 2011 +0800
+
+    uploaded xml_schema
+
+ xml_schema |  506 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 506 insertions(+), 0 deletions(-)
+
+commit 0a30e982c8883e8b45ba525283f692ee19a5b93a
+Author: Server <ruvan@ozemail.com.au>
+Date:   Mon Aug 29 10:00:37 2011 +0800
+
+    made changes to parse.php
+
+ parse.php |    9 +++++----
+ 1 files changed, 5 insertions(+), 4 deletions(-)
+
+commit 2ffdb5fb31a91217c7b67e08291ab222e109f9c8
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Mon Aug 29 08:49:31 2011 +0800
+
+    added parse.php to test JSON to PHP parsing
+
+ parse.php |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 3a5d93bf0aab387b836364040fa11a6322851528
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 27 11:13:14 2011 +0800
+
+    testing server merging
+
+ ediary_culled/config.php |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+commit 6a747c585fa54f831516dcc3c7618a8459837b0f
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 27 11:01:57 2011 +0800
+
+    testing server merging
+
+ ediary_culled/config.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit fc78be20996c153705e9015b133ad5fc07394d5f
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 27 10:57:03 2011 +0800
+
+    testing server merging
+
+ ediary_culled/config.php |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit 603f9b71d1a8dad90622ff002d105a3c3e340a6e
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 27 10:27:28 2011 +0800
+
+    Changed db info to reflect test server setup
+
+ .DS_Store                |  Bin 6148 -> 6148 bytes
+ ediary_culled/config.php |    2 +-
+ 2 files changed, 1 insertions(+), 1 deletions(-)
+
+commit b04b3d3f2e4fcff0effb74568b8ac22354a0f40e
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 27 10:19:59 2011 +0800
+
+    Added ediary_culled
+    
+    Ediary_culled is the folder containing the existing site.
+
+ .DS_Store                                          |  Bin 6148 -> 6148 bytes
+ ediary_culled/COMPCODES.csv                        |  231 +
+ ediary_culled/Fonts/GeosansLight.ttf               |  Bin 0 -> 60072 bytes
+ ediary_culled/Fonts/MankSans.ttf                   |  Bin 0 -> 58492 bytes
+ ediary_culled/Fonts/Silkscreen.ttf                 |  Bin 0 -> 16172 bytes
+ ediary_culled/Fonts/pf_arma_five.ttf               |  Bin 0 -> 21936 bytes
+ ediary_culled/Fonts/tahoma.ttf                     |  Bin 0 -> 383804 bytes
+ ediary_culled/about.php                            |   26 +
+ ediary_culled/aboutpage.php                        |   25 +
+ ediary_culled/basicStats.inc                       |  353 +
+ ediary_culled/basicStats.php                       |  353 +
+ ediary_culled/calendar.php                         |  323 +
+ ediary_culled/change_pw.php                        |   91 +
+ ediary_culled/check.php                            |   42 +
+ ediary_culled/checklogin.php                       |   53 +
+ ediary_culled/checkloginadmin.php                  |   48 +
+ ediary_culled/choose_group.php                     |    4 +
+ ediary_culled/compliance_info.php                  |  119 +
+ ediary_culled/config.php                           |    6 +
+ ediary_culled/connect.php                          |    4 +
+ ediary_culled/create_admin.php                     |   47 +
+ ediary_culled/create_class.php                     |   83 +
+ ediary_culled/create_collaborator.php              |   45 +
+ ediary_culled/create_question.php                  |   59 +
+ ediary_culled/create_rating_item.php               |  136 +
+ ediary_culled/create_subject.php                   |   52 +
+ ediary_culled/csv_print.php                        |    8 +
+ ediary_culled/db.txt                               |  130 +
+ ediary_culled/dbtester.php                         |    7 +
+ ediary_culled/display_info.php                     |   25 +
+ ediary_culled/edit_profile.php                     |  161 +
+ ediary_culled/favicon.ico                          |  Bin 0 -> 1406 bytes
+ ediary_culled/fitness_summary.php                  |   29 +
+ ediary_culled/fitness_test.php                     |  496 ++
+ ediary_culled/full_summary.php                     |   38 +
+ ediary_culled/full_summary_2.php                   |   22 +
+ ediary_culled/gd-test.php                          |   38 +
+ ediary_culled/group_confirm.php                    |    6 +
+ ediary_culled/group_profiles.php                   |   26 +
+ ediary_culled/home.php                             |   86 +
+ ediary_culled/home_admin.php                       |   50 +
+ ediary_culled/images/blue_heart_rate_sml.jpg       |  Bin 0 -> 3267 bytes
+ ediary_culled/images/blue_rating_item_sml.png      |  Bin 0 -> 252 bytes
+ ediary_culled/images/blue_running_man_5122.jpg     |  Bin 0 -> 17412 bytes
+ ediary_culled/images/blue_running_man_sml.jpg      |  Bin 0 -> 2235 bytes
+ ediary_culled/images/bullet-link.gif               |  Bin 0 -> 177 bytes
+ ediary_culled/images/calendar.jpg                  |  Bin 0 -> 69953 bytes
+ ediary_culled/images/cyclist.jpg                   |  Bin 0 -> 111806 bytes
+ ediary_culled/images/excel_icon.png                |  Bin 0 -> 2901 bytes
+ ediary_culled/images/footer-background.jpg         |  Bin 0 -> 479 bytes
+ ediary_culled/images/footer-infoarrow.gif          |  Bin 0 -> 285 bytes
+ ediary_culled/images/footer-watermark.gif          |  Bin 0 -> 11663 bytes
+ ediary_culled/images/greentick.jpg                 |  Bin 0 -> 1546 bytes
+ ediary_culled/images/greentick_sml.jpg             |  Bin 0 -> 1736 bytes
+ ediary_culled/images/group.png                     |  Bin 0 -> 6346 bytes
+ ediary_culled/images/marathon.jpg                  |  Bin 0 -> 48396 bytes
+ ediary_culled/images/nav-arrow.gif                 |  Bin 0 -> 129 bytes
+ ediary_culled/images/proto/Gait_figure.jpg         |  Bin 0 -> 31298 bytes
+ ediary_culled/images/proto/Phelps fly 4.jpg        |  Bin 0 -> 39879 bytes
+ ediary_culled/images/proto/sport-science.jpg       |  Bin 0 -> 57543 bytes
+ ediary_culled/images/proto/sports.gif              |  Bin 0 -> 48354 bytes
+ ediary_culled/images/proto/treadmill.jpg           |  Bin 0 -> 28771 bytes
+ ediary_culled/images/question-mark.png             |  Bin 0 -> 1510 bytes
+ ediary_culled/images/question-mark2.png            |  Bin 0 -> 819 bytes
+ ediary_culled/images/question_icon.gif             |  Bin 0 -> 308 bytes
+ ediary_culled/images/red180.gif                    |  Bin 0 -> 45 bytes
+ ediary_culled/images/red_cross_sm.png              |  Bin 0 -> 1351 bytes
+ ediary_culled/images/redcross.gif                  |  Bin 0 -> 1567 bytes
+ ediary_culled/images/search-background.gif         |  Bin 0 -> 99 bytes
+ ediary_culled/images/sports_logo.gif               |  Bin 0 -> 2478 bytes
+ ediary_culled/images/swimming.jpg                  |  Bin 0 -> 48381 bytes
+ ediary_culled/images/tennis.jpg                    |  Bin 0 -> 181292 bytes
+ ediary_culled/images/tennis_serve.jpg              |  Bin 0 -> 6829 bytes
+ ediary_culled/images/tick_green.jpg                |  Bin 0 -> 7355 bytes
+ ediary_culled/images/title-meddent.gif             |  Bin 0 -> 5930 bytes
+ .../ui-bg_diagonals-thick_18_b81900_40x40.png      |  Bin 0 -> 260 bytes
+ .../ui-bg_diagonals-thick_20_666666_40x40.png      |  Bin 0 -> 251 bytes
+ .../images/ui-bg_flat_10_000000_40x100.png         |  Bin 0 -> 178 bytes
+ .../images/ui-bg_glass_100_f6f6f6_1x400.png        |  Bin 0 -> 104 bytes
+ .../images/ui-bg_glass_100_fdf5ce_1x400.png        |  Bin 0 -> 125 bytes
+ .../images/ui-bg_glass_65_ffffff_1x400.png         |  Bin 0 -> 105 bytes
+ .../images/ui-bg_gloss-wave_35_f6a828_500x100.png  |  Bin 0 -> 3762 bytes
+ .../ui-bg_highlight-soft_100_eeeeee_1x100.png      |  Bin 0 -> 90 bytes
+ .../ui-bg_highlight-soft_75_ffe45c_1x100.png       |  Bin 0 -> 129 bytes
+ ediary_culled/images/ui-icons_222222_256x240.png   |  Bin 0 -> 4369 bytes
+ ediary_culled/images/ui-icons_228ef1_256x240.png   |  Bin 0 -> 4369 bytes
+ ediary_culled/images/ui-icons_ef8c08_256x240.png   |  Bin 0 -> 4369 bytes
+ ediary_culled/images/ui-icons_ffd27a_256x240.png   |  Bin 0 -> 4369 bytes
+ ediary_culled/images/ui-icons_ffffff_256x240.png   |  Bin 0 -> 4369 bytes
+ ediary_culled/images/user.png                      |  Bin 0 -> 4135 bytes
+ ediary_culled/images/uwacrest.gif                  |  Bin 0 -> 4822 bytes
+ ediary_culled/images/white180.gif                  |  Bin 0 -> 66 bytes
+ ediary_culled/images/yellow_heart_rate_sml.jpg     |  Bin 0 -> 3754 bytes
+ ediary_culled/images/yellow_rating_item_sml.png    |  Bin 0 -> 251 bytes
+ ediary_culled/images/yellow_running_man.jpg        |  Bin 0 -> 27065 bytes
+ ediary_culled/images/yellow_running_man_sml.jpg    |  Bin 0 -> 2232 bytes
+ ediary_culled/ind_fitness_raw.php                  |   39 +
+ ediary_culled/ind_illness_summary.php              |   90 +
+ ediary_culled/ind_raw_data.php                     |  114 +
+ ediary_culled/ind_raw_data2.php                    |  112 +
+ ediary_culled/index.php                            |    4 +
+ ediary_culled/jquery-1.4.4.js                      | 7179 ++++++++++++++++++++
+ ediary_culled/jquery-ui-1.7.3.custom.css           |  405 ++
+ ediary_culled/jquery-ui-1.7.3.custom.min.js        |  273 +
+ ediary_culled/jquery-ui-1.8.6.custom.min.js        |  778 +++
+ ediary_culled/jquery.confirm-1.3.js                |  146 +
+ ediary_culled/jquery.ui.selectmenu.css             |   24 +
+ ediary_culled/jquery.ui.selectmenu.js              |  545 ++
+ ediary_culled/layout.php                           |  242 +
+ ediary_culled/load_met_data.php                    |   99 +
+ ediary_culled/login.php                            |   30 +
+ ediary_culled/login_admin.php                      |   38 +
+ ediary_culled/logout.php                           |   12 +
+ ediary_culled/modify_class.php                     |   84 +
+ ediary_culled/modify_student.php                   |   34 +
+ ediary_culled/new_admin.php                        |   56 +
+ ediary_culled/new_collaborator.php                 |   77 +
+ ediary_culled/new_group.php                        |  113 +
+ ediary_culled/new_student.php                      |   78 +
+ ediary_culled/pChart/pCache.class                  |  119 +
+ ediary_culled/pChart/pChart.class                  | 3489 ++++++++++
+ ediary_culled/pChart/pData.class                   |  260 +
+ ediary_culled/password.php                         |   16 +
+ ediary_culled/queries.php                          |  347 +
+ ediary_culled/query_group.php                      |   41 +
+ ediary_culled/rating_calc.php                      |  139 +
+ ediary_culled/record.php                           |  704 ++
+ ediary_culled/select_activity.php                  |   12 +
+ ediary_culled/stats.php                            |   60 +
+ ediary_culled/stdtest.php                          |  136 +
+ ediary_culled/style.css                            |  544 ++
+ ediary_culled/subject_select_reports.php           |   29 +
+ ediary_culled/subject_view_g_reports.php           |   77 +
+ ediary_culled/subject_view_reports.php             |   88 +
+ ediary_culled/subject_view_s_reports.php           |   87 +
+ ediary_culled/test_subjects.csv                    |   17 +
+ ediary_culled/ui.selectmenu.css                    |   24 +
+ ediary_culled/ui.selectmenu.js                     |  524 ++
+ ediary_culled/upload.php                           |   65 +
+ ediary_culled/uploader.php                         |  106 +
+ ediary_culled/validations.php                      |  228 +
+ ediary_culled/view_admin.php                       |   29 +
+ ediary_culled/view_admins.php                      |  136 +
+ ediary_culled/view_group.php                       |   92 +
+ ediary_culled/view_group_f_report.php              |   31 +
+ ediary_culled/view_group_report_met.php            |   79 +
+ ediary_culled/view_groups.php                      |   39 +
+ ediary_culled/view_report.php                      |   51 +
+ ediary_culled/view_reports.php                     |   50 +
+ ediary_culled/view_students.php                    |  951 +++
+ ediary_culled/view_subject_f_report.php            |   50 +
+ ediary_culled/view_subject_report.php              |   51 +
+ ediary_culled/view_subject_report_met.php          |   89 +
+ .../admin_group_comp_breakdown_3dpie.php           |   61 +
+ .../admin_ind_comp_breakdown_3dpie.php             |   62 +
+ .../admin_ind_daily_duration_line.php              |   86 +
+ .../visualisations/admin_ind_daily_met_line.php    |   86 +
+ .../admin_ind_intensity_breakdown_3dpie.php        |   62 +
+ .../admin_ind_weekly_duration_line.php             |   86 +
+ .../visualisations/admin_ind_weekly_met_line.php   |   88 +
+ .../visualisations/group_comp_breakdown_3dpie.php  |   62 +
+ .../visualisations/ind_comp_breakdown_3dpie.php    |   62 +
+ .../visualisations/ind_daily_duration_line.php     |   86 +
+ .../visualisations/ind_daily_met_line.php          |   86 +
+ .../ind_intensity_breakdown_3dpie.php              |   62 +
+ .../visualisations/ind_weekly_duration_line.php    |   86 +
+ .../visualisations/ind_weekly_met_line.php         |   88 +
+ .../visualisations/time_breakdown_3dpie.php        |   73 +
+ 168 files changed, 23690 insertions(+), 0 deletions(-)
+
+commit af890cfa1daf7a85013684053ec20a2928db6a21
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Sat Aug 6 17:49:32 2011 +0800
+
+    Added Booked hours spreadsheet
+    
+    Spreadsheet is modified to hold all team member hours
+
+ Booked_Hours.xls |  Bin 0 -> 44544 bytes
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 24704c358407d457b30e794ae43a44c0fcdbb2ad
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Fri Aug 5 22:42:47 2011 +0800
+
+    added rev001
+
+ rev001 |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+commit d90b6740385e876fa346c35f71a56139300abb8a
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Fri Aug 5 22:32:26 2011 +0800
+
+    Added protection image
+
+ .DS_Store                 |  Bin 0 -> 6148 bytes
+ Protect_your_internet.jpg |  Bin 0 -> 26672 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fc9e77b2c111d7f1b809ccf0ffe2ee7da4e7b09a
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Fri Aug 5 16:39:09 2011 +0800
+
+    added to README
+
+ README |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 81bf02319fba1e6659d5d50a6d8a7b4bd4d9fae6
+Author: Ruvan Muthu-Krishna <ruvan@ozemail.com.au>
+Date:   Fri Aug 5 15:22:51 2011 +0800
+
+    first commit
+
+ README |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
