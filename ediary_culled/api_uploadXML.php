@@ -189,7 +189,7 @@ function uploadXML($username, $dataChoice) {
 							for ($i = 1; $i <= $index; $i++) {
 								switch ($count) {
 									case 0:
-										$commment = $healthData[($i - 1)];
+										$comment = $healthData[($i - 1)];
 										$count++;
 										break;
 									case 1:

@@ -1,7 +1,7 @@
 <?php
 /**
 	Author: Enda McCauley/20511314
-	Version: 13/10/2011
+	Version: 18/10/2011
 */
 include "api_authFunctions.php";
 
@@ -199,6 +199,7 @@ function sync($username) {
 			echo "</array>\n";
 			echo "</dict>\n";
 			echo "<string>$nextDate</string>\n";
+			echo "<string>" . date("y-m-d H:m:s O") . "</string>\n";
 			echo "</array>\n";		
 		}
 		echo "</array>\n";
