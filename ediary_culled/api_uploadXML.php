@@ -7,17 +7,20 @@ include "api_authFunctions.php";
 
 if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the token has been sent
 	$id;
+	$dataChoice = "POST";
 	if (isset($_POST["token"]) && isset($_POST["xml"])) { //now we check so see if we have both the token AND the xml data
 		$id = validateToken($_POST["token"]); //validate the token
+		$dataChoice = "POST";
 	} else if (isset($_GET["token"]) && isset($_GET["xml"])) {
 		$id = validateToken($_GET["token"]);
+		$dataChoice = "GET";
 	} else {
 		echo "error-3";
 		exit();
 	}
 		
 	if ($id != "error-2") {
-		uploadXML($id);
+		uploadXML($id, $dataChoice);
 	} else {
 		echo "error-2"; //an invalid token should produce an error
 	}
@@ -25,23 +28,29 @@ if (isset($_POST["token"]) || isset($_GET["token"])){ //check to see if the toke
 	echo "error-1";
 }
 
-function uploadXML($username) {	
-	$ratingValues = array("Excellent" => 5, "Good" => 4, "Ok" => 3, "Poor" => 2, "Awful" => 1);
+function uploadXML($username, $dataChoice) {	
+	$ratingValues = array("Excellent" => 5, "Good" => 4, "OK" => 3, "Poor" => 2, "Awful" => 1);
 	$sql="SELECT * FROM student, classmap, class WHERE id='$username' AND id=student_id AND name=class_name";
-	$result = mysql_fetch_array(mysql_query($sql));
+	$result = mysql_fetch_array(mysql_query($sql)) or die("error-5");
 	$lower = strtotime($result["start"]);
 	$upper = strtotime($result["finish"]);
 	$today = strtotime(date("Y-m-d"));
-	$window = $result["window"];
+	$window = (0 + $result["window"]);
 
 	if ($today <= $upper && $today >= $lower) { //check to make sure the user should be uploading (i.e. still within the start/end times)
-		$xml = simplexml_load_string($_POST["xml"]); //load the XML string
+		$xml;
+		if ($dataChoice == "POST") {
+			$xml = simplexml_load_string($_POST["xml"]); //load the XML string
+		} else {
+			$xml = simplexml_load_string($_GET["xml"]);
+		}
+
 		//From here to the end of the page will need to be changed to reflect the new database schema
 		foreach ($xml->array as $day) { //get each day. It is best to see the XML schema to understand what each loop is doing.
 			$date = $day->string;
 			$dateValue = strtotime($date);
 			
-			if ($dateValue <= $today && $dateValue >= ($today - 86400)) { //check to make sure that we are within the data entry window
+			if ($dateValue <= $today &&  $dateValue >= ($today - ($window * 86400))) { //check to make sure that we are within the data entry window
 				$healthItemCount = 0;
 				foreach ($day->dict as $healthItem) { //loops for each data entry options i.e. Rating Items, Health Items and Activities
 					$healthItemCount++;
@@ -66,7 +75,7 @@ function uploadXML($username) {
 										} else {
 											$healthData[$name] = $display;
 											
-											if ($display != "Enter Data") {
+											if ($display != "") {
 												$ratingChanged = true;
 											}
 										}
@@ -84,7 +93,7 @@ function uploadXML($username) {
 						$values = mysql_fetch_array($rows);
 						$class = $values["class_name"];
 						
-						if ($healthItemCount == 1 && ($healthData[0] != "Enter Data" || $healthData[1] != "Enter Data" || $healthData[2] != "Enter Data")) { //update the Wellness Data if any of its fields heart rate, sleep hours or health has changed
+						if ($healthItemCount == 1 && ($healthData[0] != "" || $healthData[1] != "" || $healthData[2] != "")) { //update the Wellness Data if any of its fields heart rate, sleep hours or health has changed
 							$sql = "SELECT * FROM training_records2 WHERE student_id='$username' && daydate='$date'";
 							$rows = mysql_query($sql) or die("error-5");
 							
@@ -95,12 +104,12 @@ function uploadXML($username) {
 								$sql = "UPDATE training_records2 SET ";
 								
 								//Only update what has been edited
-								if ($healthData[0] != "Enter Data") {
+								if ($healthData[0] != "") {
 									$heart = true;
 									$sql .= ("heart_rate=" . $healthData[0]);
 								}
 								
-								if ($healthData[1] != "Enter Data") {
+								if ($healthData[1] != "") {
 									$sleep = true;
 									
 									if ($heart) { //Need to check this to ensure if we need to add a comma. Previous data may not have been updated and hence would not be included -> no comma needed
@@ -110,7 +119,7 @@ function uploadXML($username) {
 									}
 								}
 								
-								if ($healthData[2] != "Enter Data") {
+								if ($healthData[2] != "") {
 									if ($sleep || $heart) {
 										$sql .= (", health=" . $ratingValues["$healthData[2]"]);
 									} else {
@@ -122,19 +131,19 @@ function uploadXML($username) {
 							} else { //No wellness data already exists								
 								$sql = "INSERT INTO training_records2 VALUES ('$date', '$username', '$class', ";
 								//Insert the data that has been edited OR insert the default values if it has not been edited
-								if ($healthData[0] != "Enter Data") {
+								if ($healthData[0] != "") {
 									$sql .= $healthData[0];
 								} else {
 									$sql .= "0"; //Don't need to worry about commas here as all possible fields must have a value.
 								}
 								
-								if ($healthData[1] != "Enter Data") {
+								if ($healthData[1] != "") {
 										$sql .= (", " . $healthData[1]);
 								} else {
 										$sql .= ", 0";
 								}
 								
-								if ($healthData[2] != "Enter Data") {
+								if ($healthData[2] != "") {
 									$sql .= (", " . $ratingValues["$healthData[2]"]);
 								} else {
 									$sql .= (", 5");
@@ -149,7 +158,7 @@ function uploadXML($username) {
 							$i = 0;
 							//Unfortunately it is not possible to update only one piece of rating data, we must update all of it (even if only one value changed)
 							foreach ($healthData as $value) {
-								if ($value != "Enter Data") { //If the rating data is edited or is not edited but is non default value we include it in the update
+								if ($value != "") { //If the rating data is edited or is not edited but is non default value we include it in the update
 									$data .= $ratingValues["$value"];
 								} else {
 									$data .= "5";  //Otherwise use the default value
@@ -199,7 +208,7 @@ function uploadXML($username) {
 																
 								if (($i % 4) == 0) {
 									$count = 0;
-									if ($compcode != "" && $start != "" && $end != "" && $comment != "") {
+									if ($compcode != "" && $start != "" && $end != "") {
 										if (strtotime($start) <= strtotime($end)) {
 											$duration = (strtotime($end) - strtotime($start)) / 60;
 											$TOD = getTOD($start);

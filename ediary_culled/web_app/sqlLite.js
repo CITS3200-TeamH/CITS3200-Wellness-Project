@@ -1124,6 +1124,7 @@ function extractedData(JSON){
 					if(response.indexOf("success")>=0){
 						downloadData();
 					} else {
+					alert(response);
 						alert("Sorry. We had trouble uploading your data. Please log in again.");
 						document.location = "Logon.html";
 					}
