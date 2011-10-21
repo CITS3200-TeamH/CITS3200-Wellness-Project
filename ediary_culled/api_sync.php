@@ -199,7 +199,7 @@ function sync($username) {
 			echo "</array>\n";
 			echo "</dict>\n";
 			echo "<string>$nextDate</string>\n";
-			echo "<string>" . date("y-m-d H:m:s O") . "</string>\n";
+			echo "<string>" . date("y-m-d H:i:s O") . "</string>\n";
 			echo "</array>\n";		
 		}
 		echo "</array>\n";
